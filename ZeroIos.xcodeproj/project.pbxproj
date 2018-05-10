@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955E9420A4C0E600755AE7 /* AppDelegate.m */; };
+		95955E9820A4C0E600755AE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955E9720A4C0E600755AE7 /* ViewController.m */; };
+		95955E9B20A4C0E600755AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95955E9920A4C0E600755AE7 /* Main.storyboard */; };
+		95955E9D20A4C0E800755AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95955E9C20A4C0E800755AE7 /* Assets.xcassets */; };
+		95955EA020A4C0E800755AE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95955E9E20A4C0E800755AE7 /* LaunchScreen.storyboard */; };
+		95955EA320A4C0E800755AE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955EA220A4C0E800755AE7 /* main.m */; };
+		95955EAD20A4C0E800755AE7 /* ZeroIosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955EAC20A4C0E800755AE7 /* ZeroIosTests.m */; };
+		95955EB820A4C0E800755AE7 /* ZeroIosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955EB720A4C0E800755AE7 /* ZeroIosUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95955EA920A4C0E800755AE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95955E8820A4C0E600755AE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95955E8F20A4C0E600755AE7;
+			remoteInfo = ZeroIos;
+		};
+		95955EB420A4C0E800755AE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95955E8820A4C0E600755AE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95955E8F20A4C0E600755AE7;
+			remoteInfo = ZeroIos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		95955E9020A4C0E600755AE7 /* ZeroIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeroIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95955E9320A4C0E600755AE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		95955E9420A4C0E600755AE7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		95955E9620A4C0E600755AE7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		95955E9720A4C0E600755AE7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		95955E9A20A4C0E600755AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		95955E9C20A4C0E800755AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95955E9F20A4C0E800755AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		95955EA120A4C0E800755AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95955EA220A4C0E800755AE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		95955EA820A4C0E800755AE7 /* ZeroIosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeroIosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95955EAC20A4C0E800755AE7 /* ZeroIosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZeroIosTests.m; sourceTree = "<group>"; };
+		95955EAE20A4C0E800755AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95955EB320A4C0E800755AE7 /* ZeroIosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeroIosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95955EB720A4C0E800755AE7 /* ZeroIosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZeroIosUITests.m; sourceTree = "<group>"; };
+		95955EB920A4C0E800755AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95955E8D20A4C0E600755AE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95955EA520A4C0E800755AE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95955EB020A4C0E800755AE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95955E8720A4C0E600755AE7 = {
+			isa = PBXGroup;
+			children = (
+				95955E9220A4C0E600755AE7 /* ZeroIos */,
+				95955EAB20A4C0E800755AE7 /* ZeroIosTests */,
+				95955EB620A4C0E800755AE7 /* ZeroIosUITests */,
+				95955E9120A4C0E600755AE7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95955E9120A4C0E600755AE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95955E9020A4C0E600755AE7 /* ZeroIos.app */,
+				95955EA820A4C0E800755AE7 /* ZeroIosTests.xctest */,
+				95955EB320A4C0E800755AE7 /* ZeroIosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95955E9220A4C0E600755AE7 /* ZeroIos */ = {
+			isa = PBXGroup;
+			children = (
+				95955E9320A4C0E600755AE7 /* AppDelegate.h */,
+				95955E9420A4C0E600755AE7 /* AppDelegate.m */,
+				95955E9620A4C0E600755AE7 /* ViewController.h */,
+				95955E9720A4C0E600755AE7 /* ViewController.m */,
+				95955E9920A4C0E600755AE7 /* Main.storyboard */,
+				95955E9C20A4C0E800755AE7 /* Assets.xcassets */,
+				95955E9E20A4C0E800755AE7 /* LaunchScreen.storyboard */,
+				95955EA120A4C0E800755AE7 /* Info.plist */,
+				95955EA220A4C0E800755AE7 /* main.m */,
+			);
+			path = ZeroIos;
+			sourceTree = "<group>";
+		};
+		95955EAB20A4C0E800755AE7 /* ZeroIosTests */ = {
+			isa = PBXGroup;
+			children = (
+				95955EAC20A4C0E800755AE7 /* ZeroIosTests.m */,
+				95955EAE20A4C0E800755AE7 /* Info.plist */,
+			);
+			path = ZeroIosTests;
+			sourceTree = "<group>";
+		};
+		95955EB620A4C0E800755AE7 /* ZeroIosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				95955EB720A4C0E800755AE7 /* ZeroIosUITests.m */,
+				95955EB920A4C0E800755AE7 /* Info.plist */,
+			);
+			path = ZeroIosUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95955E8F20A4C0E600755AE7 /* ZeroIos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95955EBC20A4C0E800755AE7 /* Build configuration list for PBXNativeTarget "ZeroIos" */;
+			buildPhases = (
+				95955E8C20A4C0E600755AE7 /* Sources */,
+				95955E8D20A4C0E600755AE7 /* Frameworks */,
+				95955E8E20A4C0E600755AE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZeroIos;
+			productName = ZeroIos;
+			productReference = 95955E9020A4C0E600755AE7 /* ZeroIos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95955EA720A4C0E800755AE7 /* ZeroIosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95955EBF20A4C0E800755AE7 /* Build configuration list for PBXNativeTarget "ZeroIosTests" */;
+			buildPhases = (
+				95955EA420A4C0E800755AE7 /* Sources */,
+				95955EA520A4C0E800755AE7 /* Frameworks */,
+				95955EA620A4C0E800755AE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95955EAA20A4C0E800755AE7 /* PBXTargetDependency */,
+			);
+			name = ZeroIosTests;
+			productName = ZeroIosTests;
+			productReference = 95955EA820A4C0E800755AE7 /* ZeroIosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		95955EB220A4C0E800755AE7 /* ZeroIosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95955EC220A4C0E800755AE7 /* Build configuration list for PBXNativeTarget "ZeroIosUITests" */;
+			buildPhases = (
+				95955EAF20A4C0E800755AE7 /* Sources */,
+				95955EB020A4C0E800755AE7 /* Frameworks */,
+				95955EB120A4C0E800755AE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95955EB520A4C0E800755AE7 /* PBXTargetDependency */,
+			);
+			name = ZeroIosUITests;
+			productName = ZeroIosUITests;
+			productReference = 95955EB320A4C0E800755AE7 /* ZeroIosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95955E8820A4C0E600755AE7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = zeluo;
+				TargetAttributes = {
+					95955E8F20A4C0E600755AE7 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					95955EA720A4C0E800755AE7 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 95955E8F20A4C0E600755AE7;
+					};
+					95955EB220A4C0E800755AE7 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 95955E8F20A4C0E600755AE7;
+					};
+				};
+			};
+			buildConfigurationList = 95955E8B20A4C0E600755AE7 /* Build configuration list for PBXProject "ZeroIos" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95955E8720A4C0E600755AE7;
+			productRefGroup = 95955E9120A4C0E600755AE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95955E8F20A4C0E600755AE7 /* ZeroIos */,
+				95955EA720A4C0E800755AE7 /* ZeroIosTests */,
+				95955EB220A4C0E800755AE7 /* ZeroIosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95955E8E20A4C0E600755AE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95955EA020A4C0E800755AE7 /* LaunchScreen.storyboard in Resources */,
+				95955E9D20A4C0E800755AE7 /* Assets.xcassets in Resources */,
+				95955E9B20A4C0E600755AE7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95955EA620A4C0E800755AE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95955EB120A4C0E800755AE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95955E8C20A4C0E600755AE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95955E9820A4C0E600755AE7 /* ViewController.m in Sources */,
+				95955EA320A4C0E800755AE7 /* main.m in Sources */,
+				95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95955EA420A4C0E800755AE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95955EAD20A4C0E800755AE7 /* ZeroIosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95955EAF20A4C0E800755AE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95955EB820A4C0E800755AE7 /* ZeroIosUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95955EAA20A4C0E800755AE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95955E8F20A4C0E600755AE7 /* ZeroIos */;
+			targetProxy = 95955EA920A4C0E800755AE7 /* PBXContainerItemProxy */;
+		};
+		95955EB520A4C0E800755AE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95955E8F20A4C0E600755AE7 /* ZeroIos */;
+			targetProxy = 95955EB420A4C0E800755AE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		95955E9920A4C0E600755AE7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95955E9A20A4C0E600755AE7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		95955E9E20A4C0E800755AE7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95955E9F20A4C0E800755AE7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95955EBA20A4C0E800755AE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		95955EBB20A4C0E800755AE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95955EBD20A4C0E800755AE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5XB43M9CX;
+				INFOPLIST_FILE = ZeroIos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mobi.zerodistance.ZeroIos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		95955EBE20A4C0E800755AE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5XB43M9CX;
+				INFOPLIST_FILE = ZeroIos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mobi.zerodistance.ZeroIos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		95955EC020A4C0E800755AE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5XB43M9CX;
+				INFOPLIST_FILE = ZeroIosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mobi.zerodistance.ZeroIosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZeroIos.app/ZeroIos";
+			};
+			name = Debug;
+		};
+		95955EC120A4C0E800755AE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5XB43M9CX;
+				INFOPLIST_FILE = ZeroIosTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mobi.zerodistance.ZeroIosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZeroIos.app/ZeroIos";
+			};
+			name = Release;
+		};
+		95955EC320A4C0E800755AE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5XB43M9CX;
+				INFOPLIST_FILE = ZeroIosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mobi.zerodistance.ZeroIosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZeroIos;
+			};
+			name = Debug;
+		};
+		95955EC420A4C0E800755AE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G5XB43M9CX;
+				INFOPLIST_FILE = ZeroIosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mobi.zerodistance.ZeroIosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZeroIos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95955E8B20A4C0E600755AE7 /* Build configuration list for PBXProject "ZeroIos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95955EBA20A4C0E800755AE7 /* Debug */,
+				95955EBB20A4C0E800755AE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95955EBC20A4C0E800755AE7 /* Build configuration list for PBXNativeTarget "ZeroIos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95955EBD20A4C0E800755AE7 /* Debug */,
+				95955EBE20A4C0E800755AE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95955EBF20A4C0E800755AE7 /* Build configuration list for PBXNativeTarget "ZeroIosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95955EC020A4C0E800755AE7 /* Debug */,
+				95955EC120A4C0E800755AE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95955EC220A4C0E800755AE7 /* Build configuration list for PBXNativeTarget "ZeroIosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95955EC320A4C0E800755AE7 /* Debug */,
+				95955EC420A4C0E800755AE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 95955E8820A4C0E600755AE7 /* Project object */;
+}
