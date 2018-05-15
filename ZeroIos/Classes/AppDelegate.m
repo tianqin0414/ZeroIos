@@ -17,8 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    self.window.rootViewController = [SDAppFrameTabBarController new];
+  
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController=[SDAppFrameTabBarController new];
+    [self.window makeKeyAndVisible];
+    
+        //self.window.rootViewController = [SDAppFrameTabBarController new];
     return YES;
 }
 
