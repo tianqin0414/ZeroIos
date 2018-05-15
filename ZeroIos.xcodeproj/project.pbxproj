@@ -11,7 +11,6 @@
 		95955E9820A4C0E600755AE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955E9720A4C0E600755AE7 /* ViewController.m */; };
 		95955E9B20A4C0E600755AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95955E9920A4C0E600755AE7 /* Main.storyboard */; };
 		95955E9D20A4C0E800755AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95955E9C20A4C0E800755AE7 /* Assets.xcassets */; };
-		95955EA020A4C0E800755AE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95955E9E20A4C0E800755AE7 /* LaunchScreen.storyboard */; };
 		95955EA320A4C0E800755AE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955EA220A4C0E800755AE7 /* main.m */; };
 		95955EAD20A4C0E800755AE7 /* ZeroIosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955EAC20A4C0E800755AE7 /* ZeroIosTests.m */; };
 		95955EB820A4C0E800755AE7 /* ZeroIosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955EB720A4C0E800755AE7 /* ZeroIosUITests.m */; };
@@ -42,7 +41,6 @@
 		95955E9720A4C0E600755AE7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		95955E9A20A4C0E600755AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		95955E9C20A4C0E800755AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		95955E9F20A4C0E800755AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95955EA120A4C0E800755AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95955EA220A4C0E800755AE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		95955EA820A4C0E800755AE7 /* ZeroIosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeroIosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,13 +76,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9503BDBF20A4C77C00269805 /* Supportting Files */ = {
+			isa = PBXGroup;
+			children = (
+				95955EA220A4C0E800755AE7 /* main.m */,
+				95955E9920A4C0E600755AE7 /* Main.storyboard */,
+			);
+			path = "Supportting Files";
+			sourceTree = "<group>";
+		};
+		9566303E20AAA59C00F8A40E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				95955E9320A4C0E600755AE7 /* AppDelegate.h */,
+				95955E9420A4C0E600755AE7 /* AppDelegate.m */,
+				95955E9620A4C0E600755AE7 /* ViewController.h */,
+				95955E9720A4C0E600755AE7 /* ViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9566303F20AAA5B300F8A40E /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				95955E9C20A4C0E800755AE7 /* Assets.xcassets */,
+				95955EA120A4C0E800755AE7 /* Info.plist */,
+				9503BDBF20A4C77C00269805 /* Supportting Files */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		95955E8720A4C0E600755AE7 = {
 			isa = PBXGroup;
 			children = (
+				95955E9120A4C0E600755AE7 /* Products */,
 				95955E9220A4C0E600755AE7 /* ZeroIos */,
 				95955EAB20A4C0E800755AE7 /* ZeroIosTests */,
 				95955EB620A4C0E800755AE7 /* ZeroIosUITests */,
-				95955E9120A4C0E600755AE7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +129,8 @@
 		95955E9220A4C0E600755AE7 /* ZeroIos */ = {
 			isa = PBXGroup;
 			children = (
-				95955E9320A4C0E600755AE7 /* AppDelegate.h */,
-				95955E9420A4C0E600755AE7 /* AppDelegate.m */,
-				95955E9620A4C0E600755AE7 /* ViewController.h */,
-				95955E9720A4C0E600755AE7 /* ViewController.m */,
-				95955E9920A4C0E600755AE7 /* Main.storyboard */,
-				95955E9C20A4C0E800755AE7 /* Assets.xcassets */,
-				95955E9E20A4C0E800755AE7 /* LaunchScreen.storyboard */,
-				95955EA120A4C0E800755AE7 /* Info.plist */,
-				95955EA220A4C0E800755AE7 /* main.m */,
+				9566303E20AAA59C00F8A40E /* Classes */,
+				9566303F20AAA5B300F8A40E /* Others */,
 			);
 			path = ZeroIos;
 			sourceTree = "<group>";
@@ -235,7 +256,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95955EA020A4C0E800755AE7 /* LaunchScreen.storyboard in Resources */,
 				95955E9D20A4C0E800755AE7 /* Assets.xcassets in Resources */,
 				95955E9B20A4C0E600755AE7 /* Main.storyboard in Resources */,
 			);
@@ -308,14 +328,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		95955E9E20A4C0E800755AE7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				95955E9F20A4C0E800755AE7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -370,6 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,6 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -434,8 +448,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G5XB43M9CX;
-				INFOPLIST_FILE = ZeroIos/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ZeroIos/Others/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,8 +465,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G5XB43M9CX;
-				INFOPLIST_FILE = ZeroIos/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ZeroIos/Others/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -547,7 +561,7 @@
 				95955EBB20A4C0E800755AE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		95955EBC20A4C0E800755AE7 /* Build configuration list for PBXNativeTarget "ZeroIos" */ = {
 			isa = XCConfigurationList;
@@ -556,7 +570,7 @@
 				95955EBE20A4C0E800755AE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		95955EBF20A4C0E800755AE7 /* Build configuration list for PBXNativeTarget "ZeroIosTests" */ = {
 			isa = XCConfigurationList;
@@ -565,7 +579,7 @@
 				95955EC120A4C0E800755AE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		95955EC220A4C0E800755AE7 /* Build configuration list for PBXNativeTarget "ZeroIosUITests" */ = {
 			isa = XCConfigurationList;
@@ -574,7 +588,7 @@
 				95955EC420A4C0E800755AE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
