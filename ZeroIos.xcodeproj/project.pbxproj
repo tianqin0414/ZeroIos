@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9566304320AAB6C200F8A40E /* SDAppFrameTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9566304220AAB6C200F8A40E /* SDAppFrameTabBarController.m */; };
 		95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955E9420A4C0E600755AE7 /* AppDelegate.m */; };
-		95955E9820A4C0E600755AE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955E9720A4C0E600755AE7 /* ViewController.m */; };
 		95955E9D20A4C0E800755AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95955E9C20A4C0E800755AE7 /* Assets.xcassets */; };
 		95955EA320A4C0E800755AE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955EA220A4C0E800755AE7 /* main.m */; };
 		95955EAD20A4C0E800755AE7 /* ZeroIosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955EAC20A4C0E800755AE7 /* ZeroIosTests.m */; };
@@ -39,8 +38,6 @@
 		95955E9020A4C0E600755AE7 /* ZeroIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeroIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95955E9320A4C0E600755AE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		95955E9420A4C0E600755AE7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		95955E9620A4C0E600755AE7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		95955E9720A4C0E600755AE7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		95955E9C20A4C0E800755AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95955EA120A4C0E800755AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95955EA220A4C0E800755AE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,11 +85,8 @@
 		9566303E20AAA59C00F8A40E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				95A3241620AB31D100F7F5C6 /* AppDelegate */,
 				9566304020AAB61700F8A40E /* AppFrame */,
-				95955E9320A4C0E600755AE7 /* AppDelegate.h */,
-				95955E9420A4C0E600755AE7 /* AppDelegate.m */,
-				95955E9620A4C0E600755AE7 /* ViewController.h */,
-				95955E9720A4C0E600755AE7 /* ViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -161,6 +155,15 @@
 				95955EB920A4C0E800755AE7 /* Info.plist */,
 			);
 			path = ZeroIosUITests;
+			sourceTree = "<group>";
+		};
+		95A3241620AB31D100F7F5C6 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				95955E9320A4C0E600755AE7 /* AppDelegate.h */,
+				95955E9420A4C0E600755AE7 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +294,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95955E9820A4C0E600755AE7 /* ViewController.m in Sources */,
 				95955EA320A4C0E800755AE7 /* main.m in Sources */,
 				9566304320AAB6C200F8A40E /* SDAppFrameTabBarController.m in Sources */,
 				95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */,

@@ -16,7 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //self.view.backgroundColor = [UIColor blueColor];
+    UIViewController *vc = [NSClassFromString(@"SDMeTableViewController") new];
+    UINavigationController *nav=[[UINavigationController alloc]init];
+    UITabBarItem *item = nav.tabBarItem;
+    item.title=@"爱爱";
+    int i=0;
+    for (i=0; i<4; i++) {
+        
+        [self addChildViewController:nav];
+    }
+    
     // Do any additional setup after loading the view.
 }
 
