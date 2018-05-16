@@ -13,6 +13,9 @@
 		95955EA320A4C0E800755AE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955EA220A4C0E800755AE7 /* main.m */; };
 		95955EAD20A4C0E800755AE7 /* ZeroIosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955EAC20A4C0E800755AE7 /* ZeroIosTests.m */; };
 		95955EB820A4C0E800755AE7 /* ZeroIosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955EB720A4C0E800755AE7 /* ZeroIosUITests.m */; };
+		95A3242220AC0B5D00F7F5C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95A3242420AC0B5D00F7F5C6 /* InfoPlist.strings */; };
+		95A3242720AC0BDA00F7F5C6 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A3242620AC0BDA00F7F5C6 /* Storyboard.storyboard */; };
+		95A3242A20AC0C3300F7F5C6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95A3242C20AC0C3300F7F5C6 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,12 @@
 		95955EB320A4C0E800755AE7 /* ZeroIosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZeroIosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95955EB720A4C0E800755AE7 /* ZeroIosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZeroIosUITests.m; sourceTree = "<group>"; };
 		95955EB920A4C0E800755AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95A3241920AC09D800F7F5C6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		95A3242320AC0B5D00F7F5C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		95A3242520AC0B6000F7F5C6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		95A3242620AC0BDA00F7F5C6 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		95A3242B20AC0C3300F7F5C6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		95A3242E20AC0E2B00F7F5C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +94,7 @@
 		9566303E20AAA59C00F8A40E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				95A3241620AB31D100F7F5C6 /* AppDelegate */,
-				9566304020AAB61700F8A40E /* AppFrame */,
+				95A3241720AC097E00F7F5C6 /* Common */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -97,6 +105,7 @@
 				95955E9C20A4C0E800755AE7 /* Assets.xcassets */,
 				95955EA120A4C0E800755AE7 /* Info.plist */,
 				9503BDBF20A4C77C00269805 /* Supportting Files */,
+				95A3242620AC0BDA00F7F5C6 /* Storyboard.storyboard */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -133,6 +142,11 @@
 		95955E9220A4C0E600755AE7 /* ZeroIos */ = {
 			isa = PBXGroup;
 			children = (
+				95A3242F20AC7BAD00F7F5C6 /* Zero */,
+				95A3243420AC7C5300F7F5C6 /* Show */,
+				95A3243220AC7C3700F7F5C6 /* Discover */,
+				95A3243120AC7C2800F7F5C6 /* Message */,
+				95A3243020AC7C0F00F7F5C6 /* Me */,
 				9566303E20AAA59C00F8A40E /* Classes */,
 				9566303F20AAA5B300F8A40E /* Others */,
 			);
@@ -164,6 +178,157 @@
 				95955E9420A4C0E600755AE7 /* AppDelegate.m */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		95A3241720AC097E00F7F5C6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				95A3241820AC09B500F7F5C6 /* Global */,
+				95A3241620AB31D100F7F5C6 /* AppDelegate */,
+				9566304020AAB61700F8A40E /* AppFrame */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		95A3241820AC09B500F7F5C6 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				95A3241920AC09D800F7F5C6 /* PrefixHeader.pch */,
+				95A3242420AC0B5D00F7F5C6 /* InfoPlist.strings */,
+				95A3242C20AC0C3300F7F5C6 /* Localizable.strings */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		95A3242F20AC7BAD00F7F5C6 /* Zero */ = {
+			isa = PBXGroup;
+			children = (
+				95A3243B20AC7E1D00F7F5C6 /* Controller */,
+				95A3243D20AC7E1E00F7F5C6 /* Model */,
+				95A3243C20AC7E1E00F7F5C6 /* View */,
+			);
+			path = Zero;
+			sourceTree = "<group>";
+		};
+		95A3243020AC7C0F00F7F5C6 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				95A3244520AC7E5600F7F5C6 /* Controller */,
+				95A3244420AC7E5600F7F5C6 /* Model */,
+				95A3244620AC7E5600F7F5C6 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		95A3243120AC7C2800F7F5C6 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				95A3244120AC7E4B00F7F5C6 /* Controller */,
+				95A3244320AC7E4B00F7F5C6 /* Model */,
+				95A3244220AC7E4B00F7F5C6 /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		95A3243220AC7C3700F7F5C6 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		95A3243420AC7C5300F7F5C6 /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				95A3243E20AC7E4000F7F5C6 /* Controller */,
+				95A3243F20AC7E4000F7F5C6 /* Model */,
+				95A3244020AC7E4000F7F5C6 /* View */,
+			);
+			path = Show;
+			sourceTree = "<group>";
+		};
+		95A3243B20AC7E1D00F7F5C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		95A3243C20AC7E1E00F7F5C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95A3243D20AC7E1E00F7F5C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95A3243E20AC7E4000F7F5C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		95A3243F20AC7E4000F7F5C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95A3244020AC7E4000F7F5C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95A3244120AC7E4B00F7F5C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		95A3244220AC7E4B00F7F5C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95A3244320AC7E4B00F7F5C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95A3244420AC7E5600F7F5C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95A3244520AC7E5600F7F5C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		95A3244620AC7E5600F7F5C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +416,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 95955E8720A4C0E600755AE7;
 			productRefGroup = 95955E9120A4C0E600755AE7 /* Products */;
@@ -269,7 +435,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A3242220AC0B5D00F7F5C6 /* InfoPlist.strings in Resources */,
+				95A3242A20AC0C3300F7F5C6 /* Localizable.strings in Resources */,
 				95955E9D20A4C0E800755AE7 /* Assets.xcassets in Resources */,
+				95A3242720AC0BDA00F7F5C6 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,11 +500,33 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		95A3242420AC0B5D00F7F5C6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95A3242320AC0B5D00F7F5C6 /* en */,
+				95A3242520AC0B6000F7F5C6 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		95A3242C20AC0C3300F7F5C6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95A3242B20AC0C3300F7F5C6 /* zh-Hans */,
+				95A3242E20AC0E2B00F7F5C6 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		95955EBA20A4C0E800755AE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -373,6 +564,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZeroIos/Classes/Common/Global/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -384,6 +577,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "";
+				INFOPLIST_PREFIX_HEADER = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -395,6 +589,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -430,6 +625,8 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZeroIos/Classes/Common/Global/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -437,6 +634,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "";
+				INFOPLIST_PREFIX_HEADER = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -450,7 +648,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = ZeroIos/Others/Info.plist;
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/ZeroIos/Classes/Common/Global/PrefixHeader.pch";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,7 +667,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = ZeroIos/Others/Info.plist;
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/ZeroIos/Classes/Common/Global/PrefixHeader.pch";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
