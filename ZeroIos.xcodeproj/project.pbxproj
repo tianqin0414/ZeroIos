@@ -16,6 +16,12 @@
 		95A3242220AC0B5D00F7F5C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95A3242420AC0B5D00F7F5C6 /* InfoPlist.strings */; };
 		95A3242720AC0BDA00F7F5C6 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A3242620AC0BDA00F7F5C6 /* Storyboard.storyboard */; };
 		95A3242A20AC0C3300F7F5C6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95A3242C20AC0C3300F7F5C6 /* Localizable.strings */; };
+		95A3244920AC864900F7F5C6 /* ZeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3244820AC864900F7F5C6 /* ZeroViewController.m */; };
+		95A3245020AE9B5300F7F5C6 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3244F20AE9B5300F7F5C6 /* ShowViewController.m */; };
+		95A3245620AE9B9100F7F5C6 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245520AE9B9100F7F5C6 /* DiscoverViewController.m */; };
+		95A3245920AE9BAA00F7F5C6 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245820AE9BAA00F7F5C6 /* MessageViewController.m */; };
+		95A3245C20AE9BB700F7F5C6 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245B20AE9BB700F7F5C6 /* MeViewController.m */; };
+		95A3246520AE9F7900F7F5C6 /* SDBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3246420AE9F7900F7F5C6 /* SDBaseNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,18 @@
 		95A3242620AC0BDA00F7F5C6 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		95A3242B20AC0C3300F7F5C6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		95A3242E20AC0E2B00F7F5C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		95A3244720AC864900F7F5C6 /* ZeroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZeroViewController.h; sourceTree = "<group>"; };
+		95A3244820AC864900F7F5C6 /* ZeroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZeroViewController.m; sourceTree = "<group>"; };
+		95A3244E20AE9B5300F7F5C6 /* ShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
+		95A3244F20AE9B5300F7F5C6 /* ShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
+		95A3245420AE9B9100F7F5C6 /* DiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		95A3245520AE9B9100F7F5C6 /* DiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		95A3245720AE9BAA00F7F5C6 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		95A3245820AE9BAA00F7F5C6 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		95A3245A20AE9BB700F7F5C6 /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
+		95A3245B20AE9BB700F7F5C6 /* MeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		95A3246320AE9F7900F7F5C6 /* SDBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDBaseNavigationController.h; sourceTree = "<group>"; };
+		95A3246420AE9F7900F7F5C6 /* SDBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDBaseNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +112,11 @@
 		9566303E20AAA59C00F8A40E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				95A3242F20AC7BAD00F7F5C6 /* Zero */,
+				95A3243420AC7C5300F7F5C6 /* Show */,
+				95A3243220AC7C3700F7F5C6 /* Discover */,
+				95A3243120AC7C2800F7F5C6 /* Message */,
+				95A3243020AC7C0F00F7F5C6 /* Me */,
 				95A3241720AC097E00F7F5C6 /* Common */,
 			);
 			path = Classes;
@@ -142,11 +165,6 @@
 		95955E9220A4C0E600755AE7 /* ZeroIos */ = {
 			isa = PBXGroup;
 			children = (
-				95A3242F20AC7BAD00F7F5C6 /* Zero */,
-				95A3243420AC7C5300F7F5C6 /* Show */,
-				95A3243220AC7C3700F7F5C6 /* Discover */,
-				95A3243120AC7C2800F7F5C6 /* Message */,
-				95A3243020AC7C0F00F7F5C6 /* Me */,
 				9566303E20AAA59C00F8A40E /* Classes */,
 				9566303F20AAA5B300F8A40E /* Others */,
 			);
@@ -186,6 +204,8 @@
 				95A3241820AC09B500F7F5C6 /* Global */,
 				95A3241620AB31D100F7F5C6 /* AppDelegate */,
 				9566304020AAB61700F8A40E /* AppFrame */,
+				95A3246320AE9F7900F7F5C6 /* SDBaseNavigationController.h */,
+				95A3246420AE9F7900F7F5C6 /* SDBaseNavigationController.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -233,6 +253,9 @@
 		95A3243220AC7C3700F7F5C6 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				95A3245320AE9B7A00F7F5C6 /* Controller */,
+				95A3245120AE9B7A00F7F5C6 /* Model */,
+				95A3245220AE9B7A00F7F5C6 /* View */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -250,6 +273,8 @@
 		95A3243B20AC7E1D00F7F5C6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				95A3244720AC864900F7F5C6 /* ZeroViewController.h */,
+				95A3244820AC864900F7F5C6 /* ZeroViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -271,6 +296,8 @@
 		95A3243E20AC7E4000F7F5C6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				95A3244E20AE9B5300F7F5C6 /* ShowViewController.h */,
+				95A3244F20AE9B5300F7F5C6 /* ShowViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -292,6 +319,8 @@
 		95A3244120AC7E4B00F7F5C6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				95A3245720AE9BAA00F7F5C6 /* MessageViewController.h */,
+				95A3245820AE9BAA00F7F5C6 /* MessageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,6 +349,8 @@
 		95A3244520AC7E5600F7F5C6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				95A3245A20AE9BB700F7F5C6 /* MeViewController.h */,
+				95A3245B20AE9BB700F7F5C6 /* MeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -329,6 +360,29 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		95A3245120AE9B7A00F7F5C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95A3245220AE9B7A00F7F5C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95A3245320AE9B7A00F7F5C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95A3245420AE9B9100F7F5C6 /* DiscoverViewController.h */,
+				95A3245520AE9B9100F7F5C6 /* DiscoverViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,8 +518,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				95955EA320A4C0E800755AE7 /* main.m in Sources */,
+				95A3245620AE9B9100F7F5C6 /* DiscoverViewController.m in Sources */,
+				95A3245020AE9B5300F7F5C6 /* ShowViewController.m in Sources */,
 				9566304320AAB6C200F8A40E /* SDAppFrameTabBarController.m in Sources */,
+				95A3244920AC864900F7F5C6 /* ZeroViewController.m in Sources */,
 				95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */,
+				95A3245C20AE9BB700F7F5C6 /* MeViewController.m in Sources */,
+				95A3245920AE9BAA00F7F5C6 /* MessageViewController.m in Sources */,
+				95A3246520AE9F7900F7F5C6 /* SDBaseNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

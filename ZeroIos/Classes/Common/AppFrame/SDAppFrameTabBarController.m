@@ -7,10 +7,15 @@
 //
 
 #import "SDAppFrameTabBarController.h"
+#import "ZeroViewController.h"
+
+#import "SDBaseNavigationController.h"
+
 #define kClassKey   @"rootVCClassString"
 #define kTitleKey   @"title"
 #define kImgKey     @"imageName"
 #define kSelImgKey  @"selectedImageName"
+#define Global_tintColor [UIColor colorWithRed:0 green:(190 / 255.0) blue:(12 / 255.0) alpha:1]
 @interface SDAppFrameTabBarController ()
 
 @end
@@ -21,42 +26,45 @@
     [super viewDidLoad];
     NSArray *childItemsArray=@[
                                @{
-                                   kClassKey:@"ZeroTableViewController",
+                                   kClassKey:@"ZeroViewController",
                                    kTitleKey  : localized_Zero,
                                    kImgKey    : @"iconfont_home",
                                    kSelImgKey : @"iconfont_home_current"},
                                
                                @{
-                                   kClassKey:@"ShowTableViewController",
+                                   kClassKey:@"ShowViewController",
                                    kTitleKey  : localized_Show,
                                    kImgKey    : @"iconfont_show",
                                    kSelImgKey : @"iconfont_show_current"},
                                
                                @{
-                                   kClassKey:@"DiscoverTableViewController",
+                                   kClassKey:@"DiscoverViewController",
                                    kTitleKey  :localized_Discover ,
                                    kImgKey    : @"iconfont_discover",
                                    kSelImgKey : @"iconfont_discover"},//Tianq
                                @{
-                                   kClassKey:@"MessageTableViewController",
+                                   kClassKey:@"MessageViewController",
                                    kTitleKey  :localized_Message ,
                                    kImgKey    : @"iconfont_information",
                                    kSelImgKey : @"iconfont_information_current"},
                                @{
-                                   kClassKey:@"MeTableViewController",
+                                   kClassKey:@"MeViewController",
                                    kTitleKey  : localized_Me,
                                    kImgKey    : @"iconfont_mine",
                                    kSelImgKey : @"iconfont_mine_current"},
                                ];
     [childItemsArray enumerateObjectsUsingBlock:^(NSDictionary *dict,NSUInteger idx,BOOL *stop){
+        
+        NSLog(@"%@",dict[kClassKey]);
         UIViewController *vc = [NSClassFromString(kClassKey) new];
-        UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:vc];
+        //UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:vc];
+        SDBaseNavigationController *nav=[[SDBaseNavigationController alloc]initWithRootViewController:vc];
         
         UITabBarItem *item = nav.tabBarItem;
         item.title=dict[kTitleKey];
         item.image=[UIImage  imageNamed:dict[kImgKey]];
         item.selectedImage = [[UIImage imageNamed:dict[kSelImgKey]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        
+           //[item setTitleTextAttributes:@{NSForegroundColorAttributeName : Global_tintColor} forState:UIControlStateSelected];
         [self addChildViewController:nav];
     }];
     
