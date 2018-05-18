@@ -9,8 +9,6 @@
 #import "SDAppFrameTabBarController.h"
 #import "ZeroViewController.h"
 
-#import "SDBaseNavigationController.h"
-
 #define kClassKey   @"rootVCClassString"
 #define kTitleKey   @"title"
 #define kImgKey     @"imageName"
@@ -54,11 +52,10 @@
                                    kSelImgKey : @"iconfont_mine_current"},
                                ];
     [childItemsArray enumerateObjectsUsingBlock:^(NSDictionary *dict,NSUInteger idx,BOOL *stop){
-        
-        NSLog(@"%@",dict[kClassKey]);
-        UIViewController *vc = [NSClassFromString(kClassKey) new];
-        //UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:vc];
-        SDBaseNavigationController *nav=[[SDBaseNavigationController alloc]initWithRootViewController:vc];
+               
+        UIViewController *vc = [NSClassFromString(dict[kClassKey]) new];
+        UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:vc];
+
         
         UITabBarItem *item = nav.tabBarItem;
         item.title=dict[kTitleKey];

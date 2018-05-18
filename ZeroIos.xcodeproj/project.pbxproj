@@ -17,11 +17,10 @@
 		95A3242720AC0BDA00F7F5C6 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A3242620AC0BDA00F7F5C6 /* Storyboard.storyboard */; };
 		95A3242A20AC0C3300F7F5C6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95A3242C20AC0C3300F7F5C6 /* Localizable.strings */; };
 		95A3244920AC864900F7F5C6 /* ZeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3244820AC864900F7F5C6 /* ZeroViewController.m */; };
-		95A3245020AE9B5300F7F5C6 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3244F20AE9B5300F7F5C6 /* ShowViewController.m */; };
 		95A3245620AE9B9100F7F5C6 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245520AE9B9100F7F5C6 /* DiscoverViewController.m */; };
 		95A3245920AE9BAA00F7F5C6 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245820AE9BAA00F7F5C6 /* MessageViewController.m */; };
 		95A3245C20AE9BB700F7F5C6 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245B20AE9BB700F7F5C6 /* MeViewController.m */; };
-		95A3246520AE9F7900F7F5C6 /* SDBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3246420AE9F7900F7F5C6 /* SDBaseNavigationController.m */; };
+		95A3246820AEB34700F7F5C6 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3246720AEB34700F7F5C6 /* ShowViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,16 +63,14 @@
 		95A3242E20AC0E2B00F7F5C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		95A3244720AC864900F7F5C6 /* ZeroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZeroViewController.h; sourceTree = "<group>"; };
 		95A3244820AC864900F7F5C6 /* ZeroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZeroViewController.m; sourceTree = "<group>"; };
-		95A3244E20AE9B5300F7F5C6 /* ShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
-		95A3244F20AE9B5300F7F5C6 /* ShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
 		95A3245420AE9B9100F7F5C6 /* DiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
 		95A3245520AE9B9100F7F5C6 /* DiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
 		95A3245720AE9BAA00F7F5C6 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		95A3245820AE9BAA00F7F5C6 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		95A3245A20AE9BB700F7F5C6 /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
 		95A3245B20AE9BB700F7F5C6 /* MeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
-		95A3246320AE9F7900F7F5C6 /* SDBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDBaseNavigationController.h; sourceTree = "<group>"; };
-		95A3246420AE9F7900F7F5C6 /* SDBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDBaseNavigationController.m; sourceTree = "<group>"; };
+		95A3246620AEB34700F7F5C6 /* ShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
+		95A3246720AEB34700F7F5C6 /* ShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,8 +201,6 @@
 				95A3241820AC09B500F7F5C6 /* Global */,
 				95A3241620AB31D100F7F5C6 /* AppDelegate */,
 				9566304020AAB61700F8A40E /* AppFrame */,
-				95A3246320AE9F7900F7F5C6 /* SDBaseNavigationController.h */,
-				95A3246420AE9F7900F7F5C6 /* SDBaseNavigationController.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -296,8 +291,8 @@
 		95A3243E20AC7E4000F7F5C6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				95A3244E20AE9B5300F7F5C6 /* ShowViewController.h */,
-				95A3244F20AE9B5300F7F5C6 /* ShowViewController.m */,
+				95A3246620AEB34700F7F5C6 /* ShowViewController.h */,
+				95A3246720AEB34700F7F5C6 /* ShowViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -519,13 +514,12 @@
 			files = (
 				95955EA320A4C0E800755AE7 /* main.m in Sources */,
 				95A3245620AE9B9100F7F5C6 /* DiscoverViewController.m in Sources */,
-				95A3245020AE9B5300F7F5C6 /* ShowViewController.m in Sources */,
 				9566304320AAB6C200F8A40E /* SDAppFrameTabBarController.m in Sources */,
 				95A3244920AC864900F7F5C6 /* ZeroViewController.m in Sources */,
 				95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */,
 				95A3245C20AE9BB700F7F5C6 /* MeViewController.m in Sources */,
 				95A3245920AE9BAA00F7F5C6 /* MessageViewController.m in Sources */,
-				95A3246520AE9F7900F7F5C6 /* SDBaseNavigationController.m in Sources */,
+				95A3246820AEB34700F7F5C6 /* ShowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
