@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "SDAppFrameTabBarController.h"
-#import "ZeroViewController.h"
+#import "TQAppFrameTabBarController.h"
+#import "TQZeroViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +21,7 @@
   
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController=[SDAppFrameTabBarController new];
+    self.window.rootViewController=[TQAppFrameTabBarController new];
     [self.window makeKeyAndVisible];
     
         //self.window.rootViewController = [SDAppFrameTabBarController new];

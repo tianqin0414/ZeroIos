@@ -1,5 +1,5 @@
 //
-//  DiscoverViewController.h
+//  ShowViewController.h
 //  ZeroIos
 //
 //  Created by Tianq on 2018/5/18.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DiscoverViewController : UITableViewController
+@interface TQShowViewController : UITableViewController
 
 @end

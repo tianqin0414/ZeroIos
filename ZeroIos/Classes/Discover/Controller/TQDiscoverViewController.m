@@ -6,13 +6,13 @@
 //  Copyright © 2018年 zeluo. All rights reserved.
 //
 
-#import "DiscoverViewController.h"
+#import "TQDiscoverViewController.h"
 
-@interface DiscoverViewController ()
+@interface TQDiscoverViewController ()
 
 @end
 
-@implementation DiscoverViewController
+@implementation TQDiscoverViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

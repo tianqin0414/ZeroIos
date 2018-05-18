@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SDAppFrameTabBarController : UITabBarController
+@interface TQAppFrameTabBarController : UITabBarController
 
 @end

@@ -1,18 +1,18 @@
 //
-//  ShowViewController.m
+//  MessageViewController.m
 //  ZeroIos
 //
 //  Created by Tianq on 2018/5/18.
 //  Copyright © 2018年 zeluo. All rights reserved.
 //
 
-#import "ShowViewController.h"
+#import "TQMessageViewController.h"
 
-@interface ShowViewController ()
+@interface TQMessageViewController ()
 
 @end
 
-@implementation ShowViewController
+@implementation TQMessageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -6,13 +6,13 @@
 //  Copyright © 2018年 zeluo. All rights reserved.
 //
 
-#import "ZeroViewController.h"
+#import "TQZeroViewController.h"
 
-@interface ZeroViewController ()
+@interface TQZeroViewController ()
 
 @end
 
-@implementation ZeroViewController
+@implementation TQZeroViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

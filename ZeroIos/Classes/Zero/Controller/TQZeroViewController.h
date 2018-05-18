@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZeroViewController : UITableViewController
+@interface TQZeroViewController : UITableViewController
 
 @end

@@ -6,53 +6,53 @@
 //  Copyright © 2018年 zeluo. All rights reserved.
 //
 
-#import "SDAppFrameTabBarController.h"
-#import "ZeroViewController.h"
+#import "TQAppFrameTabBarController.h"
+#import "TQZeroViewController.h"
 
 #define kClassKey   @"rootVCClassString"
 #define kTitleKey   @"title"
 #define kImgKey     @"imageName"
 #define kSelImgKey  @"selectedImageName"
-#define Global_tintColor [UIColor colorWithRed:0 green:(190 / 255.0) blue:(12 / 255.0) alpha:1]
-@interface SDAppFrameTabBarController ()
+
+@interface TQAppFrameTabBarController ()
 
 @end
 
-@implementation SDAppFrameTabBarController
+@implementation TQAppFrameTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSArray *childItemsArray=@[
                                @{
-                                   kClassKey:@"ZeroViewController",
+                                   kClassKey:@"TQZeroViewController",
                                    kTitleKey  : localized_Zero,
                                    kImgKey    : @"iconfont_home",
                                    kSelImgKey : @"iconfont_home_current"},
                                
                                @{
-                                   kClassKey:@"ShowViewController",
+                                   kClassKey:@"TQShowViewController",
                                    kTitleKey  : localized_Show,
                                    kImgKey    : @"iconfont_show",
                                    kSelImgKey : @"iconfont_show_current"},
                                
                                @{
-                                   kClassKey:@"DiscoverViewController",
+                                   kClassKey:@"TQDiscoverViewController",
                                    kTitleKey  :localized_Discover ,
                                    kImgKey    : @"iconfont_discover",
                                    kSelImgKey : @"iconfont_discover"},//Tianq
                                @{
-                                   kClassKey:@"MessageViewController",
+                                   kClassKey:@"TQMessageViewController",
                                    kTitleKey  :localized_Message ,
                                    kImgKey    : @"iconfont_information",
                                    kSelImgKey : @"iconfont_information_current"},
                                @{
-                                   kClassKey:@"MeViewController",
+                                   kClassKey:@"TQMeViewController",
                                    kTitleKey  : localized_Me,
                                    kImgKey    : @"iconfont_mine",
                                    kSelImgKey : @"iconfont_mine_current"},
                                ];
     [childItemsArray enumerateObjectsUsingBlock:^(NSDictionary *dict,NSUInteger idx,BOOL *stop){
-               
+        
         UIViewController *vc = [NSClassFromString(dict[kClassKey]) new];
         UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:vc];
 

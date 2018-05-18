@@ -1,5 +1,5 @@
 //
-//  MessageViewController.h
+//  DiscoverViewController.h
 //  ZeroIos
 //
 //  Created by Tianq on 2018/5/18.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MessageViewController : UITableViewController
+@interface TQDiscoverViewController : UITableViewController
 
 @end

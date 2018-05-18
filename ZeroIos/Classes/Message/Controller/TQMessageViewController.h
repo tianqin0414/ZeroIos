@@ -1,5 +1,5 @@
 //
-//  ShowViewController.h
+//  MessageViewController.h
 //  ZeroIos
 //
 //  Created by Tianq on 2018/5/18.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShowViewController : UITableViewController
+@interface TQMessageViewController : UITableViewController
 
 @end

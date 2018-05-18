@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9566304320AAB6C200F8A40E /* SDAppFrameTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9566304220AAB6C200F8A40E /* SDAppFrameTabBarController.m */; };
+		9566304320AAB6C200F8A40E /* TQAppFrameTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9566304220AAB6C200F8A40E /* TQAppFrameTabBarController.m */; };
 		95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955E9420A4C0E600755AE7 /* AppDelegate.m */; };
 		95955E9D20A4C0E800755AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95955E9C20A4C0E800755AE7 /* Assets.xcassets */; };
 		95955EA320A4C0E800755AE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955EA220A4C0E800755AE7 /* main.m */; };
@@ -16,11 +16,12 @@
 		95A3242220AC0B5D00F7F5C6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95A3242420AC0B5D00F7F5C6 /* InfoPlist.strings */; };
 		95A3242720AC0BDA00F7F5C6 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95A3242620AC0BDA00F7F5C6 /* Storyboard.storyboard */; };
 		95A3242A20AC0C3300F7F5C6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 95A3242C20AC0C3300F7F5C6 /* Localizable.strings */; };
-		95A3244920AC864900F7F5C6 /* ZeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3244820AC864900F7F5C6 /* ZeroViewController.m */; };
-		95A3245620AE9B9100F7F5C6 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245520AE9B9100F7F5C6 /* DiscoverViewController.m */; };
-		95A3245920AE9BAA00F7F5C6 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245820AE9BAA00F7F5C6 /* MessageViewController.m */; };
+		95A3244920AC864900F7F5C6 /* TQZeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3244820AC864900F7F5C6 /* TQZeroViewController.m */; };
+		95A3245620AE9B9100F7F5C6 /* TQDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245520AE9B9100F7F5C6 /* TQDiscoverViewController.m */; };
+		95A3245920AE9BAA00F7F5C6 /* TQMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245820AE9BAA00F7F5C6 /* TQMessageViewController.m */; };
 		95A3245C20AE9BB700F7F5C6 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245B20AE9BB700F7F5C6 /* MeViewController.m */; };
-		95A3246820AEB34700F7F5C6 /* ShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3246720AEB34700F7F5C6 /* ShowViewController.m */; };
+		95A3246820AEB34700F7F5C6 /* TQShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3246720AEB34700F7F5C6 /* TQShowViewController.m */; };
+		95A3246C20AEFB3000F7F5C6 /* TQUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3246B20AEFB3000F7F5C6 /* TQUserModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9566304120AAB6C200F8A40E /* SDAppFrameTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDAppFrameTabBarController.h; sourceTree = "<group>"; };
-		9566304220AAB6C200F8A40E /* SDAppFrameTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDAppFrameTabBarController.m; sourceTree = "<group>"; };
+		9566304120AAB6C200F8A40E /* TQAppFrameTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQAppFrameTabBarController.h; sourceTree = "<group>"; };
+		9566304220AAB6C200F8A40E /* TQAppFrameTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQAppFrameTabBarController.m; sourceTree = "<group>"; };
 		95955E9020A4C0E600755AE7 /* ZeroIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeroIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95955E9320A4C0E600755AE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		95955E9420A4C0E600755AE7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,16 +62,18 @@
 		95A3242620AC0BDA00F7F5C6 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		95A3242B20AC0C3300F7F5C6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		95A3242E20AC0E2B00F7F5C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		95A3244720AC864900F7F5C6 /* ZeroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZeroViewController.h; sourceTree = "<group>"; };
-		95A3244820AC864900F7F5C6 /* ZeroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZeroViewController.m; sourceTree = "<group>"; };
-		95A3245420AE9B9100F7F5C6 /* DiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
-		95A3245520AE9B9100F7F5C6 /* DiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
-		95A3245720AE9BAA00F7F5C6 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
-		95A3245820AE9BAA00F7F5C6 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		95A3244720AC864900F7F5C6 /* TQZeroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQZeroViewController.h; sourceTree = "<group>"; };
+		95A3244820AC864900F7F5C6 /* TQZeroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQZeroViewController.m; sourceTree = "<group>"; };
+		95A3245420AE9B9100F7F5C6 /* TQDiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQDiscoverViewController.h; sourceTree = "<group>"; };
+		95A3245520AE9B9100F7F5C6 /* TQDiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQDiscoverViewController.m; sourceTree = "<group>"; };
+		95A3245720AE9BAA00F7F5C6 /* TQMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQMessageViewController.h; sourceTree = "<group>"; };
+		95A3245820AE9BAA00F7F5C6 /* TQMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQMessageViewController.m; sourceTree = "<group>"; };
 		95A3245A20AE9BB700F7F5C6 /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
 		95A3245B20AE9BB700F7F5C6 /* MeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
-		95A3246620AEB34700F7F5C6 /* ShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowViewController.h; sourceTree = "<group>"; };
-		95A3246720AEB34700F7F5C6 /* ShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShowViewController.m; sourceTree = "<group>"; };
+		95A3246620AEB34700F7F5C6 /* TQShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQShowViewController.h; sourceTree = "<group>"; };
+		95A3246720AEB34700F7F5C6 /* TQShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQShowViewController.m; sourceTree = "<group>"; };
+		95A3246A20AEFB3000F7F5C6 /* TQUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQUserModel.h; sourceTree = "<group>"; };
+		95A3246B20AEFB3000F7F5C6 /* TQUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQUserModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +136,8 @@
 		9566304020AAB61700F8A40E /* AppFrame */ = {
 			isa = PBXGroup;
 			children = (
-				9566304120AAB6C200F8A40E /* SDAppFrameTabBarController.h */,
-				9566304220AAB6C200F8A40E /* SDAppFrameTabBarController.m */,
+				9566304120AAB6C200F8A40E /* TQAppFrameTabBarController.h */,
+				9566304220AAB6C200F8A40E /* TQAppFrameTabBarController.m */,
 			);
 			path = AppFrame;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 		95A3241720AC097E00F7F5C6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				95A3246920AEFAD200F7F5C6 /* Model */,
 				95A3241820AC09B500F7F5C6 /* Global */,
 				95A3241620AB31D100F7F5C6 /* AppDelegate */,
 				9566304020AAB61700F8A40E /* AppFrame */,
@@ -268,8 +272,8 @@
 		95A3243B20AC7E1D00F7F5C6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				95A3244720AC864900F7F5C6 /* ZeroViewController.h */,
-				95A3244820AC864900F7F5C6 /* ZeroViewController.m */,
+				95A3244720AC864900F7F5C6 /* TQZeroViewController.h */,
+				95A3244820AC864900F7F5C6 /* TQZeroViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,8 +295,8 @@
 		95A3243E20AC7E4000F7F5C6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				95A3246620AEB34700F7F5C6 /* ShowViewController.h */,
-				95A3246720AEB34700F7F5C6 /* ShowViewController.m */,
+				95A3246620AEB34700F7F5C6 /* TQShowViewController.h */,
+				95A3246720AEB34700F7F5C6 /* TQShowViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -314,8 +318,8 @@
 		95A3244120AC7E4B00F7F5C6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				95A3245720AE9BAA00F7F5C6 /* MessageViewController.h */,
-				95A3245820AE9BAA00F7F5C6 /* MessageViewController.m */,
+				95A3245720AE9BAA00F7F5C6 /* TQMessageViewController.h */,
+				95A3245820AE9BAA00F7F5C6 /* TQMessageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -374,10 +378,19 @@
 		95A3245320AE9B7A00F7F5C6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				95A3245420AE9B9100F7F5C6 /* DiscoverViewController.h */,
-				95A3245520AE9B9100F7F5C6 /* DiscoverViewController.m */,
+				95A3245420AE9B9100F7F5C6 /* TQDiscoverViewController.h */,
+				95A3245520AE9B9100F7F5C6 /* TQDiscoverViewController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		95A3246920AEFAD200F7F5C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95A3246A20AEFB3000F7F5C6 /* TQUserModel.h */,
+				95A3246B20AEFB3000F7F5C6 /* TQUserModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,13 +526,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				95955EA320A4C0E800755AE7 /* main.m in Sources */,
-				95A3245620AE9B9100F7F5C6 /* DiscoverViewController.m in Sources */,
-				9566304320AAB6C200F8A40E /* SDAppFrameTabBarController.m in Sources */,
-				95A3244920AC864900F7F5C6 /* ZeroViewController.m in Sources */,
+				95A3245620AE9B9100F7F5C6 /* TQDiscoverViewController.m in Sources */,
+				9566304320AAB6C200F8A40E /* TQAppFrameTabBarController.m in Sources */,
+				95A3244920AC864900F7F5C6 /* TQZeroViewController.m in Sources */,
 				95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */,
 				95A3245C20AE9BB700F7F5C6 /* MeViewController.m in Sources */,
-				95A3245920AE9BAA00F7F5C6 /* MessageViewController.m in Sources */,
-				95A3246820AEB34700F7F5C6 /* ShowViewController.m in Sources */,
+				95A3245920AE9BAA00F7F5C6 /* TQMessageViewController.m in Sources */,
+				95A3246C20AEFB3000F7F5C6 /* TQUserModel.m in Sources */,
+				95A3246820AEB34700F7F5C6 /* TQShowViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
