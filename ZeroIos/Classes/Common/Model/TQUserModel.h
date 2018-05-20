@@ -12,5 +12,5 @@
 @property (nonatomic, copy) NSString *Id;
 @property (nonatomic, copy) NSString *nickName;
 @property (nonatomic, copy) NSString *imageName;
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *realName;
 @end

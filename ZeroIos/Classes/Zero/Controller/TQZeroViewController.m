@@ -7,6 +7,7 @@
 //
 
 #import "TQZeroViewController.h"
+#import "TQZeroViewCell.h"
 
 @interface TQZeroViewController ()
 
@@ -16,14 +17,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    XMGLogFunc;
-    NSLog(@"哈哈哈");
+    //self.view.backgroundColor=[UIColor redColor];
+    self.tableView.rowHeight = 100;
+    UITableViewCell *cell=[[UITableViewCell alloc]init];
+    cell.backgroundColor=[UIColor yellowColor];
+    
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Table view data source
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //return self.deals.count;
+    return 2;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //创建cell
+    TQZeroViewCell *cell = [TQZeroViewCell cellWithTableView:tableView];
+    // 取出模型数据
+    //cell.model = self.deals[indexPath.row];
+    TQUserModel *model =[[TQUserModel alloc]init];
+    model.imageName=@"0.jpg";
+    cell.model=model;
+    return cell;
 }
 
 /*

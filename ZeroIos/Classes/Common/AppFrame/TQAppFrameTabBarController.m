@@ -38,18 +38,18 @@
                                @{
                                    kClassKey:@"TQDiscoverViewController",
                                    kTitleKey  :localized_Discover ,
-                                   kImgKey    : @"iconfont_discover",
-                                   kSelImgKey : @"iconfont_discover"},//Tianq
+                                   kImgKey    : @"tabbar_discover",
+                                   kSelImgKey : @"tabbar_discoverHL"},
                                @{
                                    kClassKey:@"TQMessageViewController",
                                    kTitleKey  :localized_Message ,
-                                   kImgKey    : @"iconfont_information",
-                                   kSelImgKey : @"iconfont_information_current"},
+                                   kImgKey    : @"tabbar_mainframe",
+                                   kSelImgKey : @"tabbar_mainframeHL"},
                                @{
                                    kClassKey:@"TQMeViewController",
                                    kTitleKey  : localized_Me,
-                                   kImgKey    : @"iconfont_mine",
-                                   kSelImgKey : @"iconfont_mine_current"},
+                                   kImgKey    : @"tabbar_me",
+                                   kSelImgKey : @"tabbar_meHL"},
                                ];
     [childItemsArray enumerateObjectsUsingBlock:^(NSDictionary *dict,NSUInteger idx,BOOL *stop){
         

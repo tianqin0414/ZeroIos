@@ -7,6 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950EA50620AF071B00CEEC45 /* TQZeroViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 950EA50520AF071B00CEEC45 /* TQZeroViewCell.m */; };
+		950EA50B20B15B3600CEEC45 /* TQShowViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 950EA50A20B15B3600CEEC45 /* TQShowViewCell.m */; };
+		950EA50E20B1CA6C00CEEC45 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA50D20B1CA6C00CEEC45 /* 0.jpg */; };
+		950EA52720B1CAD400CEEC45 /* 19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA50F20B1CAD000CEEC45 /* 19.jpg */; };
+		950EA52820B1CAD400CEEC45 /* 20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51020B1CAD000CEEC45 /* 20.jpg */; };
+		950EA52920B1CAD400CEEC45 /* 21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51120B1CAD000CEEC45 /* 21.jpg */; };
+		950EA52A20B1CAD400CEEC45 /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51220B1CAD000CEEC45 /* 22.jpg */; };
+		950EA52B20B1CAD400CEEC45 /* 23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51320B1CAD000CEEC45 /* 23.jpg */; };
+		950EA52C20B1CAD400CEEC45 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51420B1CAD000CEEC45 /* 1.jpg */; };
+		950EA52D20B1CAD400CEEC45 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51520B1CAD100CEEC45 /* 4.jpg */; };
+		950EA52E20B1CAD400CEEC45 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51620B1CAD100CEEC45 /* 13.jpg */; };
+		950EA52F20B1CAD400CEEC45 /* 16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51720B1CAD100CEEC45 /* 16.jpg */; };
+		950EA53020B1CAD400CEEC45 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51820B1CAD100CEEC45 /* 9.jpg */; };
+		950EA53120B1CAD400CEEC45 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51920B1CAD100CEEC45 /* 0.jpg */; };
+		950EA53220B1CAD400CEEC45 /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51A20B1CAD100CEEC45 /* 17.jpg */; };
+		950EA53320B1CAD400CEEC45 /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51B20B1CAD200CEEC45 /* 18.jpg */; };
+		950EA53420B1CAD400CEEC45 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51C20B1CAD200CEEC45 /* 6.jpg */; };
+		950EA53520B1CAD400CEEC45 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51D20B1CAD200CEEC45 /* 7.jpg */; };
+		950EA53620B1CAD400CEEC45 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51E20B1CAD200CEEC45 /* 3.jpg */; };
+		950EA53720B1CAD400CEEC45 /* 11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51F20B1CAD200CEEC45 /* 11.jpg */; };
+		950EA53820B1CAD400CEEC45 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA52020B1CAD300CEEC45 /* 10.jpg */; };
+		950EA53920B1CAD400CEEC45 /* 12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA52120B1CAD300CEEC45 /* 12.jpg */; };
+		950EA53A20B1CAD400CEEC45 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA52220B1CAD300CEEC45 /* 2.jpg */; };
+		950EA53B20B1CAD400CEEC45 /* 14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA52320B1CAD300CEEC45 /* 14.jpg */; };
+		950EA53C20B1CAD400CEEC45 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA52420B1CAD300CEEC45 /* 5.jpg */; };
+		950EA53D20B1CAD400CEEC45 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA52520B1CAD300CEEC45 /* 8.jpg */; };
+		950EA53E20B1CAD400CEEC45 /* 15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA52620B1CAD300CEEC45 /* 15.jpg */; };
+		950EA54420B1CADF00CEEC45 /* icon2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA53F20B1CADE00CEEC45 /* icon2.jpg */; };
+		950EA54520B1CADF00CEEC45 /* icon0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA54020B1CADE00CEEC45 /* icon0.jpg */; };
+		950EA54620B1CADF00CEEC45 /* icon4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA54120B1CADE00CEEC45 /* icon4.jpg */; };
+		950EA54720B1CADF00CEEC45 /* icon1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA54220B1CADE00CEEC45 /* icon1.jpg */; };
+		950EA54820B1CADF00CEEC45 /* icon3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA54320B1CADF00CEEC45 /* icon3.jpg */; };
 		9566304320AAB6C200F8A40E /* TQAppFrameTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9566304220AAB6C200F8A40E /* TQAppFrameTabBarController.m */; };
 		95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955E9420A4C0E600755AE7 /* AppDelegate.m */; };
 		95955E9D20A4C0E800755AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95955E9C20A4C0E800755AE7 /* Assets.xcassets */; };
@@ -19,9 +51,10 @@
 		95A3244920AC864900F7F5C6 /* TQZeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3244820AC864900F7F5C6 /* TQZeroViewController.m */; };
 		95A3245620AE9B9100F7F5C6 /* TQDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245520AE9B9100F7F5C6 /* TQDiscoverViewController.m */; };
 		95A3245920AE9BAA00F7F5C6 /* TQMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245820AE9BAA00F7F5C6 /* TQMessageViewController.m */; };
-		95A3245C20AE9BB700F7F5C6 /* MeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245B20AE9BB700F7F5C6 /* MeViewController.m */; };
+		95A3245C20AE9BB700F7F5C6 /* TQMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3245B20AE9BB700F7F5C6 /* TQMeViewController.m */; };
 		95A3246820AEB34700F7F5C6 /* TQShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3246720AEB34700F7F5C6 /* TQShowViewController.m */; };
 		95A3246C20AEFB3000F7F5C6 /* TQUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A3246B20AEFB3000F7F5C6 /* TQUserModel.m */; };
+		A0724C02E9F5FBC54BDFC5D6 /* libPods-ZeroIos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB657199B2875C88630CE09 /* libPods-ZeroIos.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +75,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		630F56747CC5CE3B00F69CB2 /* Pods-ZeroIos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroIos.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZeroIos/Pods-ZeroIos.release.xcconfig"; sourceTree = "<group>"; };
+		950EA50420AF071B00CEEC45 /* TQZeroViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQZeroViewCell.h; sourceTree = "<group>"; };
+		950EA50520AF071B00CEEC45 /* TQZeroViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQZeroViewCell.m; sourceTree = "<group>"; };
+		950EA50920B15B3600CEEC45 /* TQShowViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQShowViewCell.h; sourceTree = "<group>"; };
+		950EA50A20B15B3600CEEC45 /* TQShowViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQShowViewCell.m; sourceTree = "<group>"; };
+		950EA50D20B1CA6C00CEEC45 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
+		950EA50F20B1CAD000CEEC45 /* 19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 19.jpg; sourceTree = "<group>"; };
+		950EA51020B1CAD000CEEC45 /* 20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20.jpg; sourceTree = "<group>"; };
+		950EA51120B1CAD000CEEC45 /* 21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 21.jpg; sourceTree = "<group>"; };
+		950EA51220B1CAD000CEEC45 /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
+		950EA51320B1CAD000CEEC45 /* 23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 23.jpg; sourceTree = "<group>"; };
+		950EA51420B1CAD000CEEC45 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		950EA51520B1CAD100CEEC45 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		950EA51620B1CAD100CEEC45 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
+		950EA51720B1CAD100CEEC45 /* 16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16.jpg; sourceTree = "<group>"; };
+		950EA51820B1CAD100CEEC45 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
+		950EA51920B1CAD100CEEC45 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 0.jpg; path = "../../../../Temp2018/GSD_WeiXin-master/GSD_WeiXin(wechat)/Others/Resources/Images/cell_icons/0.jpg"; sourceTree = "<group>"; };
+		950EA51A20B1CAD100CEEC45 /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.jpg; sourceTree = "<group>"; };
+		950EA51B20B1CAD200CEEC45 /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
+		950EA51C20B1CAD200CEEC45 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		950EA51D20B1CAD200CEEC45 /* 7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 7.jpg; sourceTree = "<group>"; };
+		950EA51E20B1CAD200CEEC45 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		950EA51F20B1CAD200CEEC45 /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
+		950EA52020B1CAD300CEEC45 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		950EA52120B1CAD300CEEC45 /* 12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 12.jpg; sourceTree = "<group>"; };
+		950EA52220B1CAD300CEEC45 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		950EA52320B1CAD300CEEC45 /* 14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 14.jpg; sourceTree = "<group>"; };
+		950EA52420B1CAD300CEEC45 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		950EA52520B1CAD300CEEC45 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
+		950EA52620B1CAD300CEEC45 /* 15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 15.jpg; sourceTree = "<group>"; };
+		950EA53F20B1CADE00CEEC45 /* icon2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon2.jpg; sourceTree = "<group>"; };
+		950EA54020B1CADE00CEEC45 /* icon0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon0.jpg; sourceTree = "<group>"; };
+		950EA54120B1CADE00CEEC45 /* icon4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon4.jpg; sourceTree = "<group>"; };
+		950EA54220B1CADE00CEEC45 /* icon1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon1.jpg; sourceTree = "<group>"; };
+		950EA54320B1CADF00CEEC45 /* icon3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon3.jpg; sourceTree = "<group>"; };
 		9566304120AAB6C200F8A40E /* TQAppFrameTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQAppFrameTabBarController.h; sourceTree = "<group>"; };
 		9566304220AAB6C200F8A40E /* TQAppFrameTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQAppFrameTabBarController.m; sourceTree = "<group>"; };
 		95955E9020A4C0E600755AE7 /* ZeroIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZeroIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,12 +136,14 @@
 		95A3245520AE9B9100F7F5C6 /* TQDiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQDiscoverViewController.m; sourceTree = "<group>"; };
 		95A3245720AE9BAA00F7F5C6 /* TQMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQMessageViewController.h; sourceTree = "<group>"; };
 		95A3245820AE9BAA00F7F5C6 /* TQMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQMessageViewController.m; sourceTree = "<group>"; };
-		95A3245A20AE9BB700F7F5C6 /* MeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MeViewController.h; sourceTree = "<group>"; };
-		95A3245B20AE9BB700F7F5C6 /* MeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeViewController.m; sourceTree = "<group>"; };
+		95A3245A20AE9BB700F7F5C6 /* TQMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQMeViewController.h; sourceTree = "<group>"; };
+		95A3245B20AE9BB700F7F5C6 /* TQMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQMeViewController.m; sourceTree = "<group>"; };
 		95A3246620AEB34700F7F5C6 /* TQShowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQShowViewController.h; sourceTree = "<group>"; };
 		95A3246720AEB34700F7F5C6 /* TQShowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQShowViewController.m; sourceTree = "<group>"; };
 		95A3246A20AEFB3000F7F5C6 /* TQUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQUserModel.h; sourceTree = "<group>"; };
 		95A3246B20AEFB3000F7F5C6 /* TQUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQUserModel.m; sourceTree = "<group>"; };
+		B540401FB84561A22DAD9CFB /* Pods-ZeroIos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZeroIos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZeroIos/Pods-ZeroIos.debug.xcconfig"; sourceTree = "<group>"; };
+		DFB657199B2875C88630CE09 /* libPods-ZeroIos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZeroIos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0724C02E9F5FBC54BDFC5D6 /* libPods-ZeroIos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,12 +172,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41BC686EC9A8FB0FDC2ABF1B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFB657199B2875C88630CE09 /* libPods-ZeroIos.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9503BDBF20A4C77C00269805 /* Supportting Files */ = {
 			isa = PBXGroup;
 			children = (
 				95955EA220A4C0E800755AE7 /* main.m */,
 			);
 			path = "Supportting Files";
+			sourceTree = "<group>";
+		};
+		950EA50C20B1CA5B00CEEC45 /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+				950EA51920B1CAD100CEEC45 /* 0.jpg */,
+				950EA51420B1CAD000CEEC45 /* 1.jpg */,
+				950EA52220B1CAD300CEEC45 /* 2.jpg */,
+				950EA51E20B1CAD200CEEC45 /* 3.jpg */,
+				950EA51520B1CAD100CEEC45 /* 4.jpg */,
+				950EA54020B1CADE00CEEC45 /* icon0.jpg */,
+				950EA54220B1CADE00CEEC45 /* icon1.jpg */,
+				950EA53F20B1CADE00CEEC45 /* icon2.jpg */,
+				950EA54320B1CADF00CEEC45 /* icon3.jpg */,
+				950EA54120B1CADE00CEEC45 /* icon4.jpg */,
+				950EA52420B1CAD300CEEC45 /* 5.jpg */,
+				950EA51C20B1CAD200CEEC45 /* 6.jpg */,
+				950EA51D20B1CAD200CEEC45 /* 7.jpg */,
+				950EA52520B1CAD300CEEC45 /* 8.jpg */,
+				950EA51820B1CAD100CEEC45 /* 9.jpg */,
+				950EA52020B1CAD300CEEC45 /* 10.jpg */,
+				950EA51F20B1CAD200CEEC45 /* 11.jpg */,
+				950EA52120B1CAD300CEEC45 /* 12.jpg */,
+				950EA51620B1CAD100CEEC45 /* 13.jpg */,
+				950EA52320B1CAD300CEEC45 /* 14.jpg */,
+				950EA52620B1CAD300CEEC45 /* 15.jpg */,
+				950EA51720B1CAD100CEEC45 /* 16.jpg */,
+				950EA51A20B1CAD100CEEC45 /* 17.jpg */,
+				950EA51B20B1CAD200CEEC45 /* 18.jpg */,
+				950EA50F20B1CAD000CEEC45 /* 19.jpg */,
+				950EA51020B1CAD000CEEC45 /* 20.jpg */,
+				950EA51120B1CAD000CEEC45 /* 21.jpg */,
+				950EA51220B1CAD000CEEC45 /* 22.jpg */,
+				950EA51320B1CAD000CEEC45 /* 23.jpg */,
+				950EA50D20B1CA6C00CEEC45 /* 0.jpg */,
+			);
+			path = Temp;
 			sourceTree = "<group>";
 		};
 		9566303E20AAA59C00F8A40E /* Classes */ = {
@@ -125,6 +241,7 @@
 		9566303F20AAA5B300F8A40E /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				950EA50C20B1CA5B00CEEC45 /* Temp */,
 				95955E9C20A4C0E800755AE7 /* Assets.xcassets */,
 				95955EA120A4C0E800755AE7 /* Info.plist */,
 				9503BDBF20A4C77C00269805 /* Supportting Files */,
@@ -149,6 +266,8 @@
 				95955E9220A4C0E600755AE7 /* ZeroIos */,
 				95955EAB20A4C0E800755AE7 /* ZeroIosTests */,
 				95955EB620A4C0E800755AE7 /* ZeroIosUITests */,
+				E0473063D592113ECB6A0501 /* Pods */,
+				41BC686EC9A8FB0FDC2ABF1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -281,6 +400,8 @@
 		95A3243C20AC7E1E00F7F5C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				950EA50420AF071B00CEEC45 /* TQZeroViewCell.h */,
+				950EA50520AF071B00CEEC45 /* TQZeroViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +432,8 @@
 		95A3244020AC7E4000F7F5C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				950EA50920B15B3600CEEC45 /* TQShowViewCell.h */,
+				950EA50A20B15B3600CEEC45 /* TQShowViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,8 +471,8 @@
 		95A3244520AC7E5600F7F5C6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				95A3245A20AE9BB700F7F5C6 /* MeViewController.h */,
-				95A3245B20AE9BB700F7F5C6 /* MeViewController.m */,
+				95A3245A20AE9BB700F7F5C6 /* TQMeViewController.h */,
+				95A3245B20AE9BB700F7F5C6 /* TQMeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -393,6 +516,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E0473063D592113ECB6A0501 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B540401FB84561A22DAD9CFB /* Pods-ZeroIos.debug.xcconfig */,
+				630F56747CC5CE3B00F69CB2 /* Pods-ZeroIos.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -400,6 +532,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95955EBC20A4C0E800755AE7 /* Build configuration list for PBXNativeTarget "ZeroIos" */;
 			buildPhases = (
+				E18D023BC71EC42F2C27331F /* [CP] Check Pods Manifest.lock */,
 				95955E8C20A4C0E600755AE7 /* Sources */,
 				95955E8D20A4C0E600755AE7 /* Frameworks */,
 				95955E8E20A4C0E600755AE7 /* Resources */,
@@ -497,8 +630,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950EA53B20B1CAD400CEEC45 /* 14.jpg in Resources */,
+				950EA53220B1CAD400CEEC45 /* 17.jpg in Resources */,
+				950EA52E20B1CAD400CEEC45 /* 13.jpg in Resources */,
+				950EA53C20B1CAD400CEEC45 /* 5.jpg in Resources */,
+				950EA52D20B1CAD400CEEC45 /* 4.jpg in Resources */,
+				950EA53420B1CAD400CEEC45 /* 6.jpg in Resources */,
+				950EA54820B1CADF00CEEC45 /* icon3.jpg in Resources */,
+				950EA53820B1CAD400CEEC45 /* 10.jpg in Resources */,
+				950EA52C20B1CAD400CEEC45 /* 1.jpg in Resources */,
+				950EA54720B1CADF00CEEC45 /* icon1.jpg in Resources */,
+				950EA53020B1CAD400CEEC45 /* 9.jpg in Resources */,
+				950EA53120B1CAD400CEEC45 /* 0.jpg in Resources */,
+				950EA53920B1CAD400CEEC45 /* 12.jpg in Resources */,
+				950EA54420B1CADF00CEEC45 /* icon2.jpg in Resources */,
+				950EA53520B1CAD400CEEC45 /* 7.jpg in Resources */,
+				950EA52B20B1CAD400CEEC45 /* 23.jpg in Resources */,
+				950EA53E20B1CAD400CEEC45 /* 15.jpg in Resources */,
+				950EA52F20B1CAD400CEEC45 /* 16.jpg in Resources */,
+				950EA52920B1CAD400CEEC45 /* 21.jpg in Resources */,
+				950EA53720B1CAD400CEEC45 /* 11.jpg in Resources */,
+				950EA52820B1CAD400CEEC45 /* 20.jpg in Resources */,
+				950EA53620B1CAD400CEEC45 /* 3.jpg in Resources */,
 				95A3242220AC0B5D00F7F5C6 /* InfoPlist.strings in Resources */,
+				950EA54620B1CADF00CEEC45 /* icon4.jpg in Resources */,
+				950EA52720B1CAD400CEEC45 /* 19.jpg in Resources */,
+				950EA53D20B1CAD400CEEC45 /* 8.jpg in Resources */,
+				950EA50E20B1CA6C00CEEC45 /* 0.jpg in Resources */,
 				95A3242A20AC0C3300F7F5C6 /* Localizable.strings in Resources */,
+				950EA53320B1CAD400CEEC45 /* 18.jpg in Resources */,
+				950EA54520B1CADF00CEEC45 /* icon0.jpg in Resources */,
+				950EA52A20B1CAD400CEEC45 /* 22.jpg in Resources */,
+				950EA53A20B1CAD400CEEC45 /* 2.jpg in Resources */,
 				95955E9D20A4C0E800755AE7 /* Assets.xcassets in Resources */,
 				95A3242720AC0BDA00F7F5C6 /* Storyboard.storyboard in Resources */,
 			);
@@ -520,6 +683,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E18D023BC71EC42F2C27331F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZeroIos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		95955E8C20A4C0E600755AE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -530,8 +714,10 @@
 				9566304320AAB6C200F8A40E /* TQAppFrameTabBarController.m in Sources */,
 				95A3244920AC864900F7F5C6 /* TQZeroViewController.m in Sources */,
 				95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */,
-				95A3245C20AE9BB700F7F5C6 /* MeViewController.m in Sources */,
+				95A3245C20AE9BB700F7F5C6 /* TQMeViewController.m in Sources */,
 				95A3245920AE9BAA00F7F5C6 /* TQMessageViewController.m in Sources */,
+				950EA50620AF071B00CEEC45 /* TQZeroViewCell.m in Sources */,
+				950EA50B20B15B3600CEEC45 /* TQShowViewCell.m in Sources */,
 				95A3246C20AEFB3000F7F5C6 /* TQUserModel.m in Sources */,
 				95A3246820AEB34700F7F5C6 /* TQShowViewController.m in Sources */,
 			);
@@ -712,6 +898,7 @@
 		};
 		95955EBD20A4C0E800755AE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B540401FB84561A22DAD9CFB /* Pods-ZeroIos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -731,6 +918,7 @@
 		};
 		95955EBE20A4C0E800755AE7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 630F56747CC5CE3B00F69CB2 /* Pods-ZeroIos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
