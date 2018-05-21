@@ -55,13 +55,13 @@
         
         UIViewController *vc = [NSClassFromString(dict[kClassKey]) new];
         UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:vc];
-
         
         UITabBarItem *item = nav.tabBarItem;
         item.title=dict[kTitleKey];
         item.image=[UIImage  imageNamed:dict[kImgKey]];
         item.selectedImage = [[UIImage imageNamed:dict[kSelImgKey]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-           //[item setTitleTextAttributes:@{NSForegroundColorAttributeName : Global_tintColor} forState:UIControlStateSelected];
+        [item setTitleTextAttributes:@{NSForegroundColorAttributeName : Global_tintColor} forState:UIControlStateSelected];
+        //添加导航控制器为tabbarcontroller的子控制器
         [self addChildViewController:nav];
     }];
     

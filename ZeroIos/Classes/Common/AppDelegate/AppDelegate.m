@@ -18,13 +18,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  
+    // 创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
+    // 设置窗口的根控制器
     self.window.rootViewController=[TQAppFrameTabBarController new];
+    // 显示窗口
     [self.window makeKeyAndVisible];
+    [self setupNavBar];
     
-        //self.window.rootViewController = [SDAppFrameTabBarController new];
     return YES;
 }
 
@@ -56,5 +57,14 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - setup
 
+- (void)setupNavBar
+{
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    UINavigationBar *bar = [UINavigationBar appearance];
+    CGFloat rgb = 0.1;
+    bar.barTintColor = [UIColor colorWithRed:rgb green:rgb blue:rgb alpha:0.9];
+    bar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+}
 @end

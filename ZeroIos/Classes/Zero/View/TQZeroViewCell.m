@@ -8,7 +8,7 @@
 
 #import "TQZeroViewCell.h"
 @interface TQZeroViewCell()
-+ (CGFloat)fixedHeight;
+
 @end
 
 @implementation TQZeroViewCell
@@ -35,11 +35,11 @@
         [self.contentView addSubview:_iconImageView];
         
         
-        CGFloat margin = 8;
+        CGFloat margin = 18;
         
        _iconImageView.sd_layout
         .leftSpaceToView(self.contentView, margin)
-        .widthIs(70)
+        .widthIs(64)
         .heightEqualToWidth()
         .centerYEqualToView(self.contentView);
         
@@ -66,9 +66,6 @@
     
 }
 
-+ (CGFloat)fixedHeight
-{
-    return 50;
-}
+
 
 @end
