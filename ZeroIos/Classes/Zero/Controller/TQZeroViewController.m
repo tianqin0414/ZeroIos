@@ -49,22 +49,30 @@
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //return self.deals.count;
-    return 2;
+    return 20;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //创建cell
     TQZeroViewCell *cell = [TQZeroViewCell cellWithTableView:tableView];
-    // 取出模型数据
-    //cell.model = self.deals[indexPath.row];
     TQUserModel *model =[[TQUserModel alloc]init];
-    model.imageName=@"0.jpg";
-    model.nickName=@"wo123阿访";
-    model.gender=0;
+    // 取出模型数据
+    for (int i=0; i<20; i++) {
+        
+        
+        model.imageName=[SDAnalogDataGenerator randomIconImageName];
+        model.nickName=[SDAnalogDataGenerator randomName];
+        //model.gender=arc4random_uniform(1);
+        model.gender=0;
+        NSLog(@"%d",i);
+        model.distance=[NSNumber numberWithDouble:1.26];
+          cell.model=model;
+    }
+   
     
     
-    model.distance=[NSNumber numberWithDouble:1.26];
-    cell.model=model;
+    
+  
     return cell;
 }
 

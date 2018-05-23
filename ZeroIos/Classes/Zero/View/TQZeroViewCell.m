@@ -76,7 +76,7 @@
         .centerYEqualToView(self.contentView);
         
         
-        _nickName.backgroundColor=[UIColor redColor];
+        //_nickName.backgroundColor=[UIColor redColor];
         _nickName.sd_layout
         .leftSpaceToView(_iconImageView, margin *0.7)
         .topEqualToView(_iconImageView)

@@ -20,6 +20,10 @@
 #import "TQUserModel.h"
 #define Global_tintColor [UIColor colorWithRed:0 green:(190 / 255.0) blue:(12 / 255.0) alpha:1]
 
+
+#pragma mark - -------------------------零时数据(正式版删除)-------------------------
+#import "SDAnalogDataGenerator.h"
+
 #ifdef DEBUG
 #define XMGLog(...) NSLog(__VA_ARGS__)
 #else
