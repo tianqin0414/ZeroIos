@@ -24,7 +24,7 @@
 
 + (instancetype)cellWithTableView:(UITableView *)tableView
 {
-    static NSString *ID = @"ZeroUser";
+    static NSString *ID = @"ZeroUserNearby";
     // 创建cell
     TQZeroViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (cell == nil) {
