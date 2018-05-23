@@ -13,4 +13,6 @@
 @property (nonatomic, copy) NSString *nickName;
 @property (nonatomic, copy) NSString *imageName;
 @property (nonatomic, copy) NSString *realName;
+@property (nonatomic, copy) NSNumber *distance;
+@property (nonatomic, assign) BOOL gender;
 @end

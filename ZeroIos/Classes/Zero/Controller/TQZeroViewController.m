@@ -59,6 +59,11 @@
     //cell.model = self.deals[indexPath.row];
     TQUserModel *model =[[TQUserModel alloc]init];
     model.imageName=@"0.jpg";
+    model.nickName=@"wo123阿访";
+    model.gender=0;
+    
+    
+    model.distance=[NSNumber numberWithDouble:1.26];
     cell.model=model;
     return cell;
 }
