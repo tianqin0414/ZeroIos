@@ -37,6 +37,7 @@
 {
     if(self=[super initWithStyle:style reuseIdentifier:reuseIdentifier])
     {
+        NSLog(@"%d",1);
         //头像
         _iconImageView = [[UIImageView alloc] init];
         

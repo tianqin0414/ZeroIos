@@ -39,6 +39,7 @@
 		950EA54620B1CADF00CEEC45 /* icon4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA54120B1CADE00CEEC45 /* icon4.jpg */; };
 		950EA54720B1CADF00CEEC45 /* icon1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA54220B1CADE00CEEC45 /* icon1.jpg */; };
 		950EA54820B1CADF00CEEC45 /* icon3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA54320B1CADF00CEEC45 /* icon3.jpg */; };
+		95156DAE20B6B15F00DA0A44 /* TQBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95156DAD20B6B15F00DA0A44 /* TQBaseTableViewController.m */; };
 		9566304320AAB6C200F8A40E /* TQAppFrameTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9566304220AAB6C200F8A40E /* TQAppFrameTabBarController.m */; };
 		9593E34320B5C9C7002D6DC1 /* SDAnalogDataGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9593E34220B5C9C7002D6DC1 /* SDAnalogDataGenerator.m */; };
 		95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955E9420A4C0E600755AE7 /* AppDelegate.m */; };
@@ -111,6 +112,8 @@
 		950EA54120B1CADE00CEEC45 /* icon4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon4.jpg; sourceTree = "<group>"; };
 		950EA54220B1CADE00CEEC45 /* icon1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon1.jpg; sourceTree = "<group>"; };
 		950EA54320B1CADF00CEEC45 /* icon3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon3.jpg; sourceTree = "<group>"; };
+		95156DAC20B6B15100DA0A44 /* TQBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQBaseTableViewController.h; sourceTree = "<group>"; };
+		95156DAD20B6B15F00DA0A44 /* TQBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQBaseTableViewController.m; sourceTree = "<group>"; };
 		9566304120AAB6C200F8A40E /* TQAppFrameTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQAppFrameTabBarController.h; sourceTree = "<group>"; };
 		9566304220AAB6C200F8A40E /* TQAppFrameTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQAppFrameTabBarController.m; sourceTree = "<group>"; };
 		9593E34120B5C9C6002D6DC1 /* SDAnalogDataGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAnalogDataGenerator.h; sourceTree = "<group>"; };
@@ -337,6 +340,8 @@
 			isa = PBXGroup;
 			children = (
 				95A3241920AC09D800F7F5C6 /* PrefixHeader.pch */,
+				95156DAD20B6B15F00DA0A44 /* TQBaseTableViewController.m */,
+				95156DAC20B6B15100DA0A44 /* TQBaseTableViewController.h */,
 				95A3242420AC0B5D00F7F5C6 /* InfoPlist.strings */,
 				95A3242C20AC0C3300F7F5C6 /* Localizable.strings */,
 			);
@@ -717,6 +722,7 @@
 				95955EA320A4C0E800755AE7 /* main.m in Sources */,
 				95A3245620AE9B9100F7F5C6 /* TQDiscoverViewController.m in Sources */,
 				9566304320AAB6C200F8A40E /* TQAppFrameTabBarController.m in Sources */,
+				95156DAE20B6B15F00DA0A44 /* TQBaseTableViewController.m in Sources */,
 				95A3244920AC864900F7F5C6 /* TQZeroViewController.m in Sources */,
 				9593E34320B5C9C7002D6DC1 /* SDAnalogDataGenerator.m in Sources */,
 				95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */,

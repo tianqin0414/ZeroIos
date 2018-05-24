@@ -6,8 +6,8 @@
 //  Copyright © 2018年 zeluo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TQBaseTableViewController.h"
 
-@interface TQZeroViewController : UITableViewController
+@interface TQZeroViewController :TQBaseTableViewController
 
 @end

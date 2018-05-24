@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setupDataWithCount:20];
     self.navigationItem.title=@"附近的人";
     // 设置导航栏右边的按钮
     UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -28,8 +30,6 @@
     self.navigationItem.rightBarButtonItems = @[
                                                 [[UIBarButtonItem alloc] initWithCustomView:settingButton],
                                                 ];
-    
-    
     self.tableView.rowHeight = 80;
     self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
     
@@ -48,31 +48,33 @@
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //return self.deals.count;
-    return 20;
+    return self.dataArray.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //创建cell
-    TQZeroViewCell *cell = [TQZeroViewCell cellWithTableView:tableView];
-    TQUserModel *model =[[TQUserModel alloc]init];
+
+
+-(void)setupDataWithCount:(NSInteger)count
+{
+    
     // 取出模型数据
-    for (int i=0; i<20; i++) {
-        
-        
+    for (int i=0; i<count; i++) {
+        TQUserModel *model =[[TQUserModel alloc]init];
         model.imageName=[SDAnalogDataGenerator randomIconImageName];
         model.nickName=[SDAnalogDataGenerator randomName];
         //model.gender=arc4random_uniform(1);
         model.gender=0;
-        NSLog(@"%d",i);
+        //NSLog(@"%d",i);
         model.distance=[NSNumber numberWithDouble:1.26];
-          cell.model=model;
-    }
-   
+        [self.dataArray addObject:model];
+}
+
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //创建cell
+    NSLog(@"%d",2);
+    TQZeroViewCell *cell = [TQZeroViewCell cellWithTableView:tableView];
+    cell.model=self.dataArray[indexPath.row];
     
-    
-    
-  
     return cell;
 }
 
