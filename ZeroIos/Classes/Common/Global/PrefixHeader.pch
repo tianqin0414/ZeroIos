@@ -17,20 +17,26 @@
 
 
 #pragma mark - -------------------------自定义类-------------------------
+#ifdef __OBJC__//只有oc文件引入
 #import "TQUserModel.h"
+
+#endif
 #define Global_tintColor [UIColor colorWithRed:0 green:(190 / 255.0) blue:(12 / 255.0) alpha:1]
 
+#pragma mark - -------------------------常用方法-------------------------
+#define TQLog(...)  [NSString stringWithFormat:@" %@ ", __VA_ARGS__]
 
 #pragma mark - -------------------------零时数据(正式版删除)-------------------------
 #import "SDAnalogDataGenerator.h"
 
 #ifdef DEBUG
 #define XMGLog(...) NSLog(__VA_ARGS__)
+#define XMGLogFunc XMGLog(@"%s", __func__)
 #else
 #define XMGLog(...)
 #endif
 
-#define XMGLogFunc XMGLog(@"%s", __func__)
+
 
 //多语言
 #define localized_Zero NSLocalizedString(@"Zero", nil)

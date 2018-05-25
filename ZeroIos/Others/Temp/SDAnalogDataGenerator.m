@@ -27,12 +27,15 @@
  */
 
 #import "SDAnalogDataGenerator.h"
-
+@class TQIdNumberData;
 static NSArray *namesArray;
 static NSArray *iconNamesArray;
 static NSArray *messagesArray;
-
+static NSArray<TQIdNumberData *> *idNumber;
 @implementation SDAnalogDataGenerator
+
+
+
 
 + (NSString *)randomName
 {
@@ -51,6 +54,14 @@ static NSArray *messagesArray;
     int randomIndex = arc4random_uniform((int)[self messages].count);
     return messagesArray[randomIndex];
 }
+
+//-(TQIdNumberData *)randomIdNumber
+//{
+//    TQIdNumberData *test=[[TQIdNumberData alloc]init];
+//    //test.idNumber= [NSNumber numberWithInt:4];
+//    return test;
+//
+//}
 
 + (NSArray *)names
 {
@@ -128,5 +139,6 @@ static NSArray *messagesArray;
     }
     return messagesArray;
 }
+
 
 @end

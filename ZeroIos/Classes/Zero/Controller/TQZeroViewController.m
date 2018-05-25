@@ -55,24 +55,22 @@
 
 -(void)setupDataWithCount:(NSInteger)count
 {
-    
     // 取出模型数据
     for (int i=0; i<count; i++) {
         TQUserModel *model =[[TQUserModel alloc]init];
         model.imageName=[SDAnalogDataGenerator randomIconImageName];
         model.nickName=[SDAnalogDataGenerator randomName];
-        //model.gender=arc4random_uniform(1);
-        model.gender=0;
-        //NSLog(@"%d",i);
-        model.distance=[NSNumber numberWithDouble:1.26];
+        model.gender=arc4random_uniform(2);
+        //model.idNumberArray
+      model.signature=[SDAnalogDataGenerator randomMessage];
+        model.distance=[NSNumber numberWithDouble:arc4random_uniform(999)];
         [self.dataArray addObject:model];
+    }
 }
 
-}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     //创建cell
-    NSLog(@"%d",2);
-    TQZeroViewCell *cell = [TQZeroViewCell cellWithTableView:tableView];
+     TQZeroViewCell *cell = [TQZeroViewCell cellWithTableView:tableView];
     cell.model=self.dataArray[indexPath.row];
     
     return cell;
