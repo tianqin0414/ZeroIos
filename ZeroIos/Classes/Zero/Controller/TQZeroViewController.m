@@ -61,7 +61,7 @@
         model.imageName=[SDAnalogDataGenerator randomIconImageName];
         model.nickName=[SDAnalogDataGenerator randomName];
         model.gender=arc4random_uniform(2);
-        //model.idNumberArray
+        model.idNumberArray=[SDAnalogDataGenerator randomIdNumber];
       model.signature=[SDAnalogDataGenerator randomMessage];
         model.distance=[NSNumber numberWithDouble:arc4random_uniform(999)];
         [self.dataArray addObject:model];

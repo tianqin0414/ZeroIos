@@ -149,8 +149,8 @@
     NSString *distance=[tempNum stringFromNumber :model.distance];
     _distance.text=[NSString stringWithFormat:@"%@%@", distance, @"km" ];
     _signature.text=model.signature;
-    _verfication.text=@" 387956977 ";
-    //_verfication.text=TQLog(model.nickName) ;
+    //_verfication.text=@" 387956977 ";
+    _verfication.text=[NSString stringWithFormat:@"%@", model.idNumberArray[0].idNumber];
 }
 
 

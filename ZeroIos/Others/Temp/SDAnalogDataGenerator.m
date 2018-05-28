@@ -147,6 +147,7 @@ static NSMutableArray<TQIdNumber *> *idNumberArray;
         
         
         for (NSString *key in number) {
+            idNumberArray=[NSMutableArray array];
             idData.idNumber=@([key integerValue]);
             NSString *value=[number valueForKey:key];
             idData.idValue=@([value integerValue]);
