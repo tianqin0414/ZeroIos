@@ -27,20 +27,11 @@
  */
 
 #import <Foundation/Foundation.h>
-@class TQIdNumberData;
 @interface SDAnalogDataGenerator : NSObject
 
 + (NSString *)randomName;
 + (NSString *)randomIconImageName;
 + (NSString *)randomMessage;
-//+ (NSString *)randomMessageTQT;
-//+(NSArray *)<TQIdNumberData *> randomMessageTQT;
-//@property (nonatomic, copy) NSArray<TQIdNumberData *> *randomIdNumber;
--(TQIdNumberData *)randomIdNumber;
-@end
-
-@interface TQIdNumberData : NSObject
-@property (nonatomic, copy) NSNumber *idNumber;
-@property (nonatomic, copy) NSNumber *idValue;
++ (NSMutableArray<TQIdNumber *> *)randomIdNumber;
 @end
 

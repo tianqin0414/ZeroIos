@@ -27,14 +27,18 @@
  */
 
 #import "SDAnalogDataGenerator.h"
-@class TQIdNumberData;
+
 static NSArray *namesArray;
 static NSArray *iconNamesArray;
 static NSArray *messagesArray;
-static NSArray<TQIdNumberData *> *idNumber;
+static NSMutableArray<TQIdNumber *> *idNumberArray;
 @implementation SDAnalogDataGenerator
 
-
++ (NSMutableArray<TQIdNumber *> *)randomIdNumber
+{
+    
+    return [self idNumbers];
+}
 
 
 + (NSString *)randomName
@@ -54,14 +58,6 @@ static NSArray<TQIdNumberData *> *idNumber;
     int randomIndex = arc4random_uniform((int)[self messages].count);
     return messagesArray[randomIndex];
 }
-
-//-(TQIdNumberData *)randomIdNumber
-//{
-//    TQIdNumberData *test=[[TQIdNumberData alloc]init];
-//    //test.idNumber= [NSNumber numberWithInt:4];
-//    return test;
-//
-//}
 
 + (NSArray *)names
 {
@@ -140,5 +136,31 @@ static NSArray<TQIdNumberData *> *idNumber;
     return messagesArray;
 }
 
++ (NSMutableArray *)idNumbers
+{
+    NSDictionary *number=@{ @"88888":@"500000",
+                            @"60645": @"7000",
+                            @"4613769873":@"300",
+                            @"81364":@"1434"};
+    TQIdNumber *idData=[[TQIdNumber alloc]init];
+    if (!idNumberArray) {
+        
+        
+        for (NSString *key in number) {
+            idData.idNumber=@([key integerValue]);
+            NSString *value=[number valueForKey:key];
+            idData.idValue=@([value integerValue]);
+            [idNumberArray addObject:idData];
+        }
+    }
+    
+    return idNumberArray;
+}
 
 @end
+
+
+
+
+
+

@@ -11,3 +11,6 @@
 @implementation TQUserModel
 
 @end
+@implementation TQIdNumber
+
+@end
