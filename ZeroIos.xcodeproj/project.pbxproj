@@ -40,6 +40,19 @@
 		950EA54720B1CADF00CEEC45 /* icon1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA54220B1CADE00CEEC45 /* icon1.jpg */; };
 		950EA54820B1CADF00CEEC45 /* icon3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA54320B1CADF00CEEC45 /* icon3.jpg */; };
 		95156DAE20B6B15F00DA0A44 /* TQBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95156DAD20B6B15F00DA0A44 /* TQBaseTableViewController.m */; };
+		9544CEDD20BC181A00A3B48B /* IMMessageExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CED720BC181A00A3B48B /* IMMessageExt.framework */; };
+		9544CEDE20BC181A00A3B48B /* IMGroupExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CED820BC181A00A3B48B /* IMGroupExt.framework */; };
+		9544CEDF20BC181A00A3B48B /* QALSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CED920BC181A00A3B48B /* QALSDK.framework */; };
+		9544CEE020BC181A00A3B48B /* TLSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CEDA20BC181A00A3B48B /* TLSSDK.framework */; };
+		9544CEE120BC181A00A3B48B /* IMFriendshipExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CEDB20BC181A00A3B48B /* IMFriendshipExt.framework */; };
+		9544CEE220BC181A00A3B48B /* ImSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CEDC20BC181A00A3B48B /* ImSDK.framework */; };
+		9544CEE420BC188000A3B48B /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CEE320BC188000A3B48B /* CoreTelephony.framework */; };
+		9544CEE620BC189900A3B48B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CEE520BC189900A3B48B /* SystemConfiguration.framework */; };
+		9544CEE820BC18AD00A3B48B /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CEE720BC18AD00A3B48B /* libstdc++.6.tbd */; };
+		9544CEEA20BC18BE00A3B48B /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CEE920BC18BE00A3B48B /* libc++.tbd */; };
+		9544CEEC20BC18D500A3B48B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CEEB20BC18D500A3B48B /* libz.tbd */; };
+		9544CEEE20BC191A00A3B48B /* IMSDKBugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CEED20BC191A00A3B48B /* IMSDKBugly.framework */; };
+		9544CEF020BC214800A3B48B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CEEF20BC214800A3B48B /* libsqlite3.tbd */; };
 		9566304320AAB6C200F8A40E /* TQAppFrameTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9566304220AAB6C200F8A40E /* TQAppFrameTabBarController.m */; };
 		9593E34320B5C9C7002D6DC1 /* SDAnalogDataGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9593E34220B5C9C7002D6DC1 /* SDAnalogDataGenerator.m */; };
 		95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955E9420A4C0E600755AE7 /* AppDelegate.m */; };
@@ -114,6 +127,19 @@
 		950EA54320B1CADF00CEEC45 /* icon3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon3.jpg; sourceTree = "<group>"; };
 		95156DAC20B6B15100DA0A44 /* TQBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQBaseTableViewController.h; sourceTree = "<group>"; };
 		95156DAD20B6B15F00DA0A44 /* TQBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQBaseTableViewController.m; sourceTree = "<group>"; };
+		9544CED720BC181A00A3B48B /* IMMessageExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMMessageExt.framework; sourceTree = "<group>"; };
+		9544CED820BC181A00A3B48B /* IMGroupExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMGroupExt.framework; sourceTree = "<group>"; };
+		9544CED920BC181A00A3B48B /* QALSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QALSDK.framework; sourceTree = "<group>"; };
+		9544CEDA20BC181A00A3B48B /* TLSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TLSSDK.framework; sourceTree = "<group>"; };
+		9544CEDB20BC181A00A3B48B /* IMFriendshipExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMFriendshipExt.framework; sourceTree = "<group>"; };
+		9544CEDC20BC181A00A3B48B /* ImSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImSDK.framework; sourceTree = "<group>"; };
+		9544CEE320BC188000A3B48B /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		9544CEE520BC189900A3B48B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9544CEE720BC18AD00A3B48B /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		9544CEE920BC18BE00A3B48B /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		9544CEEB20BC18D500A3B48B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9544CEED20BC191A00A3B48B /* IMSDKBugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMSDKBugly.framework; sourceTree = "<group>"; };
+		9544CEEF20BC214800A3B48B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9566304120AAB6C200F8A40E /* TQAppFrameTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQAppFrameTabBarController.h; sourceTree = "<group>"; };
 		9566304220AAB6C200F8A40E /* TQAppFrameTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQAppFrameTabBarController.m; sourceTree = "<group>"; };
 		9593E34120B5C9C6002D6DC1 /* SDAnalogDataGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAnalogDataGenerator.h; sourceTree = "<group>"; };
@@ -157,6 +183,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9544CEF020BC214800A3B48B /* libsqlite3.tbd in Frameworks */,
+				9544CEEC20BC18D500A3B48B /* libz.tbd in Frameworks */,
+				9544CEEA20BC18BE00A3B48B /* libc++.tbd in Frameworks */,
+				9544CEE820BC18AD00A3B48B /* libstdc++.6.tbd in Frameworks */,
+				9544CEE620BC189900A3B48B /* SystemConfiguration.framework in Frameworks */,
+				9544CEE420BC188000A3B48B /* CoreTelephony.framework in Frameworks */,
+				9544CEDF20BC181A00A3B48B /* QALSDK.framework in Frameworks */,
+				9544CEEE20BC191A00A3B48B /* IMSDKBugly.framework in Frameworks */,
+				9544CEDD20BC181A00A3B48B /* IMMessageExt.framework in Frameworks */,
+				9544CEDE20BC181A00A3B48B /* IMGroupExt.framework in Frameworks */,
+				9544CEE220BC181A00A3B48B /* ImSDK.framework in Frameworks */,
+				9544CEE020BC181A00A3B48B /* TLSSDK.framework in Frameworks */,
+				9544CEE120BC181A00A3B48B /* IMFriendshipExt.framework in Frameworks */,
 				A0724C02E9F5FBC54BDFC5D6 /* libPods-ZeroIos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +220,12 @@
 		41BC686EC9A8FB0FDC2ABF1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9544CEEF20BC214800A3B48B /* libsqlite3.tbd */,
+				9544CEEB20BC18D500A3B48B /* libz.tbd */,
+				9544CEE920BC18BE00A3B48B /* libc++.tbd */,
+				9544CEE720BC18AD00A3B48B /* libstdc++.6.tbd */,
+				9544CEE520BC189900A3B48B /* SystemConfiguration.framework */,
+				9544CEE320BC188000A3B48B /* CoreTelephony.framework */,
 				DFB657199B2875C88630CE09 /* libPods-ZeroIos.a */,
 			);
 			name = Frameworks;
@@ -233,6 +278,28 @@
 			path = Temp;
 			sourceTree = "<group>";
 		};
+		9544CED520BC174A00A3B48B /* ZeroAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				9544CED620BC177700A3B48B /* Framework */,
+			);
+			path = ZeroAdapter;
+			sourceTree = "<group>";
+		};
+		9544CED620BC177700A3B48B /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				9544CEDB20BC181A00A3B48B /* IMFriendshipExt.framework */,
+				9544CEED20BC191A00A3B48B /* IMSDKBugly.framework */,
+				9544CED820BC181A00A3B48B /* IMGroupExt.framework */,
+				9544CED720BC181A00A3B48B /* IMMessageExt.framework */,
+				9544CEDC20BC181A00A3B48B /* ImSDK.framework */,
+				9544CED920BC181A00A3B48B /* QALSDK.framework */,
+				9544CEDA20BC181A00A3B48B /* TLSSDK.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
 		9566303E20AAA59C00F8A40E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +337,7 @@
 		95955E8720A4C0E600755AE7 = {
 			isa = PBXGroup;
 			children = (
+				9544CED520BC174A00A3B48B /* ZeroAdapter */,
 				95955E9120A4C0E600755AE7 /* Products */,
 				95955E9220A4C0E600755AE7 /* ZeroIos */,
 				95955EAB20A4C0E800755AE7 /* ZeroIosTests */,
@@ -915,6 +983,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZeroAdapter/Framework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = ZeroIos/Others/Info.plist;
 				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/ZeroIos/Classes/Common/Global/PrefixHeader.pch";
@@ -935,6 +1007,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ZeroAdapter/Framework",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = ZeroIos/Others/Info.plist;
 				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/ZeroIos/Classes/Common/Global/PrefixHeader.pch";

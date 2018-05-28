@@ -142,12 +142,13 @@ static NSMutableArray<TQIdNumber *> *idNumberArray;
                             @"60645": @"7000",
                             @"4613769873":@"300",
                             @"81364":@"1434"};
-    TQIdNumber *idData=[[TQIdNumber alloc]init];
+    
     if (!idNumberArray) {
-        
-        
+       // TQIdNumber *idData=[[TQIdNumber alloc]init];
+         idNumberArray=[NSMutableArray array];
         for (NSString *key in number) {
-            idNumberArray=[NSMutableArray array];
+       
+            TQIdNumber *idData=[[TQIdNumber alloc]init];
             idData.idNumber=@([key integerValue]);
             NSString *value=[number valueForKey:key];
             idData.idValue=@([value integerValue]);
