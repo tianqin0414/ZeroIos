@@ -278,9 +278,17 @@
 			path = Temp;
 			sourceTree = "<group>";
 		};
+		952D685A20BEDCF300C075D5 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
 		9544CED520BC174A00A3B48B /* ZeroAdapter */ = {
 			isa = PBXGroup;
 			children = (
+				952D685A20BEDCF300C075D5 /* Platform */,
 				9544CED620BC177700A3B48B /* Framework */,
 			);
 			path = ZeroAdapter;

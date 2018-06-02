@@ -44,5 +44,5 @@
 #define localized_Discover NSLocalizedString(@"Discover", nil)
 #define localized_Message NSLocalizedString(@"Message", nil)
 #define localized_Me NSLocalizedString(@"Me", nil)
-
+#define localized_PeopleNearby NSLocalizedString(@"PeopleNearby", nil)
 #endif /* PrefixHeader_pch */

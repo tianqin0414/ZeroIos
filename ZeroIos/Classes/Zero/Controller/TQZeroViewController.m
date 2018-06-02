@@ -19,14 +19,16 @@
     [super viewDidLoad];
     
     [self setupDataWithCount:20];
-    self.navigationItem.title=@"附近的人";
+   
+    self.navigationItem.title=localized_PeopleNearby;
+    
+
     // 设置导航栏右边的按钮
     UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [settingButton setBackgroundImage:[UIImage imageNamed:@"tabbar_me"] forState:UIControlStateNormal];
-    [settingButton setBackgroundImage:[UIImage imageNamed:@"tabbar_me"] forState:UIControlStateHighlighted];
-    settingButton.size = settingButton.currentBackgroundImage.size;
-    [settingButton addTarget:self action:@selector(settingClick) forControlEvents:UIControlEventTouchUpInside];
+    [settingButton setBackgroundImage:[UIImage imageNamed:@"iconMore"] forState:UIControlStateNormal];
+//    [settingButton setBackgroundImage:[UIImage imageNamed:@"iconMore"] forState:UIControlStateHighlighted];
     
+    [settingButton addTarget:self action:@selector(settingClick) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItems = @[
                                                 [[UIBarButtonItem alloc] initWithCustomView:settingButton],
                                                 ];
