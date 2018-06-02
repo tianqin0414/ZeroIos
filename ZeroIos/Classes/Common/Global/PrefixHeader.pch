@@ -19,6 +19,7 @@
 #pragma mark - -------------------------自定义类-------------------------
 #ifdef __OBJC__//只有oc文件引入
 #import "TQUserModel.h"
+#import "TQCategory.h"
 
 #endif
 #define Global_tintColor [UIColor colorWithRed:0 green:(190 / 255.0) blue:(12 / 255.0) alpha:1]

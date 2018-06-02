@@ -8,6 +8,7 @@
 
 #import "TQZeroViewController.h"
 #import "TQZeroViewCell.h"
+#import "LZActionSheet.h"
 
 @interface TQZeroViewController ()
 
@@ -28,7 +29,7 @@
     [settingButton setBackgroundImage:[UIImage imageNamed:@"iconMore"] forState:UIControlStateNormal];
 //    [settingButton setBackgroundImage:[UIImage imageNamed:@"iconMore"] forState:UIControlStateHighlighted];
     
-    [settingButton addTarget:self action:@selector(settingClick) forControlEvents:UIControlEventTouchUpInside];
+    [settingButton addTarget:self action:@selector(rightBarButtonItemClick) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItems = @[
                                                 [[UIBarButtonItem alloc] initWithCustomView:settingButton],
                                                 ];
@@ -37,7 +38,29 @@
     
 }
 
-- (void)settingClick
+#pragma mark - rightBarButtonItemClick
+- (void)rightBarButtonItemClick
+{
+    typeof(self) __weak weakSelf = self;
+    LZActionSheet *sheet = [[LZActionSheet alloc] initWithTitle:nil buttonTitles:@[@"TMQ",@"小视频",@"拍照",@"从手机相册选择"] redButtonIndex:-1 cancelTextColor:[UIColor blackColor] clicked:^(NSInteger buttonIndex) {
+        switch (buttonIndex) {
+            case 0:
+                [weakSelf takeVideo];
+                break;
+            case 1:
+                [weakSelf takeVideo];
+                break;
+            case 2:
+                [weakSelf takeVideo];
+                break;
+        }
+    }];
+    [sheet show];
+    
+}
+
+#pragma mark - 小视频
+- (void)takeVideo
 {
     XMGLogFunc;
 }
