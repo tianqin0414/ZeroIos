@@ -21,7 +21,7 @@
     [super viewDidLoad];
     
     TQActionSheet *sheet = [[TQActionSheet alloc]init];
-    [sheet show];
+    [sheet show];//TQ0604
     [self setupDataWithCount:20];
     self.navigationItem.title=localized_PeopleNearby;
     
