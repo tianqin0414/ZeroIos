@@ -9,7 +9,7 @@
 #ifndef TQCategory_h
 #define TQCategory_h
 
-#import "UIColor+Extension.m"
+#import "UIColor+Extension.h"
 
 
 

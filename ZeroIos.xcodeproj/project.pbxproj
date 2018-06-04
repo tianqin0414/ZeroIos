@@ -40,6 +40,7 @@
 		950EA54720B1CADF00CEEC45 /* icon1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA54220B1CADE00CEEC45 /* icon1.jpg */; };
 		950EA54820B1CADF00CEEC45 /* icon3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA54320B1CADF00CEEC45 /* icon3.jpg */; };
 		95156DAE20B6B15F00DA0A44 /* TQBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95156DAD20B6B15F00DA0A44 /* TQBaseTableViewController.m */; };
+		9519286A20C4464600DAA998 /* TQActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9519286820C4464500DAA998 /* TQActionSheet.m */; };
 		951FD52920C24A2800856799 /* LZActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 951FD52820C24A2700856799 /* LZActionSheet.m */; };
 		951FD52D20C24AD800856799 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 951FD52B20C24AD700856799 /* UIColor+Extension.m */; };
 		9544CEDD20BC181A00A3B48B /* IMMessageExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CED720BC181A00A3B48B /* IMMessageExt.framework */; };
@@ -129,6 +130,8 @@
 		950EA54320B1CADF00CEEC45 /* icon3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon3.jpg; sourceTree = "<group>"; };
 		95156DAC20B6B15100DA0A44 /* TQBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQBaseTableViewController.h; sourceTree = "<group>"; };
 		95156DAD20B6B15F00DA0A44 /* TQBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQBaseTableViewController.m; sourceTree = "<group>"; };
+		9519286820C4464500DAA998 /* TQActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQActionSheet.m; sourceTree = "<group>"; };
+		9519286920C4464600DAA998 /* TQActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQActionSheet.h; sourceTree = "<group>"; };
 		951FD52720C24A2700856799 /* LZActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZActionSheet.h; sourceTree = "<group>"; };
 		951FD52820C24A2700856799 /* LZActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZActionSheet.m; sourceTree = "<group>"; };
 		951FD52B20C24AD700856799 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
@@ -433,6 +436,8 @@
 		95A3241820AC09B500F7F5C6 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				9519286920C4464600DAA998 /* TQActionSheet.h */,
+				9519286820C4464500DAA998 /* TQActionSheet.m */,
 				951FD52720C24A2700856799 /* LZActionSheet.h */,
 				951FD52820C24A2700856799 /* LZActionSheet.m */,
 				95A3241920AC09D800F7F5C6 /* PrefixHeader.pch */,
@@ -821,6 +826,7 @@
 				9566304320AAB6C200F8A40E /* TQAppFrameTabBarController.m in Sources */,
 				95156DAE20B6B15F00DA0A44 /* TQBaseTableViewController.m in Sources */,
 				95A3244920AC864900F7F5C6 /* TQZeroViewController.m in Sources */,
+				9519286A20C4464600DAA998 /* TQActionSheet.m in Sources */,
 				9593E34320B5C9C7002D6DC1 /* SDAnalogDataGenerator.m in Sources */,
 				951FD52D20C24AD800856799 /* UIColor+Extension.m in Sources */,
 				95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */,

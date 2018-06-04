@@ -139,9 +139,11 @@
     
     // 所有按钮的底部view
     UIView *bottomView = [[UIView alloc] init];
-    [bottomView setBackgroundColor:[UIColor stringTOColor:@"#f4f4ea"]];
+    bottomView.width=11.f;
+    bottomView.height=220.f;
+    [bottomView setBackgroundColor:[UIColor stringTOColor:@"#f4f4ea"]];//#d81e06  //f4f4ea
     _bottomView = bottomView;
-    
+  
     if (self.title) {
         
         CGFloat vSpace = 0;
@@ -202,7 +204,8 @@
             [line setImage:lineImage];
             [line setContentMode:UIViewContentModeTop];
             CGFloat lineY = (i + (self.title ? 1 : 0)) * BUTTON_H;
-            [line setFrame:CGRectMake(0, lineY, SCREEN_SIZE.width, 1.0f)];
+           [line setFrame:CGRectMake(0, lineY, SCREEN_SIZE.width, 1.0f)];
+            
             [bottomView addSubview:line];
         }
     }

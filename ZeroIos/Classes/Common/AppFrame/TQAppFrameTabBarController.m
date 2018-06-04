@@ -21,7 +21,7 @@
 @implementation TQAppFrameTabBarController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+   [super viewDidLoad];
     NSArray *childItemsArray=@[
                                @{
                                    kClassKey:@"TQZeroViewController",

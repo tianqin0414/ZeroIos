@@ -9,6 +9,7 @@
 #import "TQZeroViewController.h"
 #import "TQZeroViewCell.h"
 #import "LZActionSheet.h"
+#import "TQActionSheet.h"
 
 @interface TQZeroViewController ()
 
@@ -19,8 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    TQActionSheet *sheet = [[TQActionSheet alloc]init];
+    [sheet show];
     [self setupDataWithCount:20];
-   
     self.navigationItem.title=localized_PeopleNearby;
     
 
@@ -56,7 +58,6 @@
         }
     }];
     [sheet show];
-    
 }
 
 #pragma mark - 小视频
