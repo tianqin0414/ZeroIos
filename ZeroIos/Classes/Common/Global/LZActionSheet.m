@@ -159,7 +159,7 @@
         
         // 标题
         UILabel *label = [[UILabel alloc] init];
-        [label setText:self.title];
+        [label setText:@"这是一个标题"];
         [label setNumberOfLines:2.0f];
         [label setTextColor:KColor(111, 111, 111)];
         [label setTextAlignment:NSTextAlignmentCenter];

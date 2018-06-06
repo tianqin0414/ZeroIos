@@ -49,7 +49,7 @@
         //nickName
         _nickName = [[UILabel alloc] init];
         _nickName.font = [UIFont systemFontOfSize:16];
-        _nickName.textColor = [UIColor blackColor];
+        _nickName.textColor = [UIColor orangeColor];
         _nickName.numberOfLines = 3;
       
         //性别

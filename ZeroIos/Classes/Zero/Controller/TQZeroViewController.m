@@ -19,19 +19,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    TQActionSheet *sheet = [[TQActionSheet alloc]init];
+    __weak TQZeroViewController *weakSelf=self;
+    TQActionSheet *sheet = [[TQActionSheet alloc]initWithSwitch:@"是否健康" buttonTitles:@[@"全部",@"只看男生",@"只看女生",@"自定义"] clicked:^(NSInteger buttonIndex){
+        switch(buttonIndex){
+            case 0:
+                [weakSelf takeVideo];
+                break;
+            case 1:
+                [weakSelf takeVideo];
+                break;
+            case 2:
+                [weakSelf takeVideo];
+                break;
+            case 3:
+                [weakSelf takeVideo];
+                break;
+        }
+    }];
     [sheet show];//TQ0604
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
+    NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self setupDataWithCount:20];
     self.navigationItem.title=localized_PeopleNearby;
+    
     
 
     // 设置导航栏右边的按钮
     UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [settingButton setBackgroundImage:[UIImage imageNamed:@"iconMore"] forState:UIControlStateNormal];
-//    [settingButton setBackgroundImage:[UIImage imageNamed:@"iconMore"] forState:UIControlStateHighlighted];
+    [settingButton setBackgroundImage:[UIImage imageNamed:@"btn_navbar_filter"] forState:UIControlStateNormal];
     
     [settingButton addTarget:self action:@selector(rightBarButtonItemClick) forControlEvents:UIControlEventTouchUpInside];
+    
     self.navigationItem.rightBarButtonItems = @[
                                                 [[UIBarButtonItem alloc] initWithCustomView:settingButton],
                                                 ];
@@ -40,11 +59,12 @@
     
 }
 
+
 #pragma mark - rightBarButtonItemClick
 - (void)rightBarButtonItemClick
 {
     typeof(self) __weak weakSelf = self;
-    LZActionSheet *sheet = [[LZActionSheet alloc] initWithTitle:nil buttonTitles:@[@"TMQ",@"小视频",@"拍照",@"从手机相册选择"] redButtonIndex:-1 cancelTextColor:[UIColor blackColor] clicked:^(NSInteger buttonIndex) {
+    LZActionSheet *sheet = [[LZActionSheet alloc] initWithTitle:@"tt" buttonTitles:@[@"TMQ",@"小视频",@"拍照",@"从手机相册选择"] redButtonIndex:-1 cancelTextColor:[UIColor blackColor] clicked:^(NSInteger buttonIndex) {
         switch (buttonIndex) {
             case 0:
                 [weakSelf takeVideo];
