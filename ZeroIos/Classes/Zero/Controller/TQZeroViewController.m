@@ -19,24 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    __weak TQZeroViewController *weakSelf=self;
-    TQActionSheet *sheet = [[TQActionSheet alloc]initWithSwitch:@"是否健康" buttonTitles:@[@"全部",@"只看男生",@"只看女生",@"自定义"] clicked:^(NSInteger buttonIndex){
-        switch(buttonIndex){
-            case 0:
-                [weakSelf takeVideo];
-                break;
-            case 1:
-                [weakSelf takeVideo];
-                break;
-            case 2:
-                [weakSelf takeVideo];
-                break;
-            case 3:
-                [weakSelf takeVideo];
-                break;
-        }
-    }];
-    [sheet show];//TQ0604
+   
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSFontAttributeName:[UIFont systemFontOfSize:19],
     NSForegroundColorAttributeName:[UIColor whiteColor]}];
@@ -63,17 +46,28 @@
 #pragma mark - rightBarButtonItemClick
 - (void)rightBarButtonItemClick
 {
-    typeof(self) __weak weakSelf = self;
-    LZActionSheet *sheet = [[LZActionSheet alloc] initWithTitle:@"tt" buttonTitles:@[@"TMQ",@"小视频",@"拍照",@"从手机相册选择"] redButtonIndex:-1 cancelTextColor:[UIColor blackColor] clicked:^(NSInteger buttonIndex) {
-        switch (buttonIndex) {
+    __weak TQZeroViewController *weakSelf=self;
+    TQActionSheet *sheet = [[TQActionSheet alloc]initWithSwitch:@"是否健康" buttonTitles:@[@"全部",@"只看男生",@"只看女生",@"自定义"] switched:^(BOOL isSwitchOn) {
+        if (isSwitchOn) {
+            NSLog(@"true");
+        }
+        else{
+            NSLog(@"false");
+        }
+        
+    } clicked:^(NSInteger buttonIndex) {
+        switch(buttonIndex){
             case 0:
                 [weakSelf takeVideo];
                 break;
             case 1:
-                [weakSelf takeVideo];
+                [weakSelf takeVideo1];
                 break;
             case 2:
-                [weakSelf takeVideo];
+                [weakSelf takeVideo2];
+                break;
+            case 3:
+                [weakSelf takeVideo3];
                 break;
         }
     }];
@@ -85,8 +79,18 @@
 {
     XMGLogFunc;
 }
-
-
+- (void)takeVideo1
+{
+    XMGLogFunc;
+}
+- (void)takeVideo2
+{
+    XMGLogFunc;
+}
+- (void)takeVideo3
+{
+    XMGLogFunc;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

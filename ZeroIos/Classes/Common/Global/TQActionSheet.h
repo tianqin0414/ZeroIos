@@ -10,6 +10,7 @@
 
 @class TQActionSheet;
 typedef void(^TQActionSheetBlock)(NSInteger buttonIndex);
+typedef void(^TQUISwitchBlock)(BOOL isSwitchOn);
 @protocol TQActionSheetDelegate <NSObject>
 @optional
 - (void)actionSheet:(TQActionSheet *)actionSheet didClickedButtonAtIndex:(NSInteger)buttonIndex;
@@ -19,12 +20,17 @@ typedef void(^TQActionSheetBlock)(NSInteger buttonIndex);
 
 @property (nonatomic, copy) TQActionSheetBlock clickedBlock;
 
+@property (nonatomic, copy) TQUISwitchBlock switchBlock;
+
+@property (nonatomic, strong) NSMutableArray *buttonTitles;
+
 @property (nonatomic, copy) NSString *switchTitle;
 
 
 -(instancetype)initWithSwitch:(NSString *)title
                  buttonTitles:(NSArray *)buttonTitles
+                    switched:(TQUISwitchBlock)switched
                       clicked:(TQActionSheetBlock)clicked;
 
-@property (nonatomic, weak) id<TQActionSheetDelegate> delegate;
+//@property (nonatomic, weak) id<TQActionSheetDelegate> delegate;
 @end

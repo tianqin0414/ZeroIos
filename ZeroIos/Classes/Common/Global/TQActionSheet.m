@@ -12,7 +12,7 @@
 #define SWITCHTO_MAINVIEW 12
 #define LZ_ACTION_SHEET_TITLE_FONT  [UIFont systemFontOfSize:18.0f]
 @interface TQActionSheet ()
-@property (nonatomic, strong) NSMutableArray *buttonTitles;
+
 
 @property (nonatomic, strong) UIView *darkView;
 
@@ -26,6 +26,7 @@
 
 -(instancetype)initWithSwitch:(NSString *)switchTitle
                  buttonTitles:(NSArray *)buttonTitles
+                     switched:(TQUISwitchBlock)switched
                       clicked:(TQActionSheetBlock)clicked{
     
     if (self = [super init]) {
@@ -33,7 +34,7 @@
         self.switchTitle = switchTitle;
         self.buttonTitles = [[NSMutableArray alloc] initWithArray:buttonTitles];
         self.clickedBlock = clicked;
-
+        self.switchBlock = switched;
     }
     
     return self;
@@ -55,8 +56,21 @@
     UIView *mainView = [[UIView alloc] init];
    [mainView setBackgroundColor:[UIColor stringTOColor:@"#f4f4ea"]];
     
-    _mainView = mainView;
-    
+    [self addSubview:darkView];
+   
+    CGFloat mainY=BUTTON_H*(_buttonTitles.count)+(self.switchTitle!=nil?BUTTON_H/6+BUTTON_H:0);
+
+   [mainView setFrame:CGRectMake(SPACETO_VIEW, SCREEN_HEIGHT/3.5, SCREEN_WIDTH-SPACETO_VIEW*2, mainY)];
+   _mainView = mainView;
+    if (self.switchTitle) {
+        [self setSwitch];
+        
+    }
+   
+    [self setBtn];
+}
+
+-(void)setSwitch{
     //开关view
     UIView *switchBgView=[[UIView alloc]init];
     switchBgView.backgroundColor=[UIColor whiteColor];
@@ -66,35 +80,29 @@
     [label setTextAlignment:NSTextAlignmentLeft];
     [label setFont:LZ_ACTION_SHEET_TITLE_FONT];
     
-
+    
     UISwitch *isHealth=[[UISwitch alloc]init];
     isHealth.tintColor=[UIColor lightGrayColor];
     isHealth.onTintColor=[UIColor SColor];
     
+    [isHealth addTarget:self action:@selector(didClickisHealth:) forControlEvents:UIControlEventValueChanged];
+    
     UIImageView *divisionView=[[UIImageView alloc]init];
     divisionView.backgroundColor=[UIColor stringTOColor:@"#f2f2f2"];
+    [switchBgView setFrame:CGRectMake(0, 0, SCREEN_WIDTH-SPACETO_VIEW*2,BUTTON_H)];
     
-    [self addSubview:darkView];
-    [switchBgView addSubview:label];
-    [switchBgView addSubview:isHealth];
-    [mainView addSubview:switchBgView];
-    [mainView addSubview:divisionView];
-    
-   [mainView setFrame:CGRectMake(SPACETO_VIEW, SCREEN_HEIGHT/3.5, SCREEN_WIDTH-SPACETO_VIEW*2, BUTTON_H)];
-        [switchBgView setFrame:CGRectMake(0, 0, SCREEN_WIDTH-SPACETO_VIEW*2,BUTTON_H)];
- 
     [label setFrame:CGRectMake(SWITCHTO_MAINVIEW, 0, switchBgView.width/2,BUTTON_H)];
     [isHealth setFrame:CGRectMake(SCREEN_WIDTH-SPACETO_VIEW*2-isHealth.width-SWITCHTO_MAINVIEW, 0, switchBgView.width/2,BUTTON_H)];
-isHealth.sd_layout
-    .centerYEqualToView(label);
+
+    isHealth.centerY=label.centerY;
+
     
     [divisionView setFrame:CGRectMake(0, switchBgView.height, switchBgView.width, BUTTON_H/6)];
     
-    [self setBtn];
-}
-
--(void)setSwitch{
-    
+    [switchBgView addSubview:label];
+    [switchBgView addSubview:isHealth];
+    [self.mainView addSubview:switchBgView];
+    [self.mainView addSubview:divisionView];
 }
 
 -(void)setBtn{
@@ -108,35 +116,42 @@ isHealth.sd_layout
             [btn setTag:i];
             [btn setBackgroundColor:[UIColor whiteColor]];
             [btn setTitle:self.buttonTitles[i] forState:UIControlStateNormal];
-           // self.textColor : [UIColor blackColor];
             [[btn titleLabel] setFont:LZ_ACTION_SHEET_TITLE_FONT];
         
             [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             
-            //[btn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];
-            
-            CGFloat btnY = BUTTON_H * (i+1)+BUTTON_H/6;
+          
+            CGFloat btnY;
+            if (_switchTitle) {
+                btnY= (i+1) * BUTTON_H+BUTTON_H/6;
+            }
+            else{
+                btnY= i * BUTTON_H;
+            }
             [btn setFrame:CGRectMake(0, btnY,SCREEN_WIDTH-SPACETO_VIEW*2, BUTTON_H)];
-            [btn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];
+            [btn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];//TQM
           
-          
+
             [self.mainView addSubview:btn];
         }
         
         for (int i = 1; i < self.buttonTitles.count; i++) {
             UIImageView *line = [[UIImageView alloc] init];
             line.backgroundColor=[UIColor stringTOColor:@"#cccccc"];
-            //[line setImage:lineImage];
-            //[line setContentMode:UIViewContentModeTop];
-            CGFloat lineY = (i+1) * BUTTON_H+BUTTON_H/6;
-            [line setFrame:CGRectMake(0,lineY,SCREEN_WIDTH-SPACETO_VIEW*2, 0.015f)];
+            CGFloat lineY;
+            if (_switchTitle) {
+                lineY= (i+1) * BUTTON_H+BUTTON_H/6;
+            }
+            else{
+                lineY= i * BUTTON_H;
+            }
+          
+            [line setFrame:CGRectMake(0,lineY,SCREEN_WIDTH-SPACETO_VIEW*2, 0.18f)];
             [self.mainView addSubview:line];
         }
     }
 }
--(void)rightBarButtonItemClick{
-    NSLog(@"BBB");
-}
+
 
 - (UIWindow *)backWindow {
     if (_backWindow == nil) {
@@ -149,13 +164,17 @@ isHealth.sd_layout
 }
 
 - (void)didClickBtn:(UIButton *)btn {
-    NSLog(@"TTT");
+    //[self dismiss];
 
     
-    if (self.clickedBlock) {
+   // if (self.clickedBlock) {
         
-        self.clickedBlock(1);
-    }
+        self.clickedBlock(btn.tag);
+    //}
+}
+
+-(void)didClickisHealth:(UISwitch *)swt{
+    self.switchBlock([swt isOn]);
 }
 
 -(void)dismiss{

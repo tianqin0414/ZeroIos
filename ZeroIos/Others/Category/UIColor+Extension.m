@@ -8,7 +8,7 @@
 
 #import "UIColor+Extension.h"
 
-@implementation UIColor (Extension)//TQ0602
+@implementation UIColor (Extension)
 
 + (UIColor *)stringTOColor:(NSString *)str
 {
