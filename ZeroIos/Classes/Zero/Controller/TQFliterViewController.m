@@ -41,7 +41,9 @@
     [mainView addSubview:view1];
     //view2
     UIView *view2=[[UIView alloc]init];
-    [view2 setFrame:CGRectMake(0, 2*TitleHeight+rectStatus.size.height, SCREEN_WIDTH, TitleHeight)];
+    [view2 setFrame:CGRectMake(0, 2*TitleHeight+rectStatus.size.height, SCREEN_WIDTH, TitleHeight*1.5)];
+
+
     view2.backgroundColor=[UIColor whiteColor];
     for (int i=0;i<3; i++) {
         // 所有按钮
@@ -50,9 +52,11 @@
         [btn setBackgroundColor:[UIColor whiteColor]];
         [btn setTitle:@"哈哈" forState:UIControlStateNormal];
         [[btn titleLabel] setFont:CFSize];
-
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-
+//        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, btn.frame.size.width, 1)];
+//        lineView.backgroundColor = [UIColor redColor];
+//        [btn addSubview:lineView];
+   
 
         CGFloat btnX;
 
@@ -64,11 +68,6 @@
     }
     [mainView addSubview:view2];
 }
-
-
-    
-
-
 
 
 
@@ -105,11 +104,9 @@
     TQZeroViewController *TQZeroVC=[[TQZeroViewController alloc]init];
        TQZeroVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:TQZeroVC animated:YES];//TQ0611
-    
+    [self dismissViewControllerAnimated:NO completion:nil];
   
-    
-    //[self.navigationController popToViewController:TQZeroVC animated:YES];
-     //[self.navigationController popViewControllerAnimated:YES];
+
 }
 
 -(void)didconfirm{
