@@ -7,6 +7,7 @@
 //
 
 #import "TQFliterViewController.h"
+#import "TQZeroViewController.h"
 #define SPACETO_VIEW 12
 #define CFSize [UIFont systemFontOfSize:20.0f]//ContentFontSize
 #define TitleHeight self.navigationController.navigationBar.frame.size.height
@@ -22,13 +23,14 @@
     [self navigationBar];
     
     UIView *mainView=[[UIView alloc]init];
+    // 状态栏
+    CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];
     [mainView setFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     mainView.backgroundColor=DivisionColor;
     [self.view addSubview:mainView];
     
     CGRect rect=CGRectMake(SPACETO_VIEW, 0, SCREEN_WIDTH, TitleHeight);
-    // 状态栏
-    CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];
+   
     //view1
     UIView *view1=[[UIView alloc]init];
     [view1 setFrame:CGRectMake(0, TitleHeight+rectStatus.size.height, SCREEN_WIDTH, TitleHeight)];
@@ -100,7 +102,14 @@
 }
 
 -(void)didCancel{
-    [self.navigationController popViewControllerAnimated:YES];
+    TQZeroViewController *TQZeroVC=[[TQZeroViewController alloc]init];
+       TQZeroVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:TQZeroVC animated:YES];//TQ0611
+    
+  
+    
+    //[self.navigationController popToViewController:TQZeroVC animated:YES];
+     //[self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)didconfirm{

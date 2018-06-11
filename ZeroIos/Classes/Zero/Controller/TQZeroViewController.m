@@ -25,16 +25,12 @@
        NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self setupDataWithCount:20];
     self.navigationItem.title=localized_PeopleNearby;
-
     
-    //
-    self.hidesBottomBarWhenPushed=YES;
-    TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
-    
-    [self.navigationController pushViewController:filterVC animated:NO];
-    self.hidesBottomBarWhenPushed=NO;
-
-    //
+//    TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
+//
+//    //这样以presentViewController 就可以显示状态栏
+//    UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVC]; //创建一个NavigationController
+//    [self presentViewController: presNavigation animated:YES completion:nil];//
     
     // 设置导航栏右边的按钮
     UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -97,15 +93,25 @@
 }
 - (void)fliterDetail
 {
+    //
+    //    self.hidesBottomBarWhenPushed=YES;
+    //    TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
+    //
+    //    [self.navigationController pushViewController:filterVC animated:NO];
+    //    self.hidesBottomBarWhenPushed=NO;
+    
+    //
+    
     //self.hidesBottomBarWhenPushed=YES;
     TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
-//
-//    [self.navigationController pushViewController:filterVC animated:NO];
-//    self.hidesBottomBarWhenPushed=NO;
-    [self presentViewController: filterVC animated:YES completion:nil];//TQ0611
-    
-    
-    //filterVC.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
+    //
+    //    [self.navigationController pushViewController:filterVC animated:NO];
+    //    self.hidesBottomBarWhenPushed=NO;
+    //这样以presentViewController 就可以显示状态栏
+    UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVC]; //创建一个NavigationController
+    [self presentViewController: presNavigation animated:YES completion:nil];//TQ0611
+    //[self.navigationController pushViewController:filterVC animated:YES];
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
