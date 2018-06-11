@@ -63,8 +63,9 @@
 {
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     UINavigationBar *bar = [UINavigationBar appearance];
+    
     CGFloat rgb = 0.1;
     bar.barTintColor = [UIColor colorWithRed:rgb green:rgb blue:rgb alpha:0.9];
-    bar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    //bar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 }
 @end

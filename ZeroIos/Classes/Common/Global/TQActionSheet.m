@@ -83,12 +83,12 @@
     
     UISwitch *isHealth=[[UISwitch alloc]init];
     isHealth.tintColor=[UIColor lightGrayColor];
-    isHealth.onTintColor=[UIColor SColor];
+    isHealth.onTintColor=SColor;
     
     [isHealth addTarget:self action:@selector(didClickisHealth:) forControlEvents:UIControlEventValueChanged];
     
     UIImageView *divisionView=[[UIImageView alloc]init];
-    divisionView.backgroundColor=[UIColor stringTOColor:@"#f2f2f2"];
+    divisionView.backgroundColor=DivisionColor;
     [switchBgView setFrame:CGRectMake(0, 0, SCREEN_WIDTH-SPACETO_VIEW*2,BUTTON_H)];
     
     [label setFrame:CGRectMake(SWITCHTO_MAINVIEW, 0, switchBgView.width/2,BUTTON_H)];
@@ -164,13 +164,9 @@
 }
 
 - (void)didClickBtn:(UIButton *)btn {
-    //[self dismiss];
+    [self dismiss];
 
-    
-   // if (self.clickedBlock) {
-        
         self.clickedBlock(btn.tag);
-    //}
 }
 
 -(void)didClickisHealth:(UISwitch *)swt{

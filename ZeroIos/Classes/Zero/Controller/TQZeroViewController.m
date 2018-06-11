@@ -8,8 +8,8 @@
 
 #import "TQZeroViewController.h"
 #import "TQZeroViewCell.h"
-#import "LZActionSheet.h"
 #import "TQActionSheet.h"
+#import "TQFliterViewController.h"
 
 @interface TQZeroViewController ()
 
@@ -21,13 +21,21 @@
     [super viewDidLoad];
    
     [self.navigationController.navigationBar setTitleTextAttributes:
-     @{NSFontAttributeName:[UIFont systemFontOfSize:19],
-    NSForegroundColorAttributeName:[UIColor whiteColor]}];
+     @{NSFontAttributeName:[UIFont systemFontOfSize:BFontSize],
+       NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [self setupDataWithCount:20];
     self.navigationItem.title=localized_PeopleNearby;
-    
-    
 
+    
+    //
+    self.hidesBottomBarWhenPushed=YES;
+    TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
+    
+    [self.navigationController pushViewController:filterVC animated:NO];
+    self.hidesBottomBarWhenPushed=NO;
+
+    //
+    
     // 设置导航栏右边的按钮
     UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [settingButton setBackgroundImage:[UIImage imageNamed:@"btn_navbar_filter"] forState:UIControlStateNormal];
@@ -67,7 +75,7 @@
                 [weakSelf takeVideo2];
                 break;
             case 3:
-                [weakSelf takeVideo3];
+                [weakSelf fliterDetail];
                 break;
         }
     }];
@@ -87,9 +95,17 @@
 {
     XMGLogFunc;
 }
-- (void)takeVideo3
+- (void)fliterDetail
 {
-    XMGLogFunc;
+    self.hidesBottomBarWhenPushed=YES;
+    TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
+ 
+    [self.navigationController pushViewController:filterVC animated:NO];
+    self.hidesBottomBarWhenPushed=NO;
+    //[self presentViewController: filterVC animated:YES completion:nil];//TQ0610
+    
+    
+    //filterView.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -126,14 +142,5 @@
     return cell;
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end
