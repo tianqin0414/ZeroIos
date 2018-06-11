@@ -97,15 +97,15 @@
 }
 - (void)fliterDetail
 {
-    self.hidesBottomBarWhenPushed=YES;
+    //self.hidesBottomBarWhenPushed=YES;
     TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
- 
-    [self.navigationController pushViewController:filterVC animated:NO];
-    self.hidesBottomBarWhenPushed=NO;
-    //[self presentViewController: filterVC animated:YES completion:nil];//TQ0610
+//
+//    [self.navigationController pushViewController:filterVC animated:NO];
+//    self.hidesBottomBarWhenPushed=NO;
+    [self presentViewController: filterVC animated:YES completion:nil];//TQ0611
     
     
-    //filterView.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
+    //filterVC.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
