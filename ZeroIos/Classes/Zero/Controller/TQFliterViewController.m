@@ -11,7 +11,8 @@
 #define SPACETO_VIEW 12
 #define CFSize [UIFont systemFontOfSize:20.0f]//ContentFontSize
 #define TitleHeight self.navigationController.navigationBar.frame.size.height
-
+#define FTLineColor  [UIColor lightGrayColor] //fliter line color
+#define FTLineBorder 0.19
 @interface TQFliterViewController ()
 
 @end
@@ -24,11 +25,11 @@
     
     UIView *mainView=[[UIView alloc]init];
     // 状态栏
-    CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];
+    //CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];
     [mainView setFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
     mainView.backgroundColor=DivisionColor;
     [self.view addSubview:mainView];
-    
+   
     CGRect rect=CGRectMake(SPACETO_VIEW, 0, SCREEN_WIDTH, TitleHeight);
    
     //view1
@@ -50,32 +51,45 @@
         UIButton *btn = [[UIButton alloc] init];
         [btn setTag:i];
         [btn setBackgroundColor:[UIColor whiteColor]];
+       
         [btn setTitle:@"哈哈" forState:UIControlStateNormal];
         [[btn titleLabel] setFont:CFSize];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, btn.frame.size.width, 1)];
-//        lineView.backgroundColor = [UIColor redColor];
-//        [btn addSubview:lineView];
-   
+        
+[btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
 
-        CGFloat btnX;
-
-        [btn setFrame:CGRectMake(SCREEN_WIDTH/3*i, 0,SCREEN_WIDTH/3, TitleHeight*1.5)];
+        [btn setFrame:CGRectMake(SCREEN_WIDTH/3*i, 0,SCREEN_WIDTH/3-FTLineBorder, TitleHeight*1.5)];
         [btn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];//TQM
 
-
         [view2 addSubview:btn];
+        if (i!=2) {
+            UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(btn.frame.size.width, 0, FTLineBorder,btn.frame.size.height )];
+            lineView.backgroundColor = FTLineColor;
+            [btn addSubview:lineView];
+            
+        }
+ 
     }
+    
+    UIView *lineView1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, FTLineBorder)];
+    lineView1.backgroundColor = FTLineColor;
+    [view2 addSubview:lineView1];
+    UIView *lineView2  = [[UIView alloc] initWithFrame:CGRectMake(0,TitleHeight*1.5 , SCREEN_WIDTH, FTLineBorder)];
+    lineView2.backgroundColor = FTLineColor;
+    [view2 addSubview:lineView2];
     [mainView addSubview:view2];
 }
 
-
+-(void)didClickBtn:(UIButton *)btn{
+    btn.Selected = YES;
+    NSLog(@"eeee");
+}
 
 -(void)navigationBar{
     self.navigationItem.title=@"筛选";
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSFontAttributeName:[UIFont systemFontOfSize:BFontSize],
-       NSForegroundColorAttributeName:[UIColor whiteColor]}];
+       NSForegroundColorAttributeName:[UIColor orangeColor]}];
     
    
     

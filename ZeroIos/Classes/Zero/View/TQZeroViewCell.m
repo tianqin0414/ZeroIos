@@ -84,7 +84,7 @@
         
         UIView *superView = self.contentView;
         CGFloat margin = 14;
-        CGFloat iconWitdth=64;
+        CGFloat iconWitdth=84;
         _iconImageView.sd_layout
         .leftSpaceToView(superView, margin)
         .widthIs(iconWitdth)

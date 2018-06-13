@@ -10,6 +10,7 @@
 #import "TQZeroViewCell.h"
 #import "TQActionSheet.h"
 #import "TQFliterViewController.h"
+#import "TQZeroHeadView.h"
 
 @interface TQZeroViewController ()
 
@@ -19,30 +20,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSFontAttributeName:[UIFont systemFontOfSize:BFontSize],
-       NSForegroundColorAttributeName:[UIColor whiteColor]}];
+       NSForegroundColorAttributeName:[UIColor blackColor]}];
     [self setupDataWithCount:20];
-    self.navigationItem.title=localized_PeopleNearby;
+    self.navigationItem.title=localized_Zero;
     
-    TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
+    //cell上面
+    TQZeroheadView *headView=[[TQZeroheadView alloc]init];
+    //[headView show];
+    self.tableView.tableHeaderView = headView;
     
-    UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVC]; //创建一个NavigationController
-    [self presentViewController: presNavigation animated:YES completion:nil];
+    
+  
     
     // 设置导航栏右边的按钮
-    UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [settingButton setBackgroundImage:[UIImage imageNamed:@"btn_navbar_filter"] forState:UIControlStateNormal];
+//    UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [settingButton setBackgroundImage:[UIImage imageNamed:@"btn_navbar_filter"] forState:UIControlStateNormal];
+//
+//    [settingButton addTarget:self action:@selector(rightBarButtonItemClick) forControlEvents:UIControlEventTouchUpInside];
+//
+//    self.navigationItem.rightBarButtonItems = @[
+//                                                [[UIBarButtonItem alloc] initWithCustomView:settingButton],
+//                                                ];
     
-    [settingButton addTarget:self action:@selector(rightBarButtonItemClick) forControlEvents:UIControlEventTouchUpInside];
+    self.tableView.rowHeight = 100;
+    self.navigationController.navigationBar.barTintColor = NavigationColor;//#F5E2D6
     
-    self.navigationItem.rightBarButtonItems = @[
-                                                [[UIBarButtonItem alloc] initWithCustomView:settingButton],
-                                                ];
-    self.tableView.rowHeight = 80;
-    self.navigationController.navigationBar.barTintColor = [UIColor blackColor];
-    
+    TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
+
+    UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVC]; //创建一个NavigationController
+    //[self presentViewController: presNavigation animated:YES completion:nil];
 }
 
 

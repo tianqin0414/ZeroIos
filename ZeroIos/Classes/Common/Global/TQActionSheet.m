@@ -182,7 +182,7 @@
 
 -(void)show{
     [self setupMainView];
-    self.frame=CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+    //self.frame=CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);//
 
     
     [self addSubview:self.mainView];

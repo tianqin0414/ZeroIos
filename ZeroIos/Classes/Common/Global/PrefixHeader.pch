@@ -22,7 +22,7 @@
 #import "TQCategory.h"
 
 #endif
-#define Global_tintColor [UIColor colorWithRed:0 green:(190 / 255.0) blue:(12 / 255.0) alpha:1]
+
 
 #pragma mark - -------------------------常用宏-------------------------
 // 1.颜色
@@ -30,6 +30,11 @@
 #define SColor [UIColor stringTOColor:@"#3B61E0"] //SelectedColor  蓝色
 
 #define DivisionColor [UIColor stringTOColor:@"#f2f2f2"]
+
+#define NavigationColor [UIColor stringTOColor:@"#F8F8FF"]
+
+//#define Global_tintColor [UIColor colorWithRed:0 green:(190 / 255.0) blue:(12 / 255.0) alpha:1]
+#define Global_tintColor [UIColor orangeColor]
 
 #define BFontSize 19
 
@@ -40,6 +45,7 @@
 #pragma mark - -------------------------常用方法-------------------------
 #define TQLog(...)  [NSString stringWithFormat:@" %@ ", __VA_ARGS__]
 
+#define rectStatus [[UIApplication sharedApplication] statusBarFrame]
 #pragma mark - -------------------------零时数据(正式版删除)-------------------------
 #import "SDAnalogDataGenerator.h"
 
