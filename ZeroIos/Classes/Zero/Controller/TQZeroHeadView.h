@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class TQZeroheadView;
+typedef void(^TQActionButtonBlock)(BOOL isClicked);
 @interface TQZeroheadView : UIView
 -(void)show;
+@property (nonatomic, copy) TQActionButtonBlock buttonBlock;
+- (instancetype)initWithClick:(TQActionButtonBlock)clicked;
 @end

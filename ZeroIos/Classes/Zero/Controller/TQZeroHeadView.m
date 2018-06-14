@@ -9,11 +9,12 @@
 #import "TQZeroHeadView.h"
 
 @implementation TQZeroheadView
-- (instancetype)init{
+
+- (instancetype)initWithClick:(TQActionButtonBlock)clicked{
     self = [super init]; //用于初始化父类
     if (self) {
-      
-        //[self  setFrame:CGRectMake(0, 0, SCREEN_WIDTH ,35)];//divisionView.size.height+view1.size.height-1)];
+        self.buttonBlock = clicked;
+    CGFloat margin = 14;
         //        do something
         UIImageView *divisionView=[[UIImageView alloc]init];
         divisionView.backgroundColor=DivisionColor;
@@ -23,17 +24,29 @@
         //content
         UIView *view1=[[UIView alloc]init];
         view1.backgroundColor=[UIColor whiteColor];
-        [view1 setFrame:CGRectMake(0, divisionView.size.height, SCREEN_WIDTH, 40)];
+        [view1 setFrame:CGRectMake(0, divisionView.size.height, SCREEN_WIDTH, 50)];
         [self addSubview:view1];
         
         UILabel *label1=[[UILabel alloc]init];
+        [view1 addSubview:label1];
         label1.text=localized_PeopleNearby;
-        label1.textColor=[UIColor redColor];
         label1.sd_layout
-        .leftSpaceToView(self, 150)
+        .leftSpaceToView(view1, margin)
         .widthIs(200)
         .heightIs(view1.size.height);
-        [view1 addSubview:label1];
+    
+        UIButton *fliterButton = [UIButton buttonWithType:UIButtonTypeCustom];
+           [fliterButton setBackgroundImage:[UIImage imageNamed:@"iconFliter"] forState:UIControlStateNormal];
+        
+        [fliterButton addTarget:self action:@selector(didClickFliter:) forControlEvents:UIControlEventTouchUpInside];
+        [view1 addSubview:fliterButton];
+        fliterButton.sd_layout
+        .rightSpaceToView(view1, margin)
+        .widthIs(20)
+        .heightIs(20)
+        .centerYEqualToView(view1);
+        
+
         
 
         UIImageView *divisionView1=[[UIImageView alloc]init];
@@ -53,6 +66,9 @@
     
 }
 
+-(void)didClickFliter:(UIButton *)fliter{
+    self.buttonBlock(YES);
+}
 -(void)show{
     UIImageView *divisionView=[[UIImageView alloc]init];
     divisionView.backgroundColor=DivisionColor;

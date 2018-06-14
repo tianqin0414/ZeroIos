@@ -13,7 +13,7 @@
 #import "TQZeroHeadView.h"
 
 @interface TQZeroViewController ()
-
+@property (nonatomic, strong) TQActionSheet *ActionSheet;
 @end
 
 @implementation TQZeroViewController
@@ -27,8 +27,18 @@
     [self setupDataWithCount:20];
     self.navigationItem.title=localized_Zero;
     
+    //__weak TQZeroViewController *weakSelf=self;
     //cell上面
-    TQZeroheadView *headView=[[TQZeroheadView alloc]init];
+    TQZeroheadView *headView=[[TQZeroheadView alloc]initWithClick:^(BOOL isClicked){
+        if (isClicked==YES) {
+            NSLog(@"eeee");
+            [self rightBarButtonItemClick];
+//            TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
+//
+//            UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVC];
+//             [self presentViewController: presNavigation animated:YES completion:nil];
+        }
+    } ];
     //[headView show];
     self.tableView.tableHeaderView = headView;
     
@@ -48,9 +58,7 @@
     self.tableView.rowHeight = 100;
     self.navigationController.navigationBar.barTintColor = NavigationColor;//#F5E2D6
     
-    TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
-
-    UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVC]; //创建一个NavigationController
+  //创建一个NavigationController
     //[self presentViewController: presNavigation animated:YES completion:nil];
 }
 
@@ -59,7 +67,7 @@
 - (void)rightBarButtonItemClick
 {
     __weak TQZeroViewController *weakSelf=self;
-    TQActionSheet *sheet = [[TQActionSheet alloc]initWithSwitch:@"是否健康" buttonTitles:@[@"全部",@"只看男生",@"只看女生",@"自定义"] switched:^(BOOL isSwitchOn) {
+    self.ActionSheet = [[TQActionSheet alloc]initWithSwitch:@"是否健康" buttonTitles:@[@"全部",@"只看男生",@"只看女生",@"自定义"] switched:^(BOOL isSwitchOn) {
         if (isSwitchOn) {
             NSLog(@"true");
         }
@@ -83,7 +91,7 @@
                 break;
         }
     }];
-    [sheet show];
+    [self.ActionSheet show];
 }
 
 #pragma mark - 小视频
@@ -99,12 +107,14 @@
 {
     XMGLogFunc;
 }
+
 - (void)fliterDetail
 {
-    TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
-
-    UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVC]; //创建一个NavigationController
-    [self presentViewController: presNavigation animated:YES completion:nil];
+    NSLog(@"333");
+                TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
+    
+                UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVC];
+                 [self presentViewController: presNavigation animated:YES completion:nil];
 
 }
 - (void)didReceiveMemoryWarning {
