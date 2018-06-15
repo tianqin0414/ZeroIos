@@ -14,13 +14,14 @@
 
 @interface TQZeroViewController ()
 @property (nonatomic, strong) TQActionSheet *ActionSheet;
+
 @end
 
 @implementation TQZeroViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    __weak TQZeroViewController *weakSelf=self;
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSFontAttributeName:[UIFont systemFontOfSize:BFontSize],
        NSForegroundColorAttributeName:[UIColor blackColor]}];
@@ -32,34 +33,24 @@
     TQZeroheadView *headView=[[TQZeroheadView alloc]initWithClick:^(BOOL isClicked){
         if (isClicked==YES) {
             NSLog(@"eeee");
-            [self rightBarButtonItemClick];
-//            TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
-//
-//            UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVC];
-//             [self presentViewController: presNavigation animated:YES completion:nil];
+            [weakSelf rightBarButtonItemClick];
+
         }
     } ];
     //[headView show];
     self.tableView.tableHeaderView = headView;
     
     
-  
+                TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
     
-    // 设置导航栏右边的按钮
-//    UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [settingButton setBackgroundImage:[UIImage imageNamed:@"btn_navbar_filter"] forState:UIControlStateNormal];
-//
-//    [settingButton addTarget:self action:@selector(rightBarButtonItemClick) forControlEvents:UIControlEventTouchUpInside];
-//
-//    self.navigationItem.rightBarButtonItems = @[
-//                                                [[UIBarButtonItem alloc] initWithCustomView:settingButton],
-//                                                ];
+                UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVC];
+                 [self presentViewController: presNavigation animated:YES completion:nil];
+    
     
     self.tableView.rowHeight = 100;
     self.navigationController.navigationBar.barTintColor = NavigationColor;//#F5E2D6
     
-  //创建一个NavigationController
-    //[self presentViewController: presNavigation animated:YES completion:nil];
+
 }
 
 
@@ -67,7 +58,7 @@
 - (void)rightBarButtonItemClick
 {
     __weak TQZeroViewController *weakSelf=self;
-    self.ActionSheet = [[TQActionSheet alloc]initWithSwitch:@"是否健康" buttonTitles:@[@"全部",@"只看男生",@"只看女生",@"自定义"] switched:^(BOOL isSwitchOn) {
+    TQActionSheet *ActionSheet = [[TQActionSheet alloc]initWithSwitch:@"是否健康" buttonTitles:@[@"全部",@"只看男生",@"只看女生",@"自定义"] switched:^(BOOL isSwitchOn) {
         if (isSwitchOn) {
             NSLog(@"true");
         }
@@ -91,7 +82,7 @@
                 break;
         }
     }];
-    [self.ActionSheet show];
+    [ActionSheet show];
 }
 
 #pragma mark - 小视频

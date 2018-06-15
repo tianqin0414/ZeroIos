@@ -13,6 +13,9 @@
 #define TitleHeight self.navigationController.navigationBar.frame.size.height
 #define FTLineColor  [UIColor lightGrayColor] //fliter line color
 #define FTLineBorder 0.19
+#define Switch_H 60
+#define Margin 25
+
 @interface TQFliterViewController ()
 
 @end
@@ -30,66 +33,80 @@
     mainView.backgroundColor=DivisionColor;
     [self.view addSubview:mainView];
    
-    CGRect rect=CGRectMake(SPACETO_VIEW, 0, SCREEN_WIDTH, TitleHeight);
    
-    //view1
-    UIView *view1=[[UIView alloc]init];
-    [view1 setFrame:CGRectMake(0, TitleHeight+rectStatus.size.height, SCREEN_WIDTH, TitleHeight)];
-    UILabel *label1=[[UILabel alloc]initWithFrame:rect];
-    label1.text=@"想看到的用户";
-    label1.textColor=[UIColor grayColor];
-    [view1 addSubview:label1];
-    [mainView addSubview:view1];
-    //view2
-    UIView *view2=[[UIView alloc]init];
-    [view2 setFrame:CGRectMake(0, 2*TitleHeight+rectStatus.size.height, SCREEN_WIDTH, TitleHeight*1.5)];
-
-
-    view2.backgroundColor=[UIColor whiteColor];
-    for (int i=0;i<3; i++) {
-        // 所有按钮
-        UIButton *btn = [[UIButton alloc] init];
-        [btn setTag:i];
-        [btn setBackgroundColor:[UIColor whiteColor]];
-       
-        [btn setTitle:@"哈哈" forState:UIControlStateNormal];
-        [[btn titleLabel] setFont:CFSize];
-        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        
-[btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
-
-        [btn setFrame:CGRectMake(SCREEN_WIDTH/3*i, 0,SCREEN_WIDTH/3-FTLineBorder, TitleHeight*1.5)];
-        [btn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];//TQM
-
-        [view2 addSubview:btn];
-        if (i!=2) {
-            UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(btn.frame.size.width, 0, FTLineBorder,btn.frame.size.height )];
-            lineView.backgroundColor = FTLineColor;
-            [btn addSubview:lineView];
-            
-        }
- 
-    }
     
-    UIView *lineView1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, FTLineBorder)];
-    lineView1.backgroundColor = FTLineColor;
-    [view2 addSubview:lineView1];
-    UIView *lineView2  = [[UIView alloc] initWithFrame:CGRectMake(0,TitleHeight*1.5 , SCREEN_WIDTH, FTLineBorder)];
-    lineView2.backgroundColor = FTLineColor;
-    [view2 addSubview:lineView2];
-    [mainView addSubview:view2];
+    UIView *switchView=[[UIView alloc]init];
+    switchView.backgroundColor=[UIColor whiteColor];
+    [mainView addSubview:switchView];
+    switchView.sd_layout
+    .topSpaceToView(view2,FTLineBorder+5)
+    .heightIs(Switch_H*3)
+    .widthIs(view2.width);
+    NSArray *arrSwitch=@[@"是否健康",@"座驾",@"房产"];
+    for (int i=0; i<arrSwitch.count; i++) {
+        UIView *view3=[[UIView alloc]init];
+       
+        [switchView addSubview:view3];
+        view3.sd_layout
+        .topSpaceToView(switchView,FTLineBorder+Switch_H*i)
+        .heightIs(Switch_H)
+        .widthIs(view2.width);
+        
+        UILabel *lb=[[UILabel alloc]init];
+        [view3 addSubview:lb];
+        lb.text=arrSwitch[i];
+        lb.font = CFSize;
+        lb.sd_layout
+        .leftSpaceToView(view3,Margin )
+        .widthIs(SCREEN_WIDTH/2)
+        .heightIs(Switch_H);
+        
+        UISwitch *swt=[[UISwitch alloc]init];
+        [swt setTag:i];
+        [view3 addSubview:swt];
+        swt.sd_layout
+        .rightSpaceToView(view3, Margin)
+        .widthIs(SCREEN_WIDTH/2)
+        .heightIs(Switch_H)
+        .centerYEqualToView(lb);
+        
+        UIView *lineView3  = [[UIView alloc] init];
+        lineView3.backgroundColor = FTLineColor;
+        [switchView addSubview:lineView3];
+        
+        lineView3.sd_layout
+        .topSpaceToView(view3,0)
+        .leftSpaceToView(switchView, i==(arrSwitch.count-1)?0:Margin)
+        .heightIs(FTLineBorder)
+        .widthIs(SCREEN_WIDTH);
+    }
+   
+}
+
+-(void)sexualSelect:(UIView *)mainView{
+    
 }
 
 -(void)didClickBtn:(UIButton *)btn{
-    btn.Selected = YES;
-    NSLog(@"eeee");
+    for(int i=0;i<10;i++){
+        if (btn.tag==100+i) {
+            btn.selected=YES;
+            [btn setTitleColor:SColor forState:UIControlStateSelected];
+            btn.backgroundColor=SBGColor;
+            continue;
+        }
+        UIButton *ub=(UIButton *) [self.view viewWithTag:100+i];
+        ub.selected=NO;
+        ub.backgroundColor=[UIColor whiteColor];
+    }
+    
 }
 
 -(void)navigationBar{
     self.navigationItem.title=@"筛选";
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSFontAttributeName:[UIFont systemFontOfSize:BFontSize],
-       NSForegroundColorAttributeName:[UIColor orangeColor]}];
+       NSForegroundColorAttributeName:[UIColor blackColor]}];
     
    
     
@@ -98,7 +115,7 @@
     confirmBtn.frame = CGRectMake(0, 0, 25,25);
     [confirmBtn setTitle:@"确定" forState:UIControlStateNormal];
     confirmBtn.titleLabel.font = [UIFont systemFontOfSize: 17];
-    [confirmBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [confirmBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     UIBarButtonItem * confirmBarBtn = [[UIBarButtonItem alloc]initWithCustomView:confirmBtn];;
     self.navigationItem.rightBarButtonItems = @[confirmBarBtn];
     [confirmBtn addTarget:self action:@selector(didconfirm) forControlEvents:UIControlEventTouchUpInside];
@@ -108,10 +125,11 @@
     cancelBtn.frame = CGRectMake(0, 0, 25,25);
     [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
     cancelBtn.titleLabel.font = [UIFont systemFontOfSize: 17];
-    [cancelBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [cancelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     UIBarButtonItem * cancelBarBtn = [[UIBarButtonItem alloc]initWithCustomView:cancelBtn];;
     self.navigationItem.leftBarButtonItems = @[cancelBarBtn];
     [cancelBtn addTarget:self action:@selector(didCancel) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 -(void)didCancel{
