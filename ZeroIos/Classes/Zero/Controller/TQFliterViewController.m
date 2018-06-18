@@ -8,13 +8,20 @@
 
 #import "TQFliterViewController.h"
 #import "TQZeroViewController.h"
+#import "TTRangeSlider.h"
+
 #define SPACETO_VIEW 12
 #define CFSize [UIFont systemFontOfSize:20.0f]//ContentFontSize
 #define TitleHeight self.navigationController.navigationBar.frame.size.height
+#define BtnHeight TitleHeight*1.5
+#define SliderHeight TitleHeight*2
+
 #define FTLineColor  [UIColor lightGrayColor] //fliter line color
 #define FTLineBorder 0.19
 #define Switch_H 60
 #define Margin 25
+#define rect CGRectMake(SPACETO_VIEW, 0, SCREEN_WIDTH, TitleHeight)
+
 
 @interface TQFliterViewController ()
 
@@ -33,7 +40,8 @@
     mainView.backgroundColor=DivisionColor;
     [self.view addSubview:mainView];
    
-   
+    //性别选择
+    UIView *view2=[self sexualSelect:mainView];
     
     UIView *switchView=[[UIView alloc]init];
     switchView.backgroundColor=[UIColor whiteColor];
@@ -62,6 +70,7 @@
         .heightIs(Switch_H);
         
         UISwitch *swt=[[UISwitch alloc]init];
+        set.backgroundColor
         [swt setTag:i];
         [view3 addSubview:swt];
         swt.sd_layout
@@ -80,12 +89,109 @@
         .heightIs(FTLineBorder)
         .widthIs(SCREEN_WIDTH);
     }
+    
+    //年龄
+    UIView *view1=[[UIView alloc]init];
+//    [view1 setFrame:CGRectMake(0, TitleHeight+rectStatus.size.height, SCREEN_WIDTH, TitleHeight)];
+    UILabel *label1=[[UILabel alloc]initWithFrame:rect];
+    label1.text=@"年龄";
+    label1.textColor=[UIColor grayColor];
+    [view1 addSubview:label1];
+     [mainView addSubview:view1];
+    view1.sd_layout
+    .topSpaceToView(switchView, FTLineBorder)
+    .leftSpaceToView(mainView, 0)
+    .heightIs(TitleHeight)
+    .widthIs(SCREEN_WIDTH);
+    
+    UIView *sexualSliderView=[[UIView alloc]init];
+    sexualSliderView.backgroundColor=[UIColor whiteColor];
+    [mainView addSubview:sexualSliderView];
+    sexualSliderView.sd_layout
+    .topSpaceToView(view1, FTLineBorder)
+    .leftSpaceToView(mainView, 0)
+    .widthIs(SCREEN_WIDTH)
+    .heightIs(SliderHeight);
+    
+    TTRangeSlider *sexualSlider=[[TTRangeSlider alloc]init];
+    
+    sexualSlider.minValue = 0;
+    sexualSlider.maxValue = 100;
+    sexualSlider.selectedMinimum = 0;
+    sexualSlider.selectedMaximum = 100;
+    sexualSlider.hideLabels=YES;
+      sexualSlider.tintColorBetweenHandles = SColor;
+    sexualSlider.handleColor=SColor;
+    sexualSlider.tintColor=[UIColor grayColor];
+     [sexualSliderView addSubview:sexualSlider];
+
+
+    [sexualSlider setFrame:CGRectMake(0, 0, SCREEN_WIDTH-SPACETO_VIEW*4, TitleHeight)];
+    sexualSlider.center=sexualSliderView.center;
    
 }
 
--(void)sexualSelect:(UIView *)mainView{
+
+//性别选择
+-(UIView *)sexualSelect:(UIView *)mainView{
     
+    
+    //view1想看到的用户
+    UIView *view1=[[UIView alloc]init];
+    [view1 setFrame:CGRectMake(0, TitleHeight+rectStatus.size.height, SCREEN_WIDTH, TitleHeight)];
+    UILabel *label1=[[UILabel alloc]initWithFrame:rect];
+    label1.text=@"想看到的用户";
+    label1.textColor=[UIColor grayColor];
+    [view1 addSubview:label1];
+    [mainView addSubview:view1];
+    //view2
+    UIView *view2=[[UIView alloc]init];
+    [view2 setFrame:CGRectMake(0, 2*TitleHeight+rectStatus.size.height, SCREEN_WIDTH, BtnHeight)];
+    
+    
+    view2.backgroundColor=[UIColor whiteColor];//性别view
+    
+    NSArray *arr=@[@"全部",@"男生",@"女生"];
+    for (int i=0;i<arr.count; i++) {
+        // 所有按钮
+        UIButton *btn = [[UIButton alloc] init];
+        [btn setTag:100+i];
+        [btn setBackgroundColor:[UIColor whiteColor]];
+        
+        [btn setTitle:arr[i] forState:UIControlStateNormal];
+        [[btn titleLabel] setFont:CFSize];
+        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        
+        
+        
+        [btn setFrame:CGRectMake(SCREEN_WIDTH/3*i, 0,SCREEN_WIDTH/3-FTLineBorder, BtnHeight)];
+        [btn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];//TQM
+        
+        [view2 addSubview:btn];
+        if (i!=2) {
+            UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(btn.frame.size.width, 0, FTLineBorder,btn.frame.size.height )];
+            lineView.backgroundColor = FTLineColor;
+            [btn addSubview:lineView];
+            
+            
+            
+        }
+        
+    }
+    
+    UIView *lineView1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, FTLineBorder)];
+    lineView1.backgroundColor = FTLineColor;
+    [view2 addSubview:lineView1];
+    UIView *lineView2  = [[UIView alloc] initWithFrame:CGRectMake(0,BtnHeight , SCREEN_WIDTH, FTLineBorder)];
+    lineView2.backgroundColor = FTLineColor;
+    [view2 addSubview:lineView2];
+    [mainView addSubview:view2];
+   
+    return view2;
 }
+
+
+//
 
 -(void)didClickBtn:(UIButton *)btn{
     for(int i=0;i<10;i++){

@@ -28,7 +28,6 @@
     [self setupDataWithCount:20];
     self.navigationItem.title=localized_Zero;
     
-    //__weak TQZeroViewController *weakSelf=self;
     //cell上面
     TQZeroheadView *headView=[[TQZeroheadView alloc]initWithClick:^(BOOL isClicked){
         if (isClicked==YES) {

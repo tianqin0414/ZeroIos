@@ -1,16 +1,24 @@
 PODS:
+  - Masonry (1.1.0)
   - SDAutoLayout (2.2.0)
+  - TTRangeSlider (1.0.6)
 
 DEPENDENCIES:
+  - Masonry
   - SDAutoLayout
+  - TTRangeSlider
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Masonry
     - SDAutoLayout
+    - TTRangeSlider
 
 SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDAutoLayout: c5509e77ae75735d9a39f7bc83dba6d3f75d49d8
+  TTRangeSlider: 78188bea83f6471a06f75adbc88da5e990baeafe
 
-PODFILE CHECKSUM: e607481a8c5a99b26242fc839948af576170bcdd
+PODFILE CHECKSUM: 567d9821e67969316b5d28792a4886f77cd74a53
 
 COCOAPODS: 1.5.0

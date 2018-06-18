@@ -20,6 +20,7 @@
 #ifdef __OBJC__//只有oc文件引入
 #import "TQUserModel.h"
 #import "TQCategory.h"
+#import "Masonry.h"
 
 #endif
 
