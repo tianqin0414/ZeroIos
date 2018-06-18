@@ -70,7 +70,7 @@
         .heightIs(Switch_H);
         
         UISwitch *swt=[[UISwitch alloc]init];
-        set.backgroundColor
+        swt.onTintColor=SColor;
         [swt setTag:i];
         [view3 addSubview:swt];
         swt.sd_layout
@@ -115,13 +115,14 @@
     
     TTRangeSlider *sexualSlider=[[TTRangeSlider alloc]init];
     
-    sexualSlider.minValue = 0;
-    sexualSlider.maxValue = 100;
-    sexualSlider.selectedMinimum = 0;
-    sexualSlider.selectedMaximum = 100;
-    sexualSlider.hideLabels=YES;
+    sexualSlider.minValue = 18;
+    sexualSlider.maxValue = 137;
+    sexualSlider.selectedMinimum = 18;
+    sexualSlider.selectedMaximum = 137;
       sexualSlider.tintColorBetweenHandles = SColor;
     sexualSlider.handleColor=SColor;
+    sexualSlider.maxLabelColour=[UIColor blackColor];
+    sexualSlider.minLabelColour=[UIColor blackColor];
     sexualSlider.tintColor=[UIColor grayColor];
      [sexualSliderView addSubview:sexualSlider];
 
