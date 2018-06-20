@@ -14,7 +14,7 @@
 #define CFSize [UIFont systemFontOfSize:20.0f]//ContentFontSize
 #define TitleHeight self.navigationController.navigationBar.frame.size.height
 #define BtnHeight TitleHeight*1.5
-#define SliderHeight TitleHeight*2
+#define SliderHeight TitleHeight*1.7
 
 #define FTLineColor  [UIColor lightGrayColor] //fliter line color
 #define FTLineBorder 0.19
@@ -41,19 +41,150 @@
     [self.view addSubview:mainView];
    
     //性别选择
-    UIView *view2=[self sexualSelect:mainView];
+    UIView *sexualSelectView=[self sexualSelect:mainView];
+    //swtich 健康/座驾/房产
+    UIView *switchView=[self conditionSwitch:mainView view2:sexualSelectView];
+    //年龄
+    UIView *ageSliderView=[self ageSlider:mainView switchView:switchView];
+   
+    //会员筛选项
+    UIView *view1=[[UIView alloc]init];
+    UILabel *label1=[[UILabel alloc]initWithFrame:rect];
+    label1.text=@"会员筛选项";
+    label1.textColor=[UIColor grayColor];
+    [view1 addSubview:label1];
+    [mainView addSubview:view1];
+    view1.sd_layout
+    .topSpaceToView(ageSliderView, FTLineBorder)
+    .leftSpaceToView(mainView, 0)
+    .heightIs(TitleHeight)
+    .widthIs(SCREEN_WIDTH);
     
+    [self viewDic:mainView viewOnTop:view1 viewHeight:SliderHeight * 2 viewCount:3];
+    
+//    UIView *view2=[[UIView alloc]init];
+//    view2.backgroundColor=[UIColor whiteColor];
+//    [mainView addSubview:view2];
+//    view2.sd_layout
+//    .topSpaceToView(view1, 0)
+//    .widthIs(SCREEN_WIDTH)
+//    .heightIs(SliderHeight *2);
+//
+//
+//
+//    UIView *heightSliderV=[[UIView alloc]init];
+//    heightSliderV.backgroundColor=[UIColor grayColor];
+//    [view2 addSubview:heightSliderV];
+//    heightSliderV.sd_layout
+//    .topEqualToView(view2)
+//    .widthIs(SCREEN_WIDTH)
+//    .heightIs(SliderHeight);
+//
+//    [self addLines:heightSliderV leftspaceToview:0 isBottom:NO];
+//
+//    UIView *weightSliderV=[[UIView alloc]init];
+//
+//    [view2 addSubview:weightSliderV];
+//    weightSliderV.sd_layout
+//    .topSpaceToView(heightSliderV, 0)
+//    .widthIs(SCREEN_WIDTH)
+//    .heightIs(SliderHeight);
+//        weightSliderV.backgroundColor=[UIColor yellowColor];
+//     [self addLines:heightSliderV leftspaceToview:Margin isBottom:YES];
+//    [self addLines:weightSliderV leftspaceToview:0 isBottom:YES];
+}
+
+-(NSDictionary *)viewDic:(UIView *)mainView
+               viewOnTop:(UIView *)viewOnTop
+                  viewHeight:(CGFloat)viewHeight
+               viewCount:(int)viewCount{
+    NSDictionary *viewDic=[[NSDictionary alloc]init];
+    NSMutableArray *viewArr=[[NSMutableArray alloc]init];
+    UIView *view=[[UIView alloc]init];
+    //[viewArr addObject:view];
+    
+    
+    UIView *bigView=[[UIView alloc]init];
+    bigView.backgroundColor=[UIColor whiteColor];
+    [mainView addSubview:bigView];
+    bigView.sd_layout
+    .topSpaceToView(viewOnTop, 0)
+    .widthIs(SCREEN_WIDTH)
+    .heightIs(viewHeight);
+    UIView *baseView=[[UIView alloc]init];
+    for (int i = 0 ; i < viewCount; i++) {
+        UIView *smallView=[[UIView alloc]init];
+        //[smallView setTag:i];
+        smallView.backgroundColor=[UIColor grayColor];
+        [bigView addSubview:smallView];
+        if (i==0) {
+            baseView=bigView;
+        }
+        else{
+            baseView=viewArr[i-1];
+        }
+
+            smallView.sd_layout
+            //.topEqualToView(baseView)
+            .topSpaceToView(baseView, 0)
+            .widthIs(SCREEN_WIDTH)
+            .heightIs(viewHeight/viewCount);
+
+        if (i==0) {
+              [self addLines:smallView leftspaceToview:0 isBottom:NO];
+        }
+        if (i==viewCount-1){
+            [self addLines:smallView leftspaceToview:0 isBottom:YES];
+             //[self addLines:smallView leftspaceToview:Margin isBottom:NO];
+        }else{
+            [self addLines:smallView leftspaceToview:Margin isBottom:YES];//TQ0620
+        }
+        
+        [viewArr addObject:smallView];
+    }
+    
+//    UIView *heightSliderV=[[UIView alloc]init];
+//    heightSliderV.backgroundColor=[UIColor grayColor];
+//    [bigView addSubview:heightSliderV];
+//    heightSliderV.sd_layout
+//    .topEqualToView(bigView)
+//    .widthIs(SCREEN_WIDTH)
+//    .heightIs(viewHeight/viewCount);
+//
+//    [self addLines:heightSliderV leftspaceToview:0 isBottom:NO];
+//
+//    UIView *weightSliderV=[[UIView alloc]init];
+//
+//    [bigView addSubview:weightSliderV];
+//    weightSliderV.sd_layout
+//    .topSpaceToView(heightSliderV, 0)
+//    .widthIs(SCREEN_WIDTH)
+//    .heightIs(viewHeight/viewCount);
+//    weightSliderV.backgroundColor=[UIColor yellowColor];
+//    [self addLines:heightSliderV leftspaceToview:Margin isBottom:YES];
+//    [self addLines:weightSliderV leftspaceToview:0 isBottom:YES];
+    
+    return viewDic;
+}
+
+//swtich 健康/座驾/房产
+-(UIView *)conditionSwitch:(UIView *)mainView
+view2:(UIView *)view2{
     UIView *switchView=[[UIView alloc]init];
     switchView.backgroundColor=[UIColor whiteColor];
     [mainView addSubview:switchView];
     switchView.sd_layout
     .topSpaceToView(view2,FTLineBorder+5)
     .heightIs(Switch_H*3)
-    .widthIs(view2.width);
+    .widthIs(SCREEN_WIDTH);
+    [self addLines:switchView leftspaceToview:0 isBottom:NO];
+    
+
+    
     NSArray *arrSwitch=@[@"是否健康",@"座驾",@"房产"];
     for (int i=0; i<arrSwitch.count; i++) {
         UIView *view3=[[UIView alloc]init];
-       
+        
         [switchView addSubview:view3];
         view3.sd_layout
         .topSpaceToView(switchView,FTLineBorder+Switch_H*i)
@@ -88,50 +219,11 @@
         .leftSpaceToView(switchView, i==(arrSwitch.count-1)?0:Margin)
         .heightIs(FTLineBorder)
         .widthIs(SCREEN_WIDTH);
+        
+        
     }
-    
-    //年龄
-    UIView *view1=[[UIView alloc]init];
-//    [view1 setFrame:CGRectMake(0, TitleHeight+rectStatus.size.height, SCREEN_WIDTH, TitleHeight)];
-    UILabel *label1=[[UILabel alloc]initWithFrame:rect];
-    label1.text=@"年龄";
-    label1.textColor=[UIColor grayColor];
-    [view1 addSubview:label1];
-     [mainView addSubview:view1];
-    view1.sd_layout
-    .topSpaceToView(switchView, FTLineBorder)
-    .leftSpaceToView(mainView, 0)
-    .heightIs(TitleHeight)
-    .widthIs(SCREEN_WIDTH);
-    
-    UIView *sexualSliderView=[[UIView alloc]init];
-    sexualSliderView.backgroundColor=[UIColor whiteColor];
-    [mainView addSubview:sexualSliderView];
-    sexualSliderView.sd_layout
-    .topSpaceToView(view1, FTLineBorder)
-    .leftSpaceToView(mainView, 0)
-    .widthIs(SCREEN_WIDTH)
-    .heightIs(SliderHeight);
-    
-    TTRangeSlider *sexualSlider=[[TTRangeSlider alloc]init];
-    
-    sexualSlider.minValue = 18;
-    sexualSlider.maxValue = 137;
-    sexualSlider.selectedMinimum = 18;
-    sexualSlider.selectedMaximum = 137;
-      sexualSlider.tintColorBetweenHandles = SColor;
-    sexualSlider.handleColor=SColor;
-    sexualSlider.maxLabelColour=[UIColor blackColor];
-    sexualSlider.minLabelColour=[UIColor blackColor];
-    sexualSlider.tintColor=[UIColor grayColor];
-     [sexualSliderView addSubview:sexualSlider];
-
-
-    [sexualSlider setFrame:CGRectMake(0, 0, SCREEN_WIDTH-SPACETO_VIEW*4, TitleHeight)];
-    sexualSlider.center=sexualSliderView.center;
-   
+    return switchView;
 }
-
 
 //性别选择
 -(UIView *)sexualSelect:(UIView *)mainView{
@@ -192,7 +284,120 @@
 }
 
 
-//
+//年龄
+-(UIView *)ageSlider:(UIView *)mainView
+          switchView:(UIView *)switchView{
+
+    UIView *view1=[[UIView alloc]init];
+    
+    UILabel *label1=[[UILabel alloc]initWithFrame:rect];
+    label1.text=@"年龄";
+    label1.textColor=[UIColor grayColor];
+    [view1 addSubview:label1];
+    [mainView addSubview:view1];
+    view1.sd_layout
+    .topSpaceToView(switchView, FTLineBorder)
+    .leftSpaceToView(mainView, 0)
+    .heightIs(TitleHeight)
+    .widthIs(SCREEN_WIDTH);
+    
+    UIView *ageSliderView=[[UIView alloc]init];
+    ageSliderView.backgroundColor=[UIColor whiteColor];
+    [mainView addSubview:ageSliderView];
+    ageSliderView.sd_layout
+    .topSpaceToView(view1, FTLineBorder)
+    .leftSpaceToView(mainView, 0)
+    .widthIs(SCREEN_WIDTH)
+    .heightIs(SliderHeight+FTLineBorder);
+    
+    TTRangeSlider *ageSlider=[[TTRangeSlider alloc]init];
+    
+    ageSlider.minValue = 18;
+    ageSlider.maxValue = 137;
+    ageSlider.selectedMinimum = 18;
+    ageSlider.selectedMaximum = 137;
+    ageSlider.selectedHandleDiameterMultiplier = 1.2;
+    ageSlider.tintColorBetweenHandles = SColor;
+    ageSlider.handleColor=SColor;
+    ageSlider.maxLabelColour=[UIColor blackColor];
+    ageSlider.minLabelColour=[UIColor blackColor];
+    ageSlider.tintColor=[UIColor grayColor];
+    [ageSliderView addSubview:ageSlider];
+    
+    
+    [ageSlider setFrame:CGRectMake(0, 0, SCREEN_WIDTH-SPACETO_VIEW*4, TitleHeight)];
+    ageSlider.center=ageSliderView.center;
+    
+    for (int i=0; i<2; i++) {
+        
+        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, FTLineBorder+(i==0?0:ageSliderView.height), SCREEN_WIDTH,FTLineBorder )];
+        lineView.backgroundColor =FTLineColor;// [UIColor redColor];
+        [ageSliderView addSubview:lineView];
+    }
+    
+    
+
+    
+    return ageSliderView;
+}
+
+
+//身高slider
+-(UIView *)heightSlider:(UIView *)mainView
+          switchView:(UIView *)switchView{
+    
+    UIView *view1=[[UIView alloc]init];
+    
+    UILabel *label1=[[UILabel alloc]initWithFrame:rect];
+    label1.text=@"身高";
+    label1.textColor=[UIColor grayColor];
+    [view1 addSubview:label1];
+    [mainView addSubview:view1];
+    view1.sd_layout
+    .topSpaceToView(switchView, FTLineBorder)
+    .leftSpaceToView(mainView, 0)
+    .heightIs(TitleHeight)
+    .widthIs(SCREEN_WIDTH);
+    
+    UIView *ageSliderView=[[UIView alloc]init];
+    ageSliderView.backgroundColor=[UIColor whiteColor];
+    [mainView addSubview:ageSliderView];
+    ageSliderView.sd_layout
+    .topSpaceToView(view1, FTLineBorder)
+    .leftSpaceToView(mainView, 0)
+    .widthIs(SCREEN_WIDTH)
+    .heightIs(SliderHeight);
+    
+    TTRangeSlider *ageSlider=[[TTRangeSlider alloc]init];
+    
+    ageSlider.minValue = 18;
+    ageSlider.maxValue = 137;
+    ageSlider.selectedMinimum = 18;
+    ageSlider.selectedMaximum = 137;
+    ageSlider.selectedHandleDiameterMultiplier = 1.2;
+    ageSlider.tintColorBetweenHandles = SColor;
+    ageSlider.handleColor=SColor;
+    ageSlider.maxLabelColour=[UIColor blackColor];
+    ageSlider.minLabelColour=[UIColor blackColor];
+    ageSlider.tintColor=[UIColor grayColor];
+    [ageSliderView addSubview:ageSlider];
+    
+    
+    [ageSlider setFrame:CGRectMake(0, 0, SCREEN_WIDTH-SPACETO_VIEW*4, TitleHeight)];
+    ageSlider.center=ageSliderView.center;
+    
+    for (int i=0; i<2; i++) {
+        
+        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, FTLineBorder+(i==0?0:ageSliderView.height), SCREEN_WIDTH,FTLineBorder )];
+        lineView.backgroundColor = FTLineColor;
+        [ageSliderView addSubview:lineView];
+    }
+    
+    
+    
+    
+    return ageSliderView;
+}
 
 -(void)didClickBtn:(UIButton *)btn{
     for(int i=0;i<10;i++){
@@ -257,6 +462,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)addLines:(UIView *)views
+    leftspaceToview:(CGFloat)leftSpace
+       isBottom:(BOOL)isBottom{
+    UIView *lineView  = [[UIView alloc] init];
+    lineView.backgroundColor = [UIColor redColor];//FTLineColor;
+    [views addSubview:lineView];
+    if (isBottom) {
+        lineView.sd_layout
+        .bottomEqualToView(views)
+        .leftSpaceToView(views, leftSpace)
+        .widthIs(SCREEN_WIDTH-leftSpace)
+        .heightIs(FTLineBorder);
+    }
+    else{
+        lineView.sd_layout
+//        .topSpaceToView(views, 0)
+        .topEqualToView(views)
+        .leftSpaceToView(views, leftSpace)
+        .widthIs(SCREEN_WIDTH-leftSpace)
+        .heightIs(FTLineBorder);
+    }
+
+}
 /*
 #pragma mark - Navigation
 

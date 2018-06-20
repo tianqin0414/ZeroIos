@@ -44,6 +44,7 @@
 		951FD52D20C24AD800856799 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 951FD52B20C24AD700856799 /* UIColor+Extension.m */; };
 		9521848B20D03F7C008A6F74 /* TQZeroHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9521848A20D03F7C008A6F74 /* TQZeroHeadView.m */; };
 		95286ACE20CD2012009DFD93 /* TQFliterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95286ACD20CD2012009DFD93 /* TQFliterViewController.m */; };
+		952E6DEF20DA4062002924BB /* ZeroNormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 952E6DEE20DA4062002924BB /* ZeroNormalView.m */; };
 		9544CEDD20BC181A00A3B48B /* IMMessageExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CED720BC181A00A3B48B /* IMMessageExt.framework */; };
 		9544CEDE20BC181A00A3B48B /* IMGroupExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CED820BC181A00A3B48B /* IMGroupExt.framework */; };
 		9544CEDF20BC181A00A3B48B /* QALSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CED920BC181A00A3B48B /* QALSDK.framework */; };
@@ -139,6 +140,8 @@
 		9521848A20D03F7C008A6F74 /* TQZeroHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQZeroHeadView.m; sourceTree = "<group>"; };
 		95286ACC20CD2012009DFD93 /* TQFliterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQFliterViewController.h; sourceTree = "<group>"; };
 		95286ACD20CD2012009DFD93 /* TQFliterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQFliterViewController.m; sourceTree = "<group>"; };
+		952E6DED20DA4062002924BB /* ZeroNormalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZeroNormalView.h; sourceTree = "<group>"; };
+		952E6DEE20DA4062002924BB /* ZeroNormalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZeroNormalView.m; sourceTree = "<group>"; };
 		9544CED720BC181A00A3B48B /* IMMessageExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMMessageExt.framework; sourceTree = "<group>"; };
 		9544CED820BC181A00A3B48B /* IMGroupExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMGroupExt.framework; sourceTree = "<group>"; };
 		9544CED920BC181A00A3B48B /* QALSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QALSDK.framework; sourceTree = "<group>"; };
@@ -443,6 +446,8 @@
 				95156DAC20B6B15100DA0A44 /* TQBaseTableViewController.h */,
 				95A3242420AC0B5D00F7F5C6 /* InfoPlist.strings */,
 				95A3242C20AC0C3300F7F5C6 /* Localizable.strings */,
+				952E6DED20DA4062002924BB /* ZeroNormalView.h */,
+				952E6DEE20DA4062002924BB /* ZeroNormalView.m */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -830,6 +835,7 @@
 				9519286A20C4464600DAA998 /* TQActionSheet.m in Sources */,
 				9593E34320B5C9C7002D6DC1 /* SDAnalogDataGenerator.m in Sources */,
 				951FD52D20C24AD800856799 /* UIColor+Extension.m in Sources */,
+				952E6DEF20DA4062002924BB /* ZeroNormalView.m in Sources */,
 				95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */,
 				95A3245C20AE9BB700F7F5C6 /* TQMeViewController.m in Sources */,
 				95A3245920AE9BAA00F7F5C6 /* TQMessageViewController.m in Sources */,
