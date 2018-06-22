@@ -26,7 +26,7 @@
      @{NSFontAttributeName:[UIFont systemFontOfSize:BFontSize],
        NSForegroundColorAttributeName:[UIColor blackColor]}];
     [self setupDataWithCount:20];
-    self.navigationItem.title=localized_Zero;
+    self.navigationItem.title=@"星球";
     
     //cell上面
     TQZeroheadView *headView=[[TQZeroheadView alloc]initWithClick:^(BOOL isClicked){

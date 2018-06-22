@@ -17,14 +17,15 @@
 #define SliderHeight TitleHeight*1.7
 
 #define FTLineColor  [UIColor lightGrayColor] //fliter line color
-#define FTLineBorder 0.19
+#define FTLineBorder 0.5
 #define Switch_H 60
 #define Margin 25
 #define rect CGRectMake(SPACETO_VIEW, 0, SCREEN_WIDTH, TitleHeight)
 
 
 @interface TQFliterViewController ()
-
+@property(nonatomic) CGSize contentSize;
+@property (nonatomic, strong) UIScrollView *scrollView;
 @end
 
 @implementation TQFliterViewController
@@ -33,12 +34,29 @@
     [super viewDidLoad];
     [self navigationBar];
     
-    UIView *mainView=[[UIView alloc]init];
+    //UIView *mainView=[[UIView alloc]init];
+    UIScrollView *mainView = [[UIScrollView alloc]init];
+    
+    [self.view addSubview:mainView];
+    
+    //mainView.scrollEnabled = YES;
+    //mainView.contentSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT+500);
+
+   // [mainView addSubview:self.view];
+    //mainView.height=UIViewAutomaticDimension;
     // 状态栏
     //CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];
-    [mainView setFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    //[mainView setFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT+500)];
+    //mainView.centerX=self.view.centerX;
+    
+    [mainView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(self.view.centerX);
+        make.width.mas_equalTo(SCREEN_WIDTH);
+        make.height.mas_equalTo(SCREEN_HEIGHT+500);
+        make.top.mas_equalTo(self.view.mas_top);
+    }];
     mainView.backgroundColor=DivisionColor;
-    [self.view addSubview:mainView];
+    
    
     //性别选择
     UIView *sexualSelectView=[self sexualSelect:mainView];
@@ -60,7 +78,7 @@
     .heightIs(TitleHeight)
     .widthIs(SCREEN_WIDTH);
     
-    [self viewDic:mainView viewOnTop:view1 viewHeight:SliderHeight * 2 viewCount:3];
+    [self viewDic:mainView viewOnTop:view1 viewHeight:SliderHeight * 2 viewCount:4];
     
 //    UIView *view2=[[UIView alloc]init];
 //    view2.backgroundColor=[UIColor whiteColor];
