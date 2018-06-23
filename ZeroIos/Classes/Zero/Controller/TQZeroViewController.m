@@ -11,6 +11,7 @@
 #import "TQActionSheet.h"
 #import "TQFliterViewController.h"
 #import "TQZeroHeadView.h"
+#import "TQFliterVC.h"
 
 @interface TQZeroViewController ()
 @property (nonatomic, strong) TQActionSheet *ActionSheet;
@@ -40,16 +41,16 @@
     self.tableView.tableHeaderView = headView;
     
     
-                TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
-    
-                UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVC];
-                 [self presentViewController: presNavigation animated:YES completion:nil];
+
     
     
     self.tableView.rowHeight = 100;
     self.navigationController.navigationBar.barTintColor = NavigationColor;//#F5E2D6
     
-
+    //TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
+    TQFliterVC *filterVCa=[[TQFliterVC alloc]init];
+    UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVCa];
+    [self presentViewController: presNavigation animated:YES completion:nil];
 }
 
 

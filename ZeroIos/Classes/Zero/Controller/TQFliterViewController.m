@@ -24,7 +24,6 @@
 
 
 @interface TQFliterViewController ()
-@property(nonatomic) CGSize contentSize;
 @property (nonatomic, strong) UIScrollView *scrollView;
 @end
 
@@ -283,9 +282,7 @@ view2:(UIView *)view2{
             UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(btn.frame.size.width, 0, FTLineBorder,btn.frame.size.height )];
             lineView.backgroundColor = FTLineColor;
             [btn addSubview:lineView];
-            
-            
-            
+  
         }
         
     }

@@ -39,6 +39,8 @@
 		950EA54620B1CADF00CEEC45 /* icon4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA54120B1CADE00CEEC45 /* icon4.jpg */; };
 		950EA54720B1CADF00CEEC45 /* icon1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA54220B1CADE00CEEC45 /* icon1.jpg */; };
 		950EA54820B1CADF00CEEC45 /* icon3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA54320B1CADF00CEEC45 /* icon3.jpg */; };
+		9511EC1120DCE5F600384B31 /* TQFliterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9511EC1020DCE5F600384B31 /* TQFliterVC.m */; };
+		9511EC3E20DD653700384B31 /* TQZeroFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 9511EC3D20DD653700384B31 /* TQZeroFrame.m */; };
 		95156DAE20B6B15F00DA0A44 /* TQBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95156DAD20B6B15F00DA0A44 /* TQBaseTableViewController.m */; };
 		9519286A20C4464600DAA998 /* TQActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9519286820C4464500DAA998 /* TQActionSheet.m */; };
 		951FD52D20C24AD800856799 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 951FD52B20C24AD700856799 /* UIColor+Extension.m */; };
@@ -129,6 +131,10 @@
 		950EA54120B1CADE00CEEC45 /* icon4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon4.jpg; sourceTree = "<group>"; };
 		950EA54220B1CADE00CEEC45 /* icon1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon1.jpg; sourceTree = "<group>"; };
 		950EA54320B1CADF00CEEC45 /* icon3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon3.jpg; sourceTree = "<group>"; };
+		9511EC0F20DCE5F600384B31 /* TQFliterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQFliterVC.h; sourceTree = "<group>"; };
+		9511EC1020DCE5F600384B31 /* TQFliterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQFliterVC.m; sourceTree = "<group>"; };
+		9511EC3C20DD653700384B31 /* TQZeroFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQZeroFrame.h; sourceTree = "<group>"; };
+		9511EC3D20DD653700384B31 /* TQZeroFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQZeroFrame.m; sourceTree = "<group>"; };
 		95156DAC20B6B15100DA0A44 /* TQBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TQBaseTableViewController.h; sourceTree = "<group>"; };
 		95156DAD20B6B15F00DA0A44 /* TQBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQBaseTableViewController.m; sourceTree = "<group>"; };
 		9519286820C4464500DAA998 /* TQActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TQActionSheet.m; sourceTree = "<group>"; };
@@ -335,12 +341,12 @@
 		9566303E20AAA59C00F8A40E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				95A3241720AC097E00F7F5C6 /* Common */,
 				95A3242F20AC7BAD00F7F5C6 /* Zero */,
 				95A3243420AC7C5300F7F5C6 /* Show */,
 				95A3243220AC7C3700F7F5C6 /* Discover */,
 				95A3243120AC7C2800F7F5C6 /* Message */,
 				95A3243020AC7C0F00F7F5C6 /* Me */,
-				95A3241720AC097E00F7F5C6 /* Common */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -448,6 +454,8 @@
 				95A3242C20AC0C3300F7F5C6 /* Localizable.strings */,
 				952E6DED20DA4062002924BB /* ZeroNormalView.h */,
 				952E6DEE20DA4062002924BB /* ZeroNormalView.m */,
+				9511EC3C20DD653700384B31 /* TQZeroFrame.h */,
+				9511EC3D20DD653700384B31 /* TQZeroFrame.m */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -511,6 +519,8 @@
 				95286ACD20CD2012009DFD93 /* TQFliterViewController.m */,
 				9521848920D03F7C008A6F74 /* TQZeroHeadView.h */,
 				9521848A20D03F7C008A6F74 /* TQZeroHeadView.m */,
+				9511EC0F20DCE5F600384B31 /* TQFliterVC.h */,
+				9511EC1020DCE5F600384B31 /* TQFliterVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -831,6 +841,7 @@
 				95A3245620AE9B9100F7F5C6 /* TQDiscoverViewController.m in Sources */,
 				9566304320AAB6C200F8A40E /* TQAppFrameTabBarController.m in Sources */,
 				95156DAE20B6B15F00DA0A44 /* TQBaseTableViewController.m in Sources */,
+				9511EC1120DCE5F600384B31 /* TQFliterVC.m in Sources */,
 				95A3244920AC864900F7F5C6 /* TQZeroViewController.m in Sources */,
 				9519286A20C4464600DAA998 /* TQActionSheet.m in Sources */,
 				9593E34320B5C9C7002D6DC1 /* SDAnalogDataGenerator.m in Sources */,
@@ -841,6 +852,7 @@
 				95A3245920AE9BAA00F7F5C6 /* TQMessageViewController.m in Sources */,
 				950EA50620AF071B00CEEC45 /* TQZeroViewCell.m in Sources */,
 				950EA50B20B15B3600CEEC45 /* TQShowViewCell.m in Sources */,
+				9511EC3E20DD653700384B31 /* TQZeroFrame.m in Sources */,
 				95A3246C20AEFB3000F7F5C6 /* TQUserModel.m in Sources */,
 				95A3246820AEB34700F7F5C6 /* TQShowViewController.m in Sources */,
 				9521848B20D03F7C008A6F74 /* TQZeroHeadView.m in Sources */,
