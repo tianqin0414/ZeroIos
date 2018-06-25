@@ -14,4 +14,13 @@
              isEquaToBottom:(BOOL)isEquaToBottom
                 titleLabel : (NSString *)labelText
                spaceToView : (CGFloat)spaceToView;
+
++(NSMutableArray *)viewArrWithContentView:(UIView *)contentView
+                                viewOnTop:(UIView *)viewOnTop
+                               viewHeight:(CGFloat)viewHeight
+                                viewCount:(int)viewCount;
+
++(void)addLines:(UIView *)view
+leftspaceToview:(CGFloat)leftSpace
+       isBottom:(BOOL)isBottom;
 @end

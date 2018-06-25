@@ -29,6 +29,8 @@
 // 1.颜色
 #define KColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define SColor [UIColor stringTOColor:@"#3B61E0"] //SelectedColor  选中(Switch/字体)颜色 蓝色
+//没有title时间距
+#define NotitleDivision 5
 
 #define DivisionColor [UIColor stringTOColor:@"#f2f2f2"]
 

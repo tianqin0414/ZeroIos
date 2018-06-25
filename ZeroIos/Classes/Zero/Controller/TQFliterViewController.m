@@ -38,15 +38,7 @@
     
     [self.view addSubview:mainView];
     
-    //mainView.scrollEnabled = YES;
-    //mainView.contentSize = CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT+500);
 
-   // [mainView addSubview:self.view];
-    //mainView.height=UIViewAutomaticDimension;
-    // 状态栏
-    //CGRect rectStatus = [[UIApplication sharedApplication] statusBarFrame];
-    //[mainView setFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT+500)];
-    //mainView.centerX=self.view.centerX;
     
     [mainView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.view.centerX);
@@ -428,6 +420,9 @@ view2:(UIView *)view2{
     }
     
 }
+
+
+
 
 -(void)navigationBar{
     self.navigationItem.title=@"筛选";

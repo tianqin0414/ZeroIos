@@ -40,17 +40,15 @@
     //[headView show];
     self.tableView.tableHeaderView = headView;
     
-    
 
-    
-    
     self.tableView.rowHeight = 100;
     self.navigationController.navigationBar.barTintColor = NavigationColor;//#F5E2D6
     
-    //TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
-    TQFliterVC *filterVCa=[[TQFliterVC alloc]init];
-    UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVCa];
-    [self presentViewController: presNavigation animated:YES completion:nil];
+    //TQFliterViewController *filterVCa=[[TQFliterViewController alloc]init];
+  
+        TQFliterVC *filterVCa=[[TQFliterVC alloc]init];
+        UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVCa];
+        [self presentViewController: presNavigation animated:YES completion:nil];
 }
 
 

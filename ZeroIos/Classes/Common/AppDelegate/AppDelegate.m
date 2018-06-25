@@ -18,6 +18,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+
+    
     // 创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // 设置窗口的根控制器
@@ -25,6 +28,11 @@
     // 显示窗口
     [self.window makeKeyAndVisible];
     [self setupNavBar];
+    
+    #if DEBUG
+    //    for iOS
+    [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection.bundle"] load];
+    #endif
     
     return YES;
 }

@@ -22,159 +22,135 @@
 #define Switch_H 60
 #define Margin 25
 
+
 @interface TQFliterVC ()
 @property (strong, nonatomic) UIScrollView* scrollView;
 @end
 
 @implementation TQFliterVC
+- (void)viewDidAppear:(BOOL)animated
+{
+    //NSLog(@"contentView--%d",self.scrollView.width);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self navigationBar];
     
     UIScrollView *scrollView = [[UIScrollView alloc]init];
     self.scrollView=scrollView;
-    scrollView.backgroundColor=[UIColor redColor];
+    scrollView.backgroundColor=DivisionColor;
     [self.view addSubview:scrollView];
     
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-    
-    
+
     UIView* contentView = UIView.new;
     [self.scrollView addSubview:contentView];
-    
+    //contentView.backgroundColor=DivisionColor;
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.scrollView);
         make.width.equalTo(self.scrollView);
     }];
-    
-
-
-    UIView* view5=[TQZeroFrame addTitleWithView:contentView tq_TitleHeight:TitleHeight isEquaToBottom:NO titleLabel:@"!!!" spaceToView:SPACETO_VIEW];
+ 
+    UIView* topView=[TQZeroFrame addTitleWithView:contentView tq_TitleHeight:TitleHeight isEquaToBottom:NO titleLabel:@"想看到的用户" spaceToView:SPACETO_VIEW];
     
     
-    UIView *fullView=[[UIView alloc]init];
-    fullView.backgroundColor=[UIColor whiteColor];
-    [contentView addSubview:fullView];
+NSMutableArray *selectView =  [TQZeroFrame viewArrWithContentView:contentView viewOnTop:topView viewHeight:BtnHeight  viewCount:1];
+    UIView *test=selectView[0];
+    [self sexualSelect:selectView main:test];
     
+        UIView* topView1=[TQZeroFrame addTitleWithView:selectView[0] tq_TitleHeight:NotitleDivision isEquaToBottom:YES titleLabel:@"" spaceToView:SPACETO_VIEW];
+    NSMutableArray *switchView1 =  [TQZeroFrame viewArrWithContentView:contentView viewOnTop:topView1 viewHeight:Switch_H * 3  viewCount:3];
+    UIView *lastView = switchView1[0];
     
-    [fullView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(view5.mas_bottom);
-        make.left.equalTo(@0);
-        make.width.equalTo(view5.mas_width);
-        make.height.equalTo(@(400));
-    }];
-    NSLog(@"%@",@"dddd");//TQ0623
-    NSLog(@"fullView--%f",fullView.width);
-     NSLog(@"fullView--%f",fullView.frame.size.width);
-    
-    
-    [self addLines:fullView leftspaceToview:0 isBottom:NO];
-    
-    [self addLines:fullView leftspaceToview:0 isBottom:YES];
-    
+     UIView* topView2=[TQZeroFrame addTitleWithView:switchView1[0] tq_TitleHeight:TitleHeight isEquaToBottom:YES titleLabel:@"年龄" spaceToView:SPACETO_VIEW];
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(fullView.mas_bottom);
+        make.bottom.equalTo(topView2.mas_bottom);
     }];
-    
-    
 }
 
-
-
-
--(void)addLines:(UIView *)view
-leftspaceToview:(CGFloat)leftSpace
-       isBottom:(BOOL)isBottom{
-    UIView *lineView  = [[UIView alloc] init];
-    lineView.backgroundColor = [UIColor blueColor];//FTLineColor;
-    [view addSubview:lineView];
-
-        
-        [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(isBottom?view.mas_bottom:view.mas_top);
-            make.left.equalTo(@(leftSpace));
-            make.width.equalTo(@(200-50));
-            make.height.equalTo(@(0.5));
-           
+#pragma 想看到的用户,男女
+-(void)sexualSelect:(NSMutableArray *)selectView
+               main:(UIView *)main{
+    
+    NSArray *arr=@[@"全部",@"男生",@"女生"];
+    for (int i = 0; i < arr.count; i++) {
+        UIButton *btn = [[UIButton alloc] init];
+        [btn setTag:100+i];
+        [btn setBackgroundColor:[UIColor whiteColor]];
+        [btn setTitle:arr[i] forState:UIControlStateNormal];
+        [[btn titleLabel] setFont:CFSize];
+        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+         [main addSubview:btn];
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(main.mas_top);
+            make.left.equalTo(@((SCREEN_WIDTH / arr.count) * i));//.offset(FTLineBorder);
+            make.height.equalTo(@(BtnHeight));
+            make.width.equalTo(@(SCREEN_WIDTH / arr.count ));
         }];
-   
-    NSLog(@"width%f",view.frame.size.width);
-    NSLog(@"width%f",view.width);
-}
-
--(NSDictionary *)viewDic:(UIView *)mainView
-               viewOnTop:(UIView *)viewOnTop
-              viewHeight:(CGFloat)viewHeight
-               viewCount:(int)viewCount{
-    NSDictionary *viewDic=[[NSDictionary alloc]init];
-    NSMutableArray *viewArr=[[NSMutableArray alloc]init];
-    UIView *view=[[UIView alloc]init];
-    //[viewArr addObject:view];
-    
-    
-    UIView *bigView=[[UIView alloc]init];
-    bigView.backgroundColor=[UIColor whiteColor];
-    [mainView addSubview:bigView];
-    bigView.sd_layout
-    .topSpaceToView(viewOnTop, 0)
-    .widthIs(SCREEN_WIDTH)
-    .heightIs(viewHeight);
-    UIView *baseView=[[UIView alloc]init];
-    for (int i = 0 ; i < viewCount; i++) {
-        UIView *smallView=[[UIView alloc]init];
-        //[smallView setTag:i];
-        smallView.backgroundColor=[UIColor grayColor];
-        [bigView addSubview:smallView];
-        if (i==0) {
-            baseView=bigView;
-        }
-        else{
-            baseView=viewArr[i-1];
-        }
         
-        smallView.sd_layout
-        //.topEqualToView(baseView)
-        .topSpaceToView(baseView, 0)
-        .widthIs(SCREEN_WIDTH)
-        .heightIs(viewHeight/viewCount);
-        
-        if (i==0) {
-            [self addLines:smallView leftspaceToview:0 isBottom:NO];
+       
+        if (i!=(arr.count-1)) {
+            UIView *lineView = [[UIView alloc]init];
+            lineView.backgroundColor=FTLineColor;
+            [btn addSubview:lineView];
+            
+            [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.equalTo(btn.mas_top);
+                make.left.equalTo(btn.mas_right);
+                make.height.equalTo(btn.mas_height);
+                make.width.equalTo(@(FTLineBorder));
+            }];
         }
-        if (i==viewCount-1){
-            [self addLines:smallView leftspaceToview:0 isBottom:YES];
-            //[self addLines:smallView leftspaceToview:Margin isBottom:NO];
-        }else{
-            [self addLines:smallView leftspaceToview:Margin isBottom:YES];//TQ0620
-        }
-        
-        [viewArr addObject:smallView];
+     
     }
     
-    //    UIView *heightSliderV=[[UIView alloc]init];
-    //    heightSliderV.backgroundColor=[UIColor grayColor];
-    //    [bigView addSubview:heightSliderV];
-    //    heightSliderV.sd_layout
-    //    .topEqualToView(bigView)
-    //    .widthIs(SCREEN_WIDTH)
-    //    .heightIs(viewHeight/viewCount);
-    //
-    //    [self addLines:heightSliderV leftspaceToview:0 isBottom:NO];
-    //
-    //    UIView *weightSliderV=[[UIView alloc]init];
-    //
-    //    [bigView addSubview:weightSliderV];
-    //    weightSliderV.sd_layout
-    //    .topSpaceToView(heightSliderV, 0)
-    //    .widthIs(SCREEN_WIDTH)
-    //    .heightIs(viewHeight/viewCount);
-    //    weightSliderV.backgroundColor=[UIColor yellowColor];
-    //    [self addLines:heightSliderV leftspaceToview:Margin isBottom:YES];
-    //    [self addLines:weightSliderV leftspaceToview:0 isBottom:YES];
+}
+
+#pragma mark -navigationBar 取消 确定
+-(void)navigationBar{
+    self.navigationItem.title=@"筛选";
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:BFontSize],
+       NSForegroundColorAttributeName:[UIColor blackColor]}];
     
-    return viewDic;
+    
+    
+    //确定按钮
+    UIButton * confirmBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    confirmBtn.frame = CGRectMake(0, 0, 25,25);
+    [confirmBtn setTitle:@"确定" forState:UIControlStateNormal];
+    confirmBtn.titleLabel.font = [UIFont systemFontOfSize: 17];
+    [confirmBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    UIBarButtonItem * confirmBarBtn = [[UIBarButtonItem alloc]initWithCustomView:confirmBtn];;
+    self.navigationItem.rightBarButtonItems = @[confirmBarBtn];
+    [confirmBtn addTarget:self action:@selector(didconfirm) forControlEvents:UIControlEventTouchUpInside];
+    
+    //取消按钮
+    UIButton * cancelBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    cancelBtn.frame = CGRectMake(0, 0, 25,25);
+    [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
+    cancelBtn.titleLabel.font = [UIFont systemFontOfSize: 17];
+    [cancelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    UIBarButtonItem * cancelBarBtn = [[UIBarButtonItem alloc]initWithCustomView:cancelBtn];;
+    self.navigationItem.leftBarButtonItems = @[cancelBarBtn];
+    [cancelBtn addTarget:self action:@selector(didCancel) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
+-(void)didCancel{
+    TQZeroViewController *TQZeroVC=[[TQZeroViewController alloc]init];
+    TQZeroVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:TQZeroVC animated:YES];
+    [self dismissViewControllerAnimated:NO completion:nil];
+    
+    
+}
+
+-(void)didconfirm{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
