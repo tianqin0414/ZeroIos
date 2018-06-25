@@ -18,9 +18,10 @@
 +(NSMutableArray *)viewArrWithContentView:(UIView *)contentView
                                 viewOnTop:(UIView *)viewOnTop
                                viewHeight:(CGFloat)viewHeight
-                                viewCount:(int)viewCount;
+                                viewCount:(int)viewCount
+                                spaceToLeft:(CGFloat)spaceToLeft;
 
 +(void)addLines:(UIView *)view
 leftspaceToview:(CGFloat)leftSpace
-       isBottom:(BOOL)isBottom;
+       isBottom:(BOOL)isBottom ;
 @end

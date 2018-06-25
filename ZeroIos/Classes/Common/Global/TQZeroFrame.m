@@ -49,7 +49,8 @@
 +(NSMutableArray *)viewArrWithContentView:(UIView *)contentView
                                 viewOnTop:(UIView *)viewOnTop
                                viewHeight:(CGFloat)viewHeight
-                                viewCount:(int)viewCount{
+                                viewCount:(int)viewCount
+                              spaceToLeft:(CGFloat)spaceToLeft{
     NSMutableArray *viewArr=[[NSMutableArray alloc]init];
     UIView *fullView=[[UIView alloc]init];
     fullView.backgroundColor=[UIColor whiteColor];
@@ -63,9 +64,12 @@
         make.height.equalTo(@(viewHeight + FTLineBorder * viewCount * 0 ));
     }];
     
-    [self addLines:fullView leftspaceToview:0 isBottom:NO];
-    //
-    [self addLines:fullView leftspaceToview:0 isBottom:YES];
+        [self addLines:fullView leftspaceToview:0 isBottom:NO addBottomLine:NO];
+
+        [self addLines:fullView leftspaceToview:0 isBottom:YES addBottomLine:YES];
+
+   
+
     [viewArr addObject:fullView];
     if (viewCount==1) {
         return viewArr;
@@ -81,17 +85,15 @@
 
         
         [apartView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(i==0?fullView.mas_top:baseView.mas_bottom);//.offset(-FTLineBorder);
-            make.left.equalTo(@(0));
+            make.top.equalTo(i==0?fullView.mas_top:baseView.mas_bottom);            make.left.equalTo(@(0));
             make.width.equalTo(@(SCREEN_WIDTH));
             make.height.equalTo(@(viewHeight/viewCount ));
         }];
 
+
         if (i!=(viewCount-1)) {
-            [self addLines:apartView leftspaceToview:SPACETO_VIEW isBottom:YES];
-     }//else{
-//            //[self addLines:apartView leftspaceToview:0 isBottom:YES];
-//        }
+            [self addLines:apartView leftspaceToview:spaceToLeft isBottom:YES addBottomLine:NO];
+     }
         
         [viewArr addObject:apartView];
     }
@@ -101,16 +103,21 @@
 
 +(void)addLines:(UIView *)view
 leftspaceToview:(CGFloat)leftSpace
-       isBottom:(BOOL)isBottom{
+       isBottom:(BOOL)isBottom
+  addBottomLine:(BOOL)isAdd{
     
     UIView *lineView  = [[UIView alloc] init];
-    lineView.backgroundColor = [UIColor redColor];//FTLineColor;
+    lineView.backgroundColor = FTLineColor;
     [view addSubview:lineView];
     
     
     [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-       make.top.equalTo(isBottom?view.mas_bottom:view.mas_top).offset(isBottom?0:-FTLineBorder);//TQ0625
-        //make.top.equalTo(view.mas_top).offset(-FTLineBorder);
+        if (isAdd) {
+               make.top.equalTo(isBottom?view.mas_bottom:view.mas_top).offset(FTLineBorder);
+        }else{
+                  make.bottom.equalTo(isBottom?view.mas_bottom:view.mas_top).offset(-FTLineBorder);
+        }
+ 
         make.left.equalTo(@(leftSpace));
         make.width.equalTo(@(SCREEN_WIDTH-leftSpace));
         make.height.equalTo(@(FTLineBorder));

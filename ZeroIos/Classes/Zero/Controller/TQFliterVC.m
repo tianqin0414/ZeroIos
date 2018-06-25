@@ -30,8 +30,9 @@
 @implementation TQFliterVC
 - (void)viewDidAppear:(BOOL)animated
 {
-    //NSLog(@"contentView--%d",self.scrollView.width);
+ 
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -48,7 +49,6 @@
 
     UIView* contentView = UIView.new;
     [self.scrollView addSubview:contentView];
-    //contentView.backgroundColor=DivisionColor;
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.scrollView);
         make.width.equalTo(self.scrollView);
@@ -56,25 +56,59 @@
  
     UIView* topView=[TQZeroFrame addTitleWithView:contentView tq_TitleHeight:TitleHeight isEquaToBottom:NO titleLabel:@"想看到的用户" spaceToView:SPACETO_VIEW];
     
+ //性别选择
+    NSMutableArray *selectView =  [TQZeroFrame viewArrWithContentView:contentView viewOnTop:topView viewHeight:BtnHeight  viewCount:1 spaceToLeft:SPACETO_VIEW];
+    [self sexualSelect:selectView];
     
-NSMutableArray *selectView =  [TQZeroFrame viewArrWithContentView:contentView viewOnTop:topView viewHeight:BtnHeight  viewCount:1];
-    UIView *test=selectView[0];
-    [self sexualSelect:selectView main:test];
+   //三个switcher
+        UIView* divisionView=[TQZeroFrame addTitleWithView:selectView[0] tq_TitleHeight:NotitleDivision isEquaToBottom:YES titleLabel:@"" spaceToView:SPACETO_VIEW];
+    NSMutableArray *switchView =  [TQZeroFrame viewArrWithContentView:contentView viewOnTop:divisionView viewHeight:Switch_H * 3  viewCount:3 spaceToLeft:Margin];
+    [self switchViews:switchView];
     
-        UIView* topView1=[TQZeroFrame addTitleWithView:selectView[0] tq_TitleHeight:NotitleDivision isEquaToBottom:YES titleLabel:@"" spaceToView:SPACETO_VIEW];
-    NSMutableArray *switchView1 =  [TQZeroFrame viewArrWithContentView:contentView viewOnTop:topView1 viewHeight:Switch_H * 3  viewCount:5];
-    UIView *lastView = switchView1[0];
     
-     UIView* topView2=[TQZeroFrame addTitleWithView:switchView1[0] tq_TitleHeight:TitleHeight isEquaToBottom:YES titleLabel:@"年龄" spaceToView:SPACETO_VIEW];
+     UIView* topView2=[TQZeroFrame addTitleWithView:switchView[0] tq_TitleHeight:TitleHeight isEquaToBottom:YES titleLabel:@"年龄" spaceToView:SPACETO_VIEW];
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(topView2.mas_bottom);
     }];
 }
 
-#pragma 想看到的用户,男女
--(void)sexualSelect:(NSMutableArray *)selectView
-               main:(UIView *)main{
+#pragma mark switch "是否健康",@"座驾",@"房产"
+
+-(void)switchViews:(NSMutableArray *)fullView{
+    NSArray *arrSwitch=@[@"是否健康",@"座驾",@"房产"];
+    for (int i = 0; i < arrSwitch.count; i++) {
+        UIView *apartView = fullView[i+1];
+        UILabel *lb=[[UILabel alloc]init];
+        [apartView addSubview:lb];
+        lb.text=arrSwitch[i];
+        lb.font = CFSize;
+        [lb mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.height.equalTo(apartView);
+            make.width.equalTo(@(SCREEN_WIDTH/2));
+            make.left.equalTo(@(Margin));
+        }];
+        
+            UISwitch *swt=[[UISwitch alloc]init];
+            swt.onTintColor=SColor;
+            [swt setTag:i];
+            [apartView addSubview:swt];
     
+        [swt mas_makeConstraints:^(MASConstraintMaker *make) {
+                //make.center.equalTo(apartView);
+              make.centerY.equalTo(apartView.mas_centerY);
+                make.top.height.equalTo(apartView);
+            
+                make.right.equalTo(apartView.mas_right).offset(-Margin);
+        }];
+        //swt.centerY=apartView.centerY;
+    }
+    
+    
+}
+
+#pragma mark 想看到的用户,男女
+-(void)sexualSelect:(NSMutableArray *)fullView{
+    UIView *mainView = fullView[0];
     NSArray *arr=@[@"全部",@"男生",@"女生"];
     for (int i = 0; i < arr.count; i++) {
         UIButton *btn = [[UIButton alloc] init];
@@ -83,10 +117,11 @@ NSMutableArray *selectView =  [TQZeroFrame viewArrWithContentView:contentView vi
         [btn setTitle:arr[i] forState:UIControlStateNormal];
         [[btn titleLabel] setFont:CFSize];
         [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-         [main addSubview:btn];
+         [btn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];//TQM
+         [mainView addSubview:btn];
         [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(main.mas_top);
-            make.left.equalTo(@((SCREEN_WIDTH / arr.count) * i));//.offset(FTLineBorder);
+            make.top.equalTo(mainView.mas_top);
+            make.left.equalTo(@((SCREEN_WIDTH / arr.count) * i));
             make.height.equalTo(@(BtnHeight));
             make.width.equalTo(@(SCREEN_WIDTH / arr.count ));
         }];
@@ -108,7 +143,20 @@ NSMutableArray *selectView =  [TQZeroFrame viewArrWithContentView:contentView vi
     }
     
 }
-
+-(void)didClickBtn:(UIButton *)btn{
+    for(int i=0;i<10;i++){
+        if (btn.tag==100+i) {
+            btn.selected=YES;
+            [btn setTitleColor:SColor forState:UIControlStateSelected];
+            btn.backgroundColor=SBGColor;
+            continue;
+        }
+        UIButton *ub=(UIButton *) [self.view viewWithTag:100+i];
+        ub.selected=NO;
+        ub.backgroundColor=[UIColor whiteColor];
+    }
+    
+}
 #pragma mark -navigationBar 取消 确定
 -(void)navigationBar{
     self.navigationItem.title=@"筛选";
