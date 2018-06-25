@@ -95,7 +95,7 @@ NSMutableArray *selectView =  [TQZeroFrame viewArrWithContentView:contentView vi
         if (i!=(arr.count-1)) {
             UIView *lineView = [[UIView alloc]init];
             lineView.backgroundColor=FTLineColor;
-            [btn addSubview:lineView];
+            [btn addSubview:lineView];//TQ0625
             
             [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.equalTo(btn.mas_top);
