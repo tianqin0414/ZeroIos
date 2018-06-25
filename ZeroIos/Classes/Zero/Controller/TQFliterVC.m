@@ -62,7 +62,7 @@ NSMutableArray *selectView =  [TQZeroFrame viewArrWithContentView:contentView vi
     [self sexualSelect:selectView main:test];
     
         UIView* topView1=[TQZeroFrame addTitleWithView:selectView[0] tq_TitleHeight:NotitleDivision isEquaToBottom:YES titleLabel:@"" spaceToView:SPACETO_VIEW];
-    NSMutableArray *switchView1 =  [TQZeroFrame viewArrWithContentView:contentView viewOnTop:topView1 viewHeight:Switch_H * 3  viewCount:3];
+    NSMutableArray *switchView1 =  [TQZeroFrame viewArrWithContentView:contentView viewOnTop:topView1 viewHeight:Switch_H * 3  viewCount:5];
     UIView *lastView = switchView1[0];
     
      UIView* topView2=[TQZeroFrame addTitleWithView:switchView1[0] tq_TitleHeight:TitleHeight isEquaToBottom:YES titleLabel:@"年龄" spaceToView:SPACETO_VIEW];
@@ -95,11 +95,11 @@ NSMutableArray *selectView =  [TQZeroFrame viewArrWithContentView:contentView vi
         if (i!=(arr.count-1)) {
             UIView *lineView = [[UIView alloc]init];
             lineView.backgroundColor=FTLineColor;
-            [btn addSubview:lineView];//TQ0625
+            [btn addSubview:lineView];
             
             [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.top.equalTo(btn.mas_top);
-                make.left.equalTo(btn.mas_right);
+                make.left.equalTo(btn.mas_right).offset(-FTLineBorder);
                 make.height.equalTo(btn.mas_height);
                 make.width.equalTo(@(FTLineBorder));
             }];

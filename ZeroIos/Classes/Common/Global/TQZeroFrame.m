@@ -60,7 +60,7 @@
         make.top.equalTo(viewOnTop.mas_bottom);
         make.left.equalTo(@0);
         make.width.equalTo(viewOnTop.mas_width);
-        make.height.equalTo(@(viewHeight + FTLineBorder * viewCount  ));
+        make.height.equalTo(@(viewHeight + FTLineBorder * viewCount * 0 ));
     }];
     
     [self addLines:fullView leftspaceToview:0 isBottom:NO];
@@ -81,7 +81,7 @@
 
         
         [apartView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(i==0?fullView.mas_top:baseView.mas_bottom).offset(FTLineBorder);
+            make.top.equalTo(i==0?fullView.mas_top:baseView.mas_bottom);//.offset(-FTLineBorder);
             make.left.equalTo(@(0));
             make.width.equalTo(@(SCREEN_WIDTH));
             make.height.equalTo(@(viewHeight/viewCount ));
@@ -89,7 +89,9 @@
 
         if (i!=(viewCount-1)) {
             [self addLines:apartView leftspaceToview:SPACETO_VIEW isBottom:YES];
-        }
+     }//else{
+//            //[self addLines:apartView leftspaceToview:0 isBottom:YES];
+//        }
         
         [viewArr addObject:apartView];
     }
@@ -102,12 +104,13 @@ leftspaceToview:(CGFloat)leftSpace
        isBottom:(BOOL)isBottom{
     
     UIView *lineView  = [[UIView alloc] init];
-    lineView.backgroundColor = FTLineColor;
+    lineView.backgroundColor = [UIColor redColor];//FTLineColor;
     [view addSubview:lineView];
     
     
     [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(isBottom?view.mas_bottom:view.mas_top);
+       make.top.equalTo(isBottom?view.mas_bottom:view.mas_top).offset(isBottom?0:-FTLineBorder);//TQ0625
+        //make.top.equalTo(view.mas_top).offset(-FTLineBorder);
         make.left.equalTo(@(leftSpace));
         make.width.equalTo(@(SCREEN_WIDTH-leftSpace));
         make.height.equalTo(@(FTLineBorder));
