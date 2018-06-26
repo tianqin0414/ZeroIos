@@ -8,7 +8,7 @@
 
 #import "TQActionSheet.h"
 #define BUTTON_H 49.0f
-#define SPACETO_VIEW 86
+#define SPACETO_VIEW 76
 #define SWITCHTO_MAINVIEW 12
 #define LZ_ACTION_SHEET_TITLE_FONT  [UIFont systemFontOfSize:18.0f]
 @interface TQActionSheet ()

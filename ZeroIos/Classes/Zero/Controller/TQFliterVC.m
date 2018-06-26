@@ -25,6 +25,7 @@
 
 @interface TQFliterVC ()
 @property (strong, nonatomic) UIScrollView* scrollView;
+@property (strong, nonatomic) NSMutableArray* switchers;
 @end
 
 @implementation TQFliterVC
@@ -52,6 +53,7 @@
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.scrollView);
         make.width.equalTo(self.scrollView);
+        make.bottom.equalTo(self.scrollView).offset(-10);
     }];
  
     UIView* topView=[TQZeroFrame addTitleWithView:contentView tq_TitleHeight:TitleHeight isEquaToBottom:NO titleLabel:@"想看到的用户" spaceToView:SPACETO_VIEW];
@@ -70,14 +72,65 @@
     NSMutableArray *ageViewArr = [TQZeroFrame viewArrWithContentView:contentView viewOnTop:egeTitle viewHeight:SliderHeight viewCount:1 spaceToLeft:Margin];
     [self ageView:ageViewArr];
     
+    //会员选项
+    UIView* memberTitle=[TQZeroFrame addTitleWithView:ageViewArr[0] tq_TitleHeight:TitleHeight isEquaToBottom:YES titleLabel:@"会员选项" spaceToView:SPACETO_VIEW];
+     NSMutableArray *memberViewArr = [TQZeroFrame viewArrWithContentView:contentView viewOnTop:memberTitle viewHeight:Switch_H *1.3 * 2 viewCount:2 spaceToLeft:Margin];
+    [self memberView:memberViewArr];
     
-    lastView = ageViewArr[0];
+    lastView = memberViewArr[0];
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(lastView.mas_bottom);
     }];
 }
 
-
+#pragma mark 会员
+-(void)memberView:(NSMutableArray *)fullViewArr{
+    UIView *heightView =fullViewArr[1];
+    UILabel *heightLB =[[UILabel alloc]init];
+    heightLB.text=@"身高/cm";
+    heightLB.font =[UIFont systemFontOfSize:15];
+    [heightView addSubview:heightLB];
+    [heightLB mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(heightView).offset(Margin);
+        make.top.height.equalTo(heightView);
+    }];
+    
+    TTRangeSlider *heightSlider = [TQZeroFrame sliderInit];
+    heightSlider.minValue = 150;
+    heightSlider.maxValue = 185;
+    heightSlider.selectedMinimum = 150;
+    heightSlider.selectedMaximum = 185;
+    [heightView addSubview:heightSlider];
+    [heightSlider mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(heightLB.mas_right).offset(10);
+        make.right.equalTo(heightView.mas_right).offset(-Margin);
+        make.top.height.equalTo(heightView);
+    }];
+    
+    
+    //体重
+    UIView *weightView =fullViewArr[2];
+    UILabel *weightLB =[[UILabel alloc]init];
+    weightLB.text=@"体重/kg";
+    weightLB.font =[UIFont systemFontOfSize:15];
+    [weightView addSubview:weightLB];
+    [weightLB mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(heightLB);
+        make.top.height.equalTo(weightView);
+    }];
+    
+    TTRangeSlider *weightSlider = [TQZeroFrame sliderInit];
+    weightSlider.minValue = 42;
+    weightSlider.maxValue = 70;
+    weightSlider.selectedMinimum = 42;
+    weightSlider.selectedMaximum = 70;
+    [weightView addSubview:weightSlider];
+    [weightSlider mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.equalTo(heightSlider);
+        make.top.height.equalTo(weightView);
+    }];
+    
+}
 
 #pragma mark 年龄  SliderHeight
 -(void)ageView:(NSMutableArray *)fullViewArr{
@@ -202,7 +255,7 @@
     //取消按钮
     UIButton * cancelBtn = [UIButton buttonWithType:UIButtonTypeSystem];
     cancelBtn.frame = CGRectMake(0, 0, 25,25);
-    [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
+    [cancelBtn setTitle:@"重置" forState:UIControlStateNormal];
     cancelBtn.titleLabel.font = [UIFont systemFontOfSize: 17];
     [cancelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     UIBarButtonItem * cancelBarBtn = [[UIBarButtonItem alloc]initWithCustomView:cancelBtn];;
@@ -212,16 +265,16 @@
 }
 
 -(void)didCancel{
+
+  
+    [self.view reloadInputViews];
+}
+
+-(void)didconfirm{
     TQZeroViewController *TQZeroVC=[[TQZeroViewController alloc]init];
     TQZeroVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:TQZeroVC animated:YES];
     [self dismissViewControllerAnimated:NO completion:nil];
-    
-    
-}
-
--(void)didconfirm{
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

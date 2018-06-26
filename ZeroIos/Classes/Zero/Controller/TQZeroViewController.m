@@ -44,7 +44,7 @@
     self.tableView.rowHeight = 100;
     self.navigationController.navigationBar.barTintColor = NavigationColor;//#F5E2D6
     
-    //TQFliterViewController *filterVCa=[[TQFliterViewController alloc]init];
+  
   
         TQFliterVC *filterVCa=[[TQFliterVC alloc]init];
         UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVCa];
@@ -99,8 +99,8 @@
 
 - (void)fliterDetail
 {
-    NSLog(@"333");
-                TQFliterViewController *filterVC=[[TQFliterViewController alloc]init];
+    
+                TQFliterVC *filterVC=[[TQFliterVC alloc]init];
     
                 UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVC];
                  [self presentViewController: presNavigation animated:YES completion:nil];
