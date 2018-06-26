@@ -7,6 +7,8 @@
 //
 
 #import "TQZeroFrame.h"
+#import "TTRangeSlider.h"
+
 #define FTLineBorder 0.5
 #define SPACETO_VIEW 12
 #define FTLineColor  [UIColor lightGrayColor]
@@ -43,7 +45,17 @@
     }];
     return newView;
 }
-
+//slider
++(TTRangeSlider *)sliderInit{
+    TTRangeSlider *Slider=[[TTRangeSlider alloc]init];
+    Slider.selectedHandleDiameterMultiplier = 1.2;
+    Slider.tintColorBetweenHandles = SColor;
+    Slider.handleColor=SColor;
+    Slider.maxLabelColour=[UIColor blackColor];
+    Slider.minLabelColour=[UIColor blackColor];
+    Slider.tintColor=[UIColor grayColor];
+    return Slider;
+}
 
 //Masonry viewDic
 +(NSMutableArray *)viewArrWithContentView:(UIView *)contentView
@@ -55,8 +67,7 @@
     UIView *fullView=[[UIView alloc]init];
     fullView.backgroundColor=[UIColor whiteColor];
     [contentView addSubview:fullView];
-    
-    
+
     [fullView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(viewOnTop.mas_bottom);
         make.left.equalTo(@0);

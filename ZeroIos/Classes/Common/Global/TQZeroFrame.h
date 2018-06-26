@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TTRangeSlider.h"
 
 @interface TQZeroFrame : UIView
 +(UIView *)addTitleWithView:(UIView *)topView
@@ -23,5 +24,7 @@
 
 +(void)addLines:(UIView *)view
 leftspaceToview:(CGFloat)leftSpace
-       isBottom:(BOOL)isBottom ;
+       isBottom:(BOOL)isBottom;
+
++(TTRangeSlider *)sliderInit;
 @end

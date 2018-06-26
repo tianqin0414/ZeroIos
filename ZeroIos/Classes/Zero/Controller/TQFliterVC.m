@@ -37,7 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self navigationBar];
-    
+    UIView *lastView = [[UIView alloc]init];
     UIScrollView *scrollView = [[UIScrollView alloc]init];
     self.scrollView=scrollView;
     scrollView.backgroundColor=DivisionColor;
@@ -65,11 +65,36 @@
     NSMutableArray *switchView =  [TQZeroFrame viewArrWithContentView:contentView viewOnTop:divisionView viewHeight:Switch_H * 3  viewCount:3 spaceToLeft:Margin];
     [self switchViews:switchView];
     
+    //年龄
+     UIView* egeTitle=[TQZeroFrame addTitleWithView:switchView[0] tq_TitleHeight:TitleHeight isEquaToBottom:YES titleLabel:@"年龄" spaceToView:SPACETO_VIEW];
+    NSMutableArray *ageViewArr = [TQZeroFrame viewArrWithContentView:contentView viewOnTop:egeTitle viewHeight:SliderHeight viewCount:1 spaceToLeft:Margin];
+    [self ageView:ageViewArr];
     
-     UIView* topView2=[TQZeroFrame addTitleWithView:switchView[0] tq_TitleHeight:TitleHeight isEquaToBottom:YES titleLabel:@"年龄" spaceToView:SPACETO_VIEW];
+    
+    lastView = ageViewArr[0];
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(topView2.mas_bottom);
+        make.bottom.equalTo(lastView.mas_bottom);
     }];
+}
+
+
+
+#pragma mark 年龄  SliderHeight
+-(void)ageView:(NSMutableArray *)fullViewArr{
+    UIView *fullview= fullViewArr[0];
+    TTRangeSlider *ageSlider = [TQZeroFrame sliderInit];
+    ageSlider.minValue = 18;
+    ageSlider.maxValue = 137;
+    ageSlider.selectedMinimum = 18;
+    ageSlider.selectedMaximum = 137;
+    [fullview addSubview:ageSlider];
+    
+    [ageSlider mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(fullview.mas_centerY);
+        make.left.equalTo(fullview.mas_left).offset(Margin);
+        make.right.equalTo(fullview.mas_right).offset(-Margin);
+    }];
+    
 }
 
 #pragma mark switch "是否健康",@"座驾",@"房产"
@@ -96,14 +121,12 @@
         [swt mas_makeConstraints:^(MASConstraintMaker *make) {
                 //make.center.equalTo(apartView);
               make.centerY.equalTo(apartView.mas_centerY);
-                make.top.height.equalTo(apartView);
             
                 make.right.equalTo(apartView.mas_right).offset(-Margin);
         }];
         //swt.centerY=apartView.centerY;
     }
-    
-    
+
 }
 
 #pragma mark 想看到的用户,男女
