@@ -12,6 +12,7 @@
 #import "TQFliterViewController.h"
 #import "TQZeroHeadView.h"
 #import "TQFliterVC.h"
+#import "TQZeroUserDetailVC.h"
 
 @interface TQZeroViewController ()
 @property (nonatomic, strong) TQActionSheet *ActionSheet;
@@ -46,7 +47,7 @@
     
   
   
-        TQFliterVC *filterVCa=[[TQFliterVC alloc]init];
+        TQZeroUserDetailVC *filterVCa=[[TQZeroUserDetailVC alloc]init];
         UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVCa];
         [self presentViewController: presNavigation animated:YES completion:nil];
 }

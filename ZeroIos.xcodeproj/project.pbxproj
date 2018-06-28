@@ -60,6 +60,7 @@
 		9544CEEC20BC18D500A3B48B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CEEB20BC18D500A3B48B /* libz.tbd */; };
 		9544CEEE20BC191A00A3B48B /* IMSDKBugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CEED20BC191A00A3B48B /* IMSDKBugly.framework */; };
 		9544CEF020BC214800A3B48B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CEEF20BC214800A3B48B /* libsqlite3.tbd */; };
+		95657F9320E39847000C4C16 /* TQZeroUserDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 95657F9220E39847000C4C16 /* TQZeroUserDetailVC.m */; };
 		9566304320AAB6C200F8A40E /* TQAppFrameTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9566304220AAB6C200F8A40E /* TQAppFrameTabBarController.m */; };
 		9593E34320B5C9C7002D6DC1 /* SDAnalogDataGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9593E34220B5C9C7002D6DC1 /* SDAnalogDataGenerator.m */; };
 		95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 95955E9420A4C0E600755AE7 /* AppDelegate.m */; };
@@ -161,6 +162,8 @@
 		9544CEEB20BC18D500A3B48B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		9544CEED20BC191A00A3B48B /* IMSDKBugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMSDKBugly.framework; sourceTree = "<group>"; };
 		9544CEEF20BC214800A3B48B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		95657F9120E39847000C4C16 /* TQZeroUserDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQZeroUserDetailVC.h; sourceTree = "<group>"; };
+		95657F9220E39847000C4C16 /* TQZeroUserDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQZeroUserDetailVC.m; sourceTree = "<group>"; };
 		9566304120AAB6C200F8A40E /* TQAppFrameTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQAppFrameTabBarController.h; sourceTree = "<group>"; };
 		9566304220AAB6C200F8A40E /* TQAppFrameTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQAppFrameTabBarController.m; sourceTree = "<group>"; };
 		9593E34120B5C9C6002D6DC1 /* SDAnalogDataGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAnalogDataGenerator.h; sourceTree = "<group>"; };
@@ -521,6 +524,8 @@
 				9521848A20D03F7C008A6F74 /* TQZeroHeadView.m */,
 				9511EC0F20DCE5F600384B31 /* TQFliterVC.h */,
 				9511EC1020DCE5F600384B31 /* TQFliterVC.m */,
+				95657F9120E39847000C4C16 /* TQZeroUserDetailVC.h */,
+				95657F9220E39847000C4C16 /* TQZeroUserDetailVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -852,6 +857,7 @@
 				95A3245920AE9BAA00F7F5C6 /* TQMessageViewController.m in Sources */,
 				950EA50620AF071B00CEEC45 /* TQZeroViewCell.m in Sources */,
 				950EA50B20B15B3600CEEC45 /* TQShowViewCell.m in Sources */,
+				95657F9320E39847000C4C16 /* TQZeroUserDetailVC.m in Sources */,
 				9511EC3E20DD653700384B31 /* TQZeroFrame.m in Sources */,
 				95A3246C20AEFB3000F7F5C6 /* TQUserModel.m in Sources */,
 				95A3246820AEB34700F7F5C6 /* TQShowViewController.m in Sources */,
