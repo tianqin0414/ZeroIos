@@ -47,6 +47,7 @@
 		9521848B20D03F7C008A6F74 /* TQZeroHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9521848A20D03F7C008A6F74 /* TQZeroHeadView.m */; };
 		95286ACE20CD2012009DFD93 /* TQFliterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95286ACD20CD2012009DFD93 /* TQFliterViewController.m */; };
 		952E6DEF20DA4062002924BB /* ZeroNormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 952E6DEE20DA4062002924BB /* ZeroNormalView.m */; };
+		9532C45A20E58A580009D623 /* TQVCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9532C45920E58A580009D623 /* TQVCDemo.m */; };
 		9544CEDD20BC181A00A3B48B /* IMMessageExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CED720BC181A00A3B48B /* IMMessageExt.framework */; };
 		9544CEDE20BC181A00A3B48B /* IMGroupExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CED820BC181A00A3B48B /* IMGroupExt.framework */; };
 		9544CEDF20BC181A00A3B48B /* QALSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9544CED920BC181A00A3B48B /* QALSDK.framework */; };
@@ -149,6 +150,8 @@
 		95286ACD20CD2012009DFD93 /* TQFliterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQFliterViewController.m; sourceTree = "<group>"; };
 		952E6DED20DA4062002924BB /* ZeroNormalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZeroNormalView.h; sourceTree = "<group>"; };
 		952E6DEE20DA4062002924BB /* ZeroNormalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZeroNormalView.m; sourceTree = "<group>"; };
+		9532C45820E58A580009D623 /* TQVCDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQVCDemo.h; sourceTree = "<group>"; };
+		9532C45920E58A580009D623 /* TQVCDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQVCDemo.m; sourceTree = "<group>"; };
 		9544CED720BC181A00A3B48B /* IMMessageExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMMessageExt.framework; sourceTree = "<group>"; };
 		9544CED820BC181A00A3B48B /* IMGroupExt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMGroupExt.framework; sourceTree = "<group>"; };
 		9544CED920BC181A00A3B48B /* QALSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QALSDK.framework; sourceTree = "<group>"; };
@@ -441,6 +444,8 @@
 				95A3241820AC09B500F7F5C6 /* Global */,
 				95A3241620AB31D100F7F5C6 /* AppDelegate */,
 				9566304020AAB61700F8A40E /* AppFrame */,
+				9532C45820E58A580009D623 /* TQVCDemo.h */,
+				9532C45920E58A580009D623 /* TQVCDemo.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -845,6 +850,7 @@
 				95286ACE20CD2012009DFD93 /* TQFliterViewController.m in Sources */,
 				95A3245620AE9B9100F7F5C6 /* TQDiscoverViewController.m in Sources */,
 				9566304320AAB6C200F8A40E /* TQAppFrameTabBarController.m in Sources */,
+				9532C45A20E58A580009D623 /* TQVCDemo.m in Sources */,
 				95156DAE20B6B15F00DA0A44 /* TQBaseTableViewController.m in Sources */,
 				9511EC1120DCE5F600384B31 /* TQFliterVC.m in Sources */,
 				95A3244920AC864900F7F5C6 /* TQZeroViewController.m in Sources */,

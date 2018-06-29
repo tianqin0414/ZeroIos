@@ -21,6 +21,8 @@
 #import "TQUserModel.h"
 #import "TQCategory.h"
 #import "Masonry.h"
+#import "TQVCDemo.h"
+
 
 #endif
 

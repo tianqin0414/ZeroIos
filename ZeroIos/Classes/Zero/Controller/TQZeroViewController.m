@@ -43,11 +43,11 @@
     
 
     self.tableView.rowHeight = 100;
-    self.navigationController.navigationBar.barTintColor = NavigationColor;//#F5E2D6
+    self.navigationController.navigationBar.barTintColor = NavigationColor;//#F5E2D6 TQ
     
   
   
-        TQZeroUserDetailVC *filterVCa=[[TQZeroUserDetailVC alloc]init];
+        TQVCDemo *filterVCa=[[TQVCDemo alloc]init];//TQ
         UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVCa];
         [self presentViewController: presNavigation animated:YES completion:nil];
 }
@@ -141,6 +141,16 @@
     
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath//TQ
+{
+    UIViewController *vc = [TQZeroUserDetailVC new];
+    vc.hidesBottomBarWhenPushed = YES;
+    
+    UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];
+    temporaryBarButtonItem.title =@"  详细资料";
+   [self.navigationController.navigationBar setTintColor:[UIColor blackColor]];  
+    self.navigationItem.backBarButtonItem = temporaryBarButtonItem;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end

@@ -24,7 +24,8 @@
 
 +(void)addLines:(UIView *)view
 leftspaceToview:(CGFloat)leftSpace
-       isBottom:(BOOL)isBottom;
+       isBottom:(BOOL)isBottom
+  addBottomLine:(BOOL)isAdd;
 
 +(TTRangeSlider *)sliderInit;
 @end

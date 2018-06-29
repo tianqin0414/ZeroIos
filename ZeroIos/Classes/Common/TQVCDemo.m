@@ -1,39 +1,37 @@
 //
-//  TQZeroUserDetail.m
+//  TQVCDemo.m
 //  ZeroIos
 //
-//  Created by Tianq on 2018/6/27.
+//  Created by Tianq on 2018/6/29.
 //  Copyright © 2018年 zeluo. All rights reserved.
 //
 
-#import "TQZeroUserDetailVC.h"
+#import "TQVCDemo.h"
 
-@interface TQZeroUserDetailVC()
+@interface TQVCDemo ()
 
 @end
 
-@implementation TQZeroUserDetailVC
-
+@implementation TQVCDemo
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
-      self.navigationController.navigationBar.barTintColor = NavigationColor;
+    self.navigationController.navigationBar.barTintColor = NavigationColor;
     //更多按钮
     UIButton * moreBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    moreBtn.frame = CGRectMake(0, 0, 45,45);
+    moreBtn.frame = CGRectMake(0, 0, 25,25);
     [moreBtn setImage:[UIImage imageNamed:@"iconMoreAcross"] forState:0];
     [moreBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     UIBarButtonItem * moreBarBtn = [[UIBarButtonItem alloc]initWithCustomView:moreBtn];;
     self.navigationItem.rightBarButtonItems = @[moreBarBtn];
     [moreBtn addTarget:self action:@selector(didMoreClick) forControlEvents:UIControlEventTouchUpInside];
-    
-
 }
 
 -(void)didMoreClick{
     XMGLogFunc;
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
