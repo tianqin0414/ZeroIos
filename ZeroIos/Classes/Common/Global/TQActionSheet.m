@@ -174,8 +174,6 @@
 }
 
 -(void)dismiss{
-//    [_darkView setAlpha:0];
-//     [_darkView setUserInteractionEnabled:NO];
      self.backWindow.hidden = YES;
 }
 

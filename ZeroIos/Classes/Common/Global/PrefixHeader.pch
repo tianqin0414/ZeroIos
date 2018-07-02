@@ -39,8 +39,10 @@
 #define NavigationColor [UIColor stringTOColor:@"#F8F8FF"]
 
 #define SBGColor [UIColor stringTOColor:@"#F7F6F5"] //selectedBackgroundColor 选中按钮背景颜色  浅灰色
+#define SHEETFontGray   [UIColor stringTOColor:@"#7B8085"]//#7B8085  riseSheet 字体灰色
 
-//#define Global_tintColor [UIColor colorWithRed:0 green:(190 / 255.0) blue:(12 / 255.0) alpha:1]
+
+
 #define Global_tintColor [UIColor orangeColor]
 
 #define BFontSize 19

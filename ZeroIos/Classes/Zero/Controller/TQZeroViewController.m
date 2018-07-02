@@ -143,7 +143,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath//TQ
 {
-    UIViewController *vc = [TQZeroUserDetailVC new];
+    UIViewController *vc = [TQVCDemo new];
     vc.hidesBottomBarWhenPushed = YES;
     
     UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];

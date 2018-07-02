@@ -68,13 +68,7 @@
 
 }
 
-- (void)injected
-{
-    NSLog(@"!!!I've been injected: %@", self);
-    NSLog(@"!!!I've been injectedLLLAA: %@", self);
-  
-    
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
   

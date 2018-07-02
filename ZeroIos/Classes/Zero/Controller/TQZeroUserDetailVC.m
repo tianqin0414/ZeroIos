@@ -32,7 +32,8 @@
 }
 
 -(void)didMoreClick{
-    XMGLogFunc;
+    //XMGLogFunc;
+    
 }
 
 - (void)didReceiveMemoryWarning {

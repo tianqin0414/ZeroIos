@@ -11,10 +11,10 @@
 @class TQActionSheet;
 typedef void(^TQActionSheetBlock)(NSInteger buttonIndex);
 typedef void(^TQUISwitchBlock)(BOOL isSwitchOn);
-@protocol TQActionSheetDelegate <NSObject>
-@optional
-- (void)actionSheet:(TQActionSheet *)actionSheet didClickedButtonAtIndex:(NSInteger)buttonIndex;
-@end
+//@protocol TQActionSheetDelegate <NSObject>
+//@optional
+//- (void)actionSheet:(TQActionSheet *)actionSheet didClickedButtonAtIndex:(NSInteger)buttonIndex;
+//@end
 @interface TQActionSheet : UIView
 - (void)show;
 

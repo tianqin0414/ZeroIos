@@ -7,6 +7,7 @@
 //
 
 #import "TQVCDemo.h"
+#import "TQRiseSheet.h"
 
 @interface TQVCDemo ()
 
@@ -26,12 +27,38 @@
     UIBarButtonItem * moreBarBtn = [[UIBarButtonItem alloc]initWithCustomView:moreBtn];;
     self.navigationItem.rightBarButtonItems = @[moreBarBtn];
     [moreBtn addTarget:self action:@selector(didMoreClick) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 -(void)didMoreClick{
     XMGLogFunc;
+    __weak TQVCDemo *weakSelf=self;
+    NSDictionary *Dic =@{@"zs":@"iconMoreAcross",@"备注备注":@"iconMoreAcross",@"ls":@"iconMoreAcross",@"bz":@"iconMoreAcross"};
+    
+    TQRiseSheet *riseSheet=[[TQRiseSheet alloc]initWithDic:Dic clicked:^(NSInteger buttonIndex) {
+                                switch(buttonIndex){
+                                    case 0:
+                                        [weakSelf takeVideo];
+                                        break;
+                                    case 1:
+                                        [weakSelf takeVideo];
+                                        break;
+                                    case 2:
+                                        [weakSelf takeVideo];
+                                        break;
+                                    case 3:
+                                        [weakSelf takeVideo];
+                                        break;
+                                }
+                            }];
+ 
+
+    [riseSheet show];
 }
 
+-(void)takeVideo{
+    XMGLogFunc;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

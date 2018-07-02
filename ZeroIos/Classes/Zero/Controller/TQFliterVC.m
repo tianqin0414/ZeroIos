@@ -53,7 +53,7 @@
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.scrollView);
         make.width.equalTo(self.scrollView);
-        make.bottom.equalTo(self.scrollView).offset(-10);
+        //make.bottom.equalTo(self.scrollView).offset(-10);
     }];
  
     UIView* topView=[TQZeroFrame addTitleWithView:contentView tq_TitleHeight:TitleHeight isEquaToBottom:NO titleLabel:@"想看到的用户" spaceToView:SPACETO_VIEW];
@@ -79,7 +79,7 @@
     
     lastView = memberViewArr[0];
     [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(lastView.mas_bottom);
+        make.bottom.equalTo(lastView.mas_bottom).offset(10);
     }];
 }
 
