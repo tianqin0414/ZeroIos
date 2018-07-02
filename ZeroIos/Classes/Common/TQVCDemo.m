@@ -10,7 +10,7 @@
 #import "TQRiseSheet.h"
 
 @interface TQVCDemo ()
-
+@property (strong, nonatomic) UIScrollView* scrollView;
 @end
 
 @implementation TQVCDemo
@@ -28,6 +28,21 @@
     self.navigationItem.rightBarButtonItems = @[moreBarBtn];
     [moreBtn addTarget:self action:@selector(didMoreClick) forControlEvents:UIControlEventTouchUpInside];
     
+    UIScrollView *scrollView = [[UIScrollView alloc]init];
+    self.scrollView=scrollView;
+    scrollView.backgroundColor=DivisionColor;
+    [self.view addSubview:scrollView];
+    
+    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    UIView* contentView = UIView.new;
+    [self.scrollView addSubview:contentView];
+    [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.scrollView);
+        make.width.equalTo(self.scrollView);
+    }];
 }
 
 -(void)didMoreClick{

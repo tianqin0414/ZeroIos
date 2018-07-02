@@ -45,6 +45,7 @@
 		9519286A20C4464600DAA998 /* TQActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9519286820C4464500DAA998 /* TQActionSheet.m */; };
 		951FD52D20C24AD800856799 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 951FD52B20C24AD700856799 /* UIColor+Extension.m */; };
 		9521848B20D03F7C008A6F74 /* TQZeroHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9521848A20D03F7C008A6F74 /* TQZeroHeadView.m */; };
+		952299E220EA9C5D00DCDE39 /* UIImage+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 952299E020EA9C5D00DCDE39 /* UIImage+Extension.m */; };
 		95286ACE20CD2012009DFD93 /* TQFliterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95286ACD20CD2012009DFD93 /* TQFliterViewController.m */; };
 		952E6DEF20DA4062002924BB /* ZeroNormalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 952E6DEE20DA4062002924BB /* ZeroNormalView.m */; };
 		9532C45A20E58A580009D623 /* TQVCDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9532C45920E58A580009D623 /* TQVCDemo.m */; };
@@ -147,6 +148,8 @@
 		951FD52E20C24B2100856799 /* TQCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQCategory.h; sourceTree = "<group>"; };
 		9521848920D03F7C008A6F74 /* TQZeroHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQZeroHeadView.h; sourceTree = "<group>"; };
 		9521848A20D03F7C008A6F74 /* TQZeroHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQZeroHeadView.m; sourceTree = "<group>"; };
+		952299E020EA9C5D00DCDE39 /* UIImage+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extension.m"; sourceTree = "<group>"; };
+		952299E120EA9C5D00DCDE39 /* UIImage+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extension.h"; sourceTree = "<group>"; };
 		95286ACC20CD2012009DFD93 /* TQFliterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TQFliterViewController.h; sourceTree = "<group>"; };
 		95286ACD20CD2012009DFD93 /* TQFliterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TQFliterViewController.m; sourceTree = "<group>"; };
 		952E6DED20DA4062002924BB /* ZeroNormalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZeroNormalView.h; sourceTree = "<group>"; };
@@ -313,6 +316,8 @@
 				951FD52E20C24B2100856799 /* TQCategory.h */,
 				951FD52C20C24AD800856799 /* UIColor+Extension.h */,
 				951FD52B20C24AD700856799 /* UIColor+Extension.m */,
+				952299E120EA9C5D00DCDE39 /* UIImage+Extension.h */,
+				952299E020EA9C5D00DCDE39 /* UIImage+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -866,6 +871,7 @@
 				952E6DEF20DA4062002924BB /* ZeroNormalView.m in Sources */,
 				95955E9520A4C0E600755AE7 /* AppDelegate.m in Sources */,
 				95A3245C20AE9BB700F7F5C6 /* TQMeViewController.m in Sources */,
+				952299E220EA9C5D00DCDE39 /* UIImage+Extension.m in Sources */,
 				95A3245920AE9BAA00F7F5C6 /* TQMessageViewController.m in Sources */,
 				950EA50620AF071B00CEEC45 /* TQZeroViewCell.m in Sources */,
 				950EA50B20B15B3600CEEC45 /* TQShowViewCell.m in Sources */,

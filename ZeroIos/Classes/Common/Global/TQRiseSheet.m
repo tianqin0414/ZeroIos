@@ -7,6 +7,7 @@
 //
 
 #import "TQRiseSheet.h"
+#import "UIImage+Extension.h"
 #define BUTTON_H 70.0f
 #define MARGIN  SCREEN_WIDTH/12
 
@@ -40,7 +41,7 @@
    
     
     UIView *bottomView = [[UIView alloc] init];
-     [bottomView setBackgroundColor:[UIColor stringTOColor:@"#f4f4ea"]];//maincolor
+     [bottomView setBackgroundColor:[UIColor whiteColor]];//maincolor  #f4f4ea
 
 
     //[self addSubview:bottomView];
@@ -71,9 +72,12 @@
       
         
         UIButton *btn = [[UIButton alloc] init];
-
-             [btn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];
+         [btn setBackgroundColor:[UIColor whiteColor]];
+             [btn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];//UIControlEventTouchUpInside
+        UIImage *bgImage = [UIImage imageNamed:@"bgImage_H"];
+        [btn setBackgroundImage:bgImage forState:UIControlStateHighlighted];
         
+
         [btn setTag:i];
         
         [contentView addSubview:btn];
@@ -109,7 +113,7 @@
 }
 
 - (void)didClickBtn:(UIButton *)btn {
-    
+    //btn.backgroundColor=[UIColor grayColor];//[UIColor stringTOColor:@"#f4f4ea"];
     self.clickedBlock(btn.tag);
 }
 
