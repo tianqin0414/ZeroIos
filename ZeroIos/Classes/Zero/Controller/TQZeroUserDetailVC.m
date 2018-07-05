@@ -64,7 +64,7 @@
     [self bottomBtn];
 }
 
-//头像
+//第一行(头像\昵称等)
 -(void)iconViews:(NSMutableArray *)iconViews{
     UIView *apartView = iconViews[0];
     UIImageView *iconV = [UIImageView new];
@@ -78,13 +78,34 @@
     }];
     
     UILabel *nickName = [UILabel new];
-    nickName.text = @"ceshiceshi";
-    
+    nickName.text = @"ceshiceshiasdfwqerasdfasdfwaqer";
+    nickName.font = [UIFont systemFontOfSize:24];
     [apartView addSubview:nickName];
     [nickName mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(iconV.mas_top);
-        make.left.equalTo(iconV.mas_right).offset(1.5 * SPACETO_VIEW);
+        make.top.equalTo(iconV.mas_top).offset(5);
+        make.left.equalTo(iconV.mas_right).offset(2 * SPACETO_VIEW);
+        make.width.lessThanOrEqualTo(@(110));
+        make.height.equalTo(@24);
         
+    }];
+    
+    UIImageView *sexualIcon = [[UIImageView alloc]init];
+    sexualIcon.image = [UIImage imageNamed:@"iconMale"];
+    [apartView addSubview:sexualIcon];
+    [sexualIcon mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.width.equalTo(nickName.mas_height);
+        make.left.equalTo(nickName.mas_right).offset(10);
+        make.top.equalTo(nickName.mas_top);
+        
+    }];
+    
+    UILabel *idLabel = [[UILabel alloc]init];
+    idLabel.text = @"ID : 12345678901";
+    idLabel.textColor =[UIColor lightGrayColor];
+    [apartView addSubview:idLabel];
+    [idLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(nickName.mas_bottom).offset(10);
+        make.left.equalTo(nickName);
     }];
     
 }
