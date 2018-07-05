@@ -47,7 +47,7 @@
     
   
   
-        TQVCDemo *filterVCa=[[TQVCDemo alloc]init];//TQ
+        TQZeroUserDetailVC *filterVCa=[[TQZeroUserDetailVC alloc]init];//TQ
         UINavigationController *presNavigation = [[UINavigationController alloc] initWithRootViewController: filterVCa];
         [self presentViewController: presNavigation animated:YES completion:nil];
 }
@@ -143,7 +143,7 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath//TQ
 {
-    UIViewController *vc = [TQVCDemo new];
+    UIViewController *vc = [TQZeroUserDetailVC new];
     vc.hidesBottomBarWhenPushed = YES;
     
     UIBarButtonItem *temporaryBarButtonItem = [[UIBarButtonItem alloc] init];

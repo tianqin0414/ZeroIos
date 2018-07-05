@@ -12,6 +12,8 @@
 #define FTLineBorder 0.5
 #define SPACETO_VIEW 12
 #define FTLineColor  [UIColor lightGrayColor]
+
+
 @implementation TQZeroFrame
 
 //masonry

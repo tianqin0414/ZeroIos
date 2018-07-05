@@ -146,7 +146,7 @@
             [self addLines:smallView leftspaceToview:0 isBottom:YES];
              //[self addLines:smallView leftspaceToview:Margin isBottom:NO];
         }else{
-            [self addLines:smallView leftspaceToview:Margin isBottom:YES];//TQ0620
+            [self addLines:smallView leftspaceToview:Margin isBottom:YES];
         }
         
         [viewArr addObject:smallView];
@@ -457,7 +457,7 @@ view2:(UIView *)view2{
 -(void)didCancel{
     TQZeroViewController *TQZeroVC=[[TQZeroViewController alloc]init];
        TQZeroVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:TQZeroVC animated:YES];//TQ0611
+    [self.navigationController pushViewController:TQZeroVC animated:YES];
     [self dismissViewControllerAnimated:NO completion:nil];
   
 
