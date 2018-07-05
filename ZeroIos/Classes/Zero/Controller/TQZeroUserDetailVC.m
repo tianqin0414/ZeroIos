@@ -102,7 +102,8 @@
     //对话
     UIButton *dialogueBtn = [UIButton new];
      [dialogueBtn addTarget:self action:@selector(didDialogueClick) forControlEvents:UIControlEventTouchUpInside];
-    
+    UIImage *bgImage = [UIImage imageNamed:@"bgImage_H"];
+    [dialogueBtn setBackgroundImage:bgImage forState:UIControlStateHighlighted];//TQ0715
    
     
     dialogueBtn.backgroundColor = ZEROColor;
@@ -152,14 +153,7 @@
 
 -(void)didDialogueClick{
     XMGLogFunc;
-    [MBProgressHUD createHudToView:self.navigationController.view title:@"aa" configHud:^(MBProgressHUD *hud) {
-        hud.title(@"new title");
-        hud.contentColor = [UIColor yellowColor];
-        hud.titleColor(UIColor.redColor);
-        //[hud setAlpha:0.3];
-        hud.bezelBackgroundColor(UIColor.greenColor);
-        //hud.hudBackgroundColor([[UIColor blueColor] colorWithAlphaComponent:0.2]);
-    }];
+   
     
 }
 -(void)didAttentionClick{

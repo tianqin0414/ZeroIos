@@ -75,7 +75,7 @@
          [btn setBackgroundColor:[UIColor whiteColor]];
              [btn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];//UIControlEventTouchUpInside
         UIImage *bgImage = [UIImage imageNamed:@"bgImage_H"];
-        [btn setBackgroundImage:bgImage forState:UIControlStateHighlighted];
+        [btn setBackgroundImage:bgImage forState:UIControlStateHighlighted];//TQ0
         
 
         [btn setTag:i];
