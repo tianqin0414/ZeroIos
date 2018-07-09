@@ -3,4 +3,5 @@ target 'ZeroIos' do
 pod 'SDAutoLayout'
 pod 'TTRangeSlider'
 pod 'Masonry'
+pod 'AFNetworking'
 end

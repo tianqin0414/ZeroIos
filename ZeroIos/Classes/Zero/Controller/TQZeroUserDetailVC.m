@@ -123,7 +123,7 @@
     //对话
     UIButton *dialogueBtn = [UIButton new];
      [dialogueBtn addTarget:self action:@selector(didDialogueClick) forControlEvents:UIControlEventTouchUpInside];
-    UIImage *bgImage = [UIImage imageNamed:@"bgImage_H"];
+    UIImage *bgImage = [UIImage createImageWithColor:[[UIColor lightGrayColor] colorWithAlphaComponent:0.2]];
     [dialogueBtn setBackgroundImage:bgImage forState:UIControlStateHighlighted];//TQ0715
    
     

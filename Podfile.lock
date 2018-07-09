@@ -1,24 +1,42 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - Masonry (1.1.0)
   - SDAutoLayout (2.2.0)
   - TTRangeSlider (1.0.6)
 
 DEPENDENCIES:
+  - AFNetworking
   - Masonry
   - SDAutoLayout
   - TTRangeSlider
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
     - Masonry
     - SDAutoLayout
     - TTRangeSlider
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   SDAutoLayout: c5509e77ae75735d9a39f7bc83dba6d3f75d49d8
   TTRangeSlider: 78188bea83f6471a06f75adbc88da5e990baeafe
 
-PODFILE CHECKSUM: 567d9821e67969316b5d28792a4886f77cd74a53
+PODFILE CHECKSUM: d14cbeac0039990f642f9ad01d22dc32fc660cc8
 
 COCOAPODS: 1.5.0

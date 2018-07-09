@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "TQAppFrameTabBarController.h"
 #import "TQZeroViewController.h"
+#import "TQLoginHomeVC.h"
 
 @interface AppDelegate ()
 
@@ -19,12 +20,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-
     
     // 创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // 设置窗口的根控制器
-    self.window.rootViewController=[TQAppFrameTabBarController new];
+    self.window.rootViewController=[TQLoginHomeVC new];
     // 显示窗口
     [self.window makeKeyAndVisible];
     [self setupNavBar];
@@ -69,6 +69,7 @@
 
 - (void)setupNavBar
 {
+    
     //[UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     //UINavigationBar *bar = [UINavigationBar appearance];
     
