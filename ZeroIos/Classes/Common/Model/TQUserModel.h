@@ -15,6 +15,7 @@
 @property (nonatomic, copy) NSString *realName;
 @property (nonatomic, copy) NSNumber *distance;
 @property (nonatomic, copy) NSString *signature;
+@property (nonatomic, copy) NSString *SourceSysNo;
 @property (nonatomic, assign) BOOL gender;
 @end
 

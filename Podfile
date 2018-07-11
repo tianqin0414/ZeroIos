@@ -4,4 +4,5 @@ pod 'SDAutoLayout'
 pod 'TTRangeSlider'
 pod 'Masonry'
 pod 'AFNetworking'
+pod 'MJExtension'
 end

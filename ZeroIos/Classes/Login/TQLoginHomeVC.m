@@ -20,24 +20,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    NSString *url = @"http://118.25.105.109:8001/Help/Api/POST-Customer-LoginCustomer";
     //创建请求地址
-    //NSString *url=@"http://api.nohttp.net/postBody";
+    NSString *url = @"http://118.25.105.109:8001/Customer/LoginCustomer";
+   
     //构造参数
     NSDictionary *Body = @{@"CellphoneNo": @"18969123461",
                            @"PassWord": @"12345"};
     NSDictionary *parameters=@{@"Body":Body};//TQ0709
 
    
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    //AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
    
-    [manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+    // 获得请求管理者
+    AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
+    
 
+    [session POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
- NSLog(@"responseObject-->%@",responseObject);
+        TQUserModel *user = [TQUserModel mj_objectWithKeyValues:responseObject];
+        NSLog(@"responseObject-->%@",user.SourceSysNo);
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-NSLog(@"error-->%@",error);
+//NSLog(@"error-->%@",error);
     }];
     
     
