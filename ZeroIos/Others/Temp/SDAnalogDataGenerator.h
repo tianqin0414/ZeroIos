@@ -32,6 +32,6 @@
 + (NSString *)randomName;
 + (NSString *)randomIconImageName;
 + (NSString *)randomMessage;
-+ (NSMutableArray<TQIdNumber *> *)randomIdNumber;
++ (NSMutableArray<TQGoodNumber *> *)randomIdNumber;
 @end
 

@@ -11,6 +11,6 @@
 @implementation TQUserModel
 
 @end
-@implementation TQIdNumber
+@implementation TQGoodNumber
 
 @end

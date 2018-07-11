@@ -37,8 +37,9 @@
 
     [session POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        TQUserModel *user = [TQUserModel mj_objectWithKeyValues:responseObject];
-        NSLog(@"responseObject-->%@",user.SourceSysNo);
+
+        //TQUserModel *user = [TQUserModel mj_objectWithKeyValues:responseObject];//TQ0711
+        //NSLog(@"responseObject-->%@",user.Body.SourceSysNo);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 //NSLog(@"error-->%@",error);

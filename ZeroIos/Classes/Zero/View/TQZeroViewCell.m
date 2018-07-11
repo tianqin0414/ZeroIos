@@ -150,7 +150,7 @@
     _distance.text=[NSString stringWithFormat:@"%@%@", distance, @"km" ];
     _signature.text=model.signature;
     //_verfication.text=@" 387956977 ";
-    _verfication.text=[NSString stringWithFormat:@"%@", model.idNumberArray[0].idNumber];
+    _verfication.text=[NSString stringWithFormat:@"%@", model.goodNumberArray[0].idNumber];
 }
 
 

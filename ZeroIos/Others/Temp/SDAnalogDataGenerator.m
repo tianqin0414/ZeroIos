@@ -31,10 +31,10 @@
 static NSArray *namesArray;
 static NSArray *iconNamesArray;
 static NSArray *messagesArray;
-static NSMutableArray<TQIdNumber *> *idNumberArray;
+static NSMutableArray<TQGoodNumber *> *goodNumberArray;
 @implementation SDAnalogDataGenerator
 
-+ (NSMutableArray<TQIdNumber *> *)randomIdNumber
++ (NSMutableArray<TQGoodNumber *> *)randomIdNumber
 {
     
     return [self idNumbers];
@@ -143,20 +143,20 @@ static NSMutableArray<TQIdNumber *> *idNumberArray;
                             @"4613769873":@"300",
                             @"81364":@"1434"};
     
-    if (!idNumberArray) {
-       // TQIdNumber *idData=[[TQIdNumber alloc]init];
-         idNumberArray=[NSMutableArray array];
+    if (!goodNumberArray) {
+       // TQGoodNumber *idData=[[TQGoodNumber alloc]init];
+         goodNumberArray=[NSMutableArray array];
         for (NSString *key in number) {
        
-            TQIdNumber *idData=[[TQIdNumber alloc]init];
+            TQGoodNumber *idData=[[TQGoodNumber alloc]init];
             idData.idNumber=@([key integerValue]);
             NSString *value=[number valueForKey:key];
             idData.idValue=@([value integerValue]);
-            [idNumberArray addObject:idData];
+            [goodNumberArray addObject:idData];
         }
     }
     
-    return idNumberArray;
+    return goodNumberArray;
 }
 
 @end

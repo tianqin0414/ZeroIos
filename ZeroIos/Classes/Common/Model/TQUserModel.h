@@ -7,19 +7,26 @@
 //
 
 #import <Foundation/Foundation.h>
-@class TQIdNumber;
+@class TQGoodNumber;
+@class  Body;
 @interface TQUserModel : NSObject
-@property (nonatomic, copy) NSArray<TQIdNumber *> *idNumberArray;
+@property (nonatomic, strong) NSArray<TQGoodNumber *> *goodNumberArray;
+@property (nonatomic, copy) NSNumber *idNumber;
 @property (nonatomic, copy) NSString *nickName;
 @property (nonatomic, copy) NSString *imageName;
 @property (nonatomic, copy) NSString *realName;
 @property (nonatomic, copy) NSNumber *distance;
 @property (nonatomic, copy) NSString *signature;
 @property (nonatomic, copy) NSString *SourceSysNo;
+@property (nonatomic, strong) Body *Body;
 @property (nonatomic, assign) BOOL gender;
 @end
 
-@interface TQIdNumber : NSObject
+@interface TQGoodNumber : NSObject
 @property (nonatomic, copy) NSNumber *idNumber;
 @property (nonatomic, copy) NSNumber *idValue;
+@end
+@interface Body : NSObject
+@property (nonatomic, copy) NSString *CustomerSysNo;
+@property (nonatomic, copy) NSString *SourceSysNo;
 @end
