@@ -20,7 +20,6 @@
 		950EA52E20B1CAD400CEEC45 /* 13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51620B1CAD100CEEC45 /* 13.jpg */; };
 		950EA52F20B1CAD400CEEC45 /* 16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51720B1CAD100CEEC45 /* 16.jpg */; };
 		950EA53020B1CAD400CEEC45 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51820B1CAD100CEEC45 /* 9.jpg */; };
-		950EA53120B1CAD400CEEC45 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51920B1CAD100CEEC45 /* 0.jpg */; };
 		950EA53220B1CAD400CEEC45 /* 17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51A20B1CAD100CEEC45 /* 17.jpg */; };
 		950EA53320B1CAD400CEEC45 /* 18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51B20B1CAD200CEEC45 /* 18.jpg */; };
 		950EA53420B1CAD400CEEC45 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 950EA51C20B1CAD200CEEC45 /* 6.jpg */; };
@@ -117,7 +116,6 @@
 		950EA51620B1CAD100CEEC45 /* 13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 13.jpg; sourceTree = "<group>"; };
 		950EA51720B1CAD100CEEC45 /* 16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 16.jpg; sourceTree = "<group>"; };
 		950EA51820B1CAD100CEEC45 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
-		950EA51920B1CAD100CEEC45 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 0.jpg; path = "../../../../Temp2018/GSD_WeiXin-master/GSD_WeiXin(wechat)/Others/Resources/Images/cell_icons/0.jpg"; sourceTree = "<group>"; };
 		950EA51A20B1CAD100CEEC45 /* 17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 17.jpg; sourceTree = "<group>"; };
 		950EA51B20B1CAD200CEEC45 /* 18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 18.jpg; sourceTree = "<group>"; };
 		950EA51C20B1CAD200CEEC45 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
@@ -279,7 +277,6 @@
 			children = (
 				9593E34120B5C9C6002D6DC1 /* SDAnalogDataGenerator.h */,
 				9593E34220B5C9C7002D6DC1 /* SDAnalogDataGenerator.m */,
-				950EA51920B1CAD100CEEC45 /* 0.jpg */,
 				950EA51420B1CAD000CEEC45 /* 1.jpg */,
 				950EA52220B1CAD300CEEC45 /* 2.jpg */,
 				950EA51E20B1CAD200CEEC45 /* 3.jpg */,
@@ -802,7 +799,6 @@
 				950EA52C20B1CAD400CEEC45 /* 1.jpg in Resources */,
 				950EA54720B1CADF00CEEC45 /* icon1.jpg in Resources */,
 				950EA53020B1CAD400CEEC45 /* 9.jpg in Resources */,
-				950EA53120B1CAD400CEEC45 /* 0.jpg in Resources */,
 				950EA53920B1CAD400CEEC45 /* 12.jpg in Resources */,
 				950EA54420B1CADF00CEEC45 /* icon2.jpg in Resources */,
 				950EA53520B1CAD400CEEC45 /* 7.jpg in Resources */,

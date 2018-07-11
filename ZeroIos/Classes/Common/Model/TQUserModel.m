@@ -14,3 +14,6 @@
 @implementation TQGoodNumber
 
 @end
+
+@implementation TQBody
+@end

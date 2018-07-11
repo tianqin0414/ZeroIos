@@ -8,6 +8,8 @@
 
 #import "TQLoginHomeVC.h"
 #import "AFNetworking.h"
+#import "TQUserModel.h"
+#import <MJExtension/MJExtension.h>
 
 @interface TQLoginHomeVC ()
 
@@ -24,9 +26,9 @@
     NSString *url = @"http://118.25.105.109:8001/Customer/LoginCustomer";
    
     //构造参数
-    NSDictionary *Body = @{@"CellphoneNo": @"18969123461",
+    NSDictionary *body = @{@"CellphoneNo": @"18969123461",
                            @"PassWord": @"12345"};
-    NSDictionary *parameters=@{@"Body":Body};//TQ0709
+    NSDictionary *parameters=@{@"Body":body};//TQ0709
 
    
     //AFHTTPSessionManager *session = [AFHTTPSessionManager manager];
@@ -38,8 +40,9 @@
     [session POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 
-        //TQUserModel *user = [TQUserModel mj_objectWithKeyValues:responseObject];//TQ0711
-        //NSLog(@"responseObject-->%@",user.Body.SourceSysNo);
+        TQBody *body = [TQBody mj_objectWithKeyValues:responseObject[@"Body"]];
+//        Body *user = [Body mj_objectWithKeyValues:responseObject];//TQ0711
+        NSLog(@"responseObject-->%@",body);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 //NSLog(@"error-->%@",error);

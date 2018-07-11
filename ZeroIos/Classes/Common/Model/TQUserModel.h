@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class TQGoodNumber;
-@class  Body;
+@class  TQBody;
 @interface TQUserModel : NSObject
 @property (nonatomic, strong) NSArray<TQGoodNumber *> *goodNumberArray;
 @property (nonatomic, copy) NSNumber *idNumber;
@@ -18,7 +18,7 @@
 @property (nonatomic, copy) NSNumber *distance;
 @property (nonatomic, copy) NSString *signature;
 @property (nonatomic, copy) NSString *SourceSysNo;
-@property (nonatomic, strong) Body *Body;
+@property (nonatomic, strong) TQBody *body;
 @property (nonatomic, assign) BOOL gender;
 @end
 
@@ -26,7 +26,8 @@
 @property (nonatomic, copy) NSNumber *idNumber;
 @property (nonatomic, copy) NSNumber *idValue;
 @end
-@interface Body : NSObject
+
+@interface TQBody : NSObject
 @property (nonatomic, copy) NSString *CustomerSysNo;
 @property (nonatomic, copy) NSString *SourceSysNo;
 @end
