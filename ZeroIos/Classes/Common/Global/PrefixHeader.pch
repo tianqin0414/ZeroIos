@@ -23,6 +23,7 @@
 #import "Masonry.h"
 #import "TQVCDemo.h"
 #import "MJExtension.h"
+#import "ImSDK/ImSDK.h"
 
 
 #endif

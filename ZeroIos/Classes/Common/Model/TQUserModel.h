@@ -18,7 +18,7 @@
 @property (nonatomic, copy) NSNumber *distance;
 @property (nonatomic, copy) NSString *signature;
 @property (nonatomic, copy) NSString *SourceSysNo;
-@property (nonatomic, strong) TQBody *body;
+//@property (nonatomic, strong) TQBody *body;
 @property (nonatomic, assign) BOOL gender;
 @end
 
@@ -28,6 +28,6 @@
 @end
 
 @interface TQBody : NSObject
-@property (nonatomic, copy) NSString *CustomerSysNo;
+//@property (nonatomic, copy) NSString *CustomerSysNo;
 @property (nonatomic, copy) NSString *SourceSysNo;
 @end
